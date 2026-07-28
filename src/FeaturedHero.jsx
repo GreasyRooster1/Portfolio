@@ -17,8 +17,20 @@ export default function FeaturedHero() {
             <HeroOverlay />
           </div>
         </Flex>
-        <Flex className={styles.box} gridRow={"1/1"} gridColumn={"3/3"}>
-          <div>
+        <Grid gridRow={"1/1"} gridColumn={"3/3"} direction="column" gap={{initial:"2",lg:"3"}}>
+          <Flex className={styles.box} justify={"center"} align={"center"}>
+            <div className={styles.metrics}>
+              <div>
+                <div className={styles.metricLabel}>students</div>
+                <div className={styles.metricValue}>300+</div>
+              </div>
+              <div>
+                <div className={styles.metricLabel}>total projects</div>
+                <div className={styles.metricValue}>2,467</div>
+              </div>
+            </div>
+          </Flex>
+          <div className={styles.box}>
             <div className={styles.metricLabel}>stack</div>
             <div className={styles.stack}>
               JS · Rust
@@ -26,19 +38,10 @@ export default function FeaturedHero() {
               Firebase
             </div>
           </div>
-        </Flex>
+        </Grid>
 
         <Flex className={styles.box} gridRow={"2/2"} gridColumn={"1/1"} justify={"center"} align={"center"}>
-          <div className={styles.metrics}>
-            <div>
-              <div className={styles.metricLabel}>students</div>
-              <div className={styles.metricValue}>300+</div>
-            </div>
-            <div>
-              <div className={styles.metricLabel}>total projects</div>
-              <div className={styles.metricValue}>2,467</div>
-            </div>
-          </div>
+
         </Flex>
         <Flex className={styles.box} gridRow={"2/2"} gridColumn={"2/4"}>
         </Flex>
