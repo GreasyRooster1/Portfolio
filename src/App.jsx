@@ -11,15 +11,15 @@ import Footer from './components/Footer'
 import styles from './App.module.css'
 
 export default function App() {
-  return (
-    <div className={styles.page}>
-      <Nav />
-      <Hero />
-      <FeaturedHero />
-      <SelectedWork />
-      <ProjectIndex />
-      <About />
-      <Footer />
-    </div>
-  )
+    return (
+        <div className={styles.page}>
+            <Nav />
+            <FeaturedHero />
+            <Hero/>
+            <SelectedWork />
+            <ProjectIndex />
+            <About />
+            <Footer />
+        </div>
+    )
 }

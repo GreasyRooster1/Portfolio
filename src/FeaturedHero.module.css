@@ -1,6 +1,7 @@
 .section {
   position: relative;
   margin: 60px 64px 0;
+  height: 90vh;
 }
 
 .overlay {

@@ -7,7 +7,7 @@ const LINKS = [{ label: 'live demo', accent: true }, { label: 'source' }, { labe
 export default function FeaturedHero() {
   return (
     <section className={styles.section}>
-      <Placeholder height={440} note="hero capture — flagship project, 2240 × 1260" />
+      <Placeholder height={"90vh"} note="hero capture — flagship project, 2240 × 1260" />
       <div className={styles.overlay}>
         <div>
           <div className={styles.eyebrow}>featured · 2026</div>
