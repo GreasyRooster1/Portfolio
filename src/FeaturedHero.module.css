@@ -33,3 +33,29 @@
 .links {
   margin-top: 16px;
 }
+
+.metrics {
+  display: flex;
+  flex: none;
+  gap: 26px;
+  padding-bottom: 4px;
+}
+
+.metricLabel {
+  font: 400 10px/1 var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.metricValue {
+  margin-top: 7px;
+  font: 500 24px/1 var(--font-mono);
+  color: var(--text);
+}
+
+.stack {
+  margin-top: 9px;
+  font: 500 13px/1.45 var(--font-mono);
+  color: var(--body);
+}
