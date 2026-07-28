@@ -13,7 +13,9 @@ export default function FeaturedHero() {
       <Grid style={{height:"60vh"}} columns={{initial:"1",sm:"1",lg:"3"}} gap={{initial:"2",lg:"3"}} >
 
         <Flex className={styles.box} gridRow={"1/1"} gridColumn={"1/3"}>
-          a
+          <div>
+            <HeroOverlay />
+          </div>
         </Flex>
         <Flex className={styles.box} gridRow={"1/1"} gridColumn={"3/3"}>
           a
