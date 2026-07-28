@@ -21,6 +21,18 @@ a {
   color: inherit;
 }
 
+.navlink:hover {
+  color: #e6e9ee;
+}
+
+.gcard:hover {
+  transform: translateY(-3px);
+}
+
+.trow:hover {
+  background: #161917;
+}
+
 @keyframes blink {
   0%,
   49% {
