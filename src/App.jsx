@@ -3,7 +3,7 @@
 
 import Nav from './components/Nav'
 import Hero from './components/Hero'
-import FeaturedHero from './FeaturedHero'
+import FeaturedHero from './FeaturedHero.jsx'
 import SelectedWork from './SelectedWork'
 import ProjectIndex from './ProjectIndex'
 import About from './components/About'
