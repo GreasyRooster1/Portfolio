@@ -1,5 +1,5 @@
-import Placeholder from './Placeholder'
-import LinkRow from './LinkRow'
+import Placeholder from '@components/Placeholder'
+import LinkRow from '@components/LinkRow'
 import styles from './FeaturedHero.module.css'
 
 const LINKS = [{ label: 'live demo', accent: true }, { label: 'source' }, { label: 'writeup' }]

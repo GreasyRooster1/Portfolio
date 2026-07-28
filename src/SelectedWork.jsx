@@ -1,7 +1,7 @@
-import SectionHead from './SectionHead'
-import WorkCard from './WorkCard'
+import SectionHead from '@components/SectionHead'
+import WorkCard from '@components/WorkCard'
 import styles from './SelectedWork.module.css'
-import { WORK } from '../data'
+import { WORK } from '@/data'
 
 export default function SelectedWork() {
   return (

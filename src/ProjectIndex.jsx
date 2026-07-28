@@ -1,7 +1,7 @@
-import SectionHead from './SectionHead'
-import IndexRow from './IndexRow'
+import SectionHead from '@components/SectionHead'
+import IndexRow from '@components/IndexRow'
 import styles from './ProjectIndex.module.css'
-import { INDEX_ROWS } from '../data'
+import { INDEX_ROWS } from '@/data'
 
 export default function ProjectIndex() {
   return (
