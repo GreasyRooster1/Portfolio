@@ -3,9 +3,9 @@
 
 import Nav from './components/Nav'
 import Hero from './components/Hero'
-import FeaturedHero from './components/FeaturedHero'
-import SelectedWork from './components/SelectedWork'
-import ProjectIndex from './components/ProjectIndex'
+import FeaturedHero from './FeaturedHero'
+import SelectedWork from './SelectedWork'
+import ProjectIndex from './ProjectIndex'
 import About from './components/About'
 import Footer from './components/Footer'
 import styles from './App.module.css'
