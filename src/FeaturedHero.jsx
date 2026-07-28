@@ -6,6 +6,7 @@ import {Box, Flex, Grid, Text} from "@radix-ui/themes";
 import React from "react";
 import firebaseIcon from '@assets/firebase.png'
 import viteIcon from '@assets/vite.svg'
+import rustIcon from '@assets/rust.png'
 import TechIcon from "@components/TechIcon.jsx";
 
 const LINKS = [{ label: 'live demo', accent: true }, { label: 'source' }, { label: 'writeup' }]
@@ -37,6 +38,7 @@ export default function FeaturedHero() {
             <Flex width={"70%"} style={{justifyContent:"space-evenly"}}>
               <TechIcon icon={firebaseIcon} name={"Firebase"}/>
               <TechIcon icon={viteIcon} name={"Vite"}/>
+              <TechIcon icon={rustIcon} name={"Rust"}/>
             </Flex>
           </Flex>
         </Grid>
