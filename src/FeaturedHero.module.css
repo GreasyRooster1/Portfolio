@@ -60,3 +60,7 @@
   font: 500 13px/1.45 var(--font-mono);
   color: var(--body);
 }
+
+.techText{
+  font-family: var(--font-mono);
+}

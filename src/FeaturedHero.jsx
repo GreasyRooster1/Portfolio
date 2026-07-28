@@ -2,8 +2,11 @@ import Placeholder from '@components/Placeholder'
 import LinkRow from '@components/LinkRow'
 import styles from './FeaturedHero.module.css'
 import HeroOverlay from "@/HeroOverlay.jsx";
-import {Box, Flex, Grid} from "@radix-ui/themes";
+import {Box, Flex, Grid, Text} from "@radix-ui/themes";
 import React from "react";
+import firebaseIcon from '@assets/firebase.png'
+import viteIcon from '@assets/vite.svg'
+import TechIcon from "@components/TechIcon.jsx";
 
 const LINKS = [{ label: 'live demo', accent: true }, { label: 'source' }, { label: 'writeup' }]
 
@@ -30,14 +33,12 @@ export default function FeaturedHero() {
               </div>
             </div>
           </Flex>
-          <div className={styles.box}>
-            <div className={styles.metricLabel}>stack</div>
-            <div className={styles.stack}>
-              JS · Rust
-              <br />
-              Firebase
-            </div>
-          </div>
+          <Flex className={styles.box} justify={"center"} align={"center"}>
+            <Flex width={"70%"} style={{justifyContent:"space-evenly"}}>
+              <TechIcon icon={firebaseIcon} name={"Firebase"}/>
+              <TechIcon icon={viteIcon} name={"Vite"}/>
+            </Flex>
+          </Flex>
         </Grid>
 
         <Flex className={styles.box} gridRow={"2/2"} gridColumn={"1/1"} justify={"center"} align={"center"}>
