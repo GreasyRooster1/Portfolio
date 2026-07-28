@@ -1,13 +1,14 @@
 import Placeholder from '@components/Placeholder'
 import LinkRow from '@components/LinkRow'
 import styles from './FeaturedHero.module.css'
+import HeroContent from "@/HeroContent.jsx";
 
 const LINKS = [{ label: 'live demo', accent: true }, { label: 'source' }, { label: 'writeup' }]
 
 export default function FeaturedHero() {
   return (
     <section className={styles.section}>
-      <Placeholder height={"90vh"} note="hero capture — flagship project, 2240 × 1260" />
+      <HeroContent/>
       <div className={styles.overlay}>
         <div>
           <div className={styles.eyebrow}>featured · 2024-2026</div>
