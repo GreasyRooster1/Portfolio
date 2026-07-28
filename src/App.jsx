@@ -14,8 +14,8 @@ export default function App() {
     return (
         <div className={styles.page}>
             <Nav />
-            <FeaturedHero />
             <Hero/>
+            <FeaturedHero />
             <SelectedWork />
             <ProjectIndex />
             <About />

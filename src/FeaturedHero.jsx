@@ -10,29 +10,28 @@ export default function FeaturedHero() {
       <Placeholder height={"90vh"} note="hero capture — flagship project, 2240 × 1260" />
       <div className={styles.overlay}>
         <div>
-          <div className={styles.eyebrow}>featured · 2026</div>
-          <div className={styles.title}>Realtime collaboration engine</div>
+          <div className={styles.eyebrow}>featured · 2024-2026</div>
+          <div className={styles.title}>Teaching Students</div>
           <p className={styles.desc}>
-            CRDT document sync with offline reconciliation and a merge UI for genuine conflicts. Rust
-            core compiled to WASM, shared by web and native.
+            Currently teaching Javascript, Arduino, Scratch and Python to students ages 6-16
           </p>
           <LinkRow links={LINKS} className={styles.links} />
         </div>
         <div className={styles.metrics}>
           <div>
-            <div className={styles.metricLabel}>p99</div>
-            <div className={styles.metricValue}>40 ms</div>
+            <div className={styles.metricLabel}>students</div>
+            <div className={styles.metricValue}>300+</div>
           </div>
           <div>
-            <div className={styles.metricLabel}>peers</div>
-            <div className={styles.metricValue}>1.2 k</div>
+            <div className={styles.metricLabel}>total projects</div>
+            <div className={styles.metricValue}>2,467</div>
           </div>
           <div>
             <div className={styles.metricLabel}>stack</div>
             <div className={styles.stack}>
-              Rust · WASM
+              JS · Rust
               <br />
-              WebSocket
+              Firebase
             </div>
           </div>
         </div>
