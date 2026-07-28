@@ -1,0 +1,20 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--hairline-strong);
+}
+
+.title {
+  font: 600 24px/1 var(--font-sans);
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.meta {
+  font: 500 10.5px/1 var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--faint);
+}

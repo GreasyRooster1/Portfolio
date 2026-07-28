@@ -1,0 +1,76 @@
+.card {
+  transition: transform 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 18px;
+}
+
+.title {
+  font: 600 21px/1.2 var(--font-sans);
+  color: var(--text);
+}
+
+.year {
+  font: 400 11px/1 var(--font-mono);
+  color: var(--faint);
+}
+
+.desc {
+  margin: 9px 0 0;
+  font: 400 14.5px/1.6 var(--font-sans);
+  color: var(--body);
+  text-wrap: pretty;
+}
+
+.stats {
+  display: flex;
+  align-items: flex-end;
+  gap: 26px;
+  margin-top: 16px;
+}
+
+.statLabel {
+  font: 400 10px/1 var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.statValue {
+  margin-top: 6px;
+  font: 500 22px/1 var(--font-mono);
+  color: var(--text);
+}
+
+.bar {
+  flex: 1;
+}
+
+.barFill {
+  height: 7px;
+  background: var(--accent);
+}
+
+.barTrack {
+  height: 7px;
+  margin-top: 5px;
+  background: var(--bar-track);
+}
+
+.barNote {
+  margin-top: 6px;
+  font: 400 9.5px/1 var(--font-mono);
+  color: var(--faint);
+}
+
+.links {
+  margin-top: 16px;
+}
