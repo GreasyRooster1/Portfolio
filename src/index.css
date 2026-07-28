@@ -27,7 +27,7 @@
   --font-sans: Archivo, Helvetica, system-ui, sans-serif;
 
   /* Layout */
-  --page-width: 1180px;
+  --page-width: 1580px;
   --index-cols: 44px 1fr 190px 160px 108px;
 }
 .dark, .dark-theme {

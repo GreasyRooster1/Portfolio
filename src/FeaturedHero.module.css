@@ -1,11 +1,11 @@
 .section {
   position: relative;
   margin: 60px 64px 0;
-  height: 50vh;
+  height: 60vh;
 }
 
 .box{
-  border: 1px solid var(--hairline);
+  border: 2px solid var(--hairline);
 }
 
 .eyebrow {
