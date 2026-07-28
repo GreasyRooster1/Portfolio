@@ -30,6 +30,9 @@
   --page-width: 1180px;
   --index-cols: 44px 1fr 190px 160px 108px;
 }
+.dark, .dark-theme {
+  --color-background: transparent !important; /* Your custom dark color */
+}
 
 * {
   box-sizing: border-box;
