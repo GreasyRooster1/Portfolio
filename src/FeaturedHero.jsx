@@ -35,7 +35,7 @@ export default function FeaturedHero() {
             </div>
           </Flex>
           <Flex className={styles.box} justify={"center"} align={"center"}>
-            <Flex width={"70%"} style={{justifyContent:"space-evenly"}}>
+            <Flex width={"100%"} style={{justifyContent:"space-evenly"}}>
               <TechIcon icon={firebaseIcon} name={"Firebase"}/>
               <TechIcon icon={viteIcon} name={"Vite"}/>
               <TechIcon icon={rustIcon} name={"Rust"}/>

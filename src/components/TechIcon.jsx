@@ -8,7 +8,7 @@ function TechIcon(props) {
     return (
         <Flex direction={"column"} justify={"center"}>
             <img src={props.icon} alt={"firebase logo"} width={"64px"} height={"64px"} style={{objectFit: "contain"}}/>
-            <Text className={styles.techText} mt={"2"}>{props.name}</Text>
+            <Text className={styles.techText} mt={"2"} align={"center"}>{props.name}</Text>
         </Flex>
     );
 }
