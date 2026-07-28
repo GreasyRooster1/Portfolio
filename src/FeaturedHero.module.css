@@ -37,12 +37,13 @@
 .metrics {
   display: flex;
   flex: none;
-  gap: 26px;
+  justify-content: space-evenly;
+  width: 100%;
   padding-bottom: 4px;
 }
 
 .metricLabel {
-  font: 400 10px/1 var(--font-mono);
+  font: 400 15px/1 var(--font-mono);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
@@ -50,7 +51,7 @@
 
 .metricValue {
   margin-top: 7px;
-  font: 500 24px/1 var(--font-mono);
+  font: 500 48px/1 var(--font-mono);
   color: var(--text);
 }
 
