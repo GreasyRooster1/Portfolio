@@ -64,3 +64,14 @@
 .techText{
   font-family: var(--font-mono);
 }
+
+.karmaClubLogo{
+  width: 80%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-55%,-55%);
+  z-index: -1;
+  opacity: 1;
+}

@@ -7,6 +7,7 @@ import React from "react";
 import firebaseIcon from '@assets/firebase.png'
 import viteIcon from '@assets/vite.svg'
 import rustIcon from '@assets/rust.png'
+import karmaImg from '@assets/karma2.png'
 import TechIcon from "@components/TechIcon.jsx";
 
 const LINKS = [{ label: 'live demo', accent: true }, { label: 'source' }, { label: 'writeup' }]
@@ -46,12 +47,13 @@ export default function FeaturedHero() {
         <Flex className={styles.box} gridRow={"2/2"} gridColumn={"1/1"} justify={"center"} align={"center"}>
 
         </Flex>
-        <Flex className={styles.box} gridRow={"2/2"} gridColumn={"2/4"} justify={"center"} align={"center"} px={"7"} direction={"column"} style={{fontSize:"14pt"}}>
+        <Flex className={styles.box} gridRow={"2/2"} gridColumn={"2/4"} justify={"center"} align={"center"} px={"7"} direction={"column"} style={{fontSize:"14pt",overflow:"clip",position:"relative",zIndex:"1"}}>
           <Quote wrap="pretty">Dillon was one of the most impressive student instructors I've ever seen. His ability to explain complex coding concepts with patience, clarity, and enthusiasm kept every student fully engaged from start to finish. Quite honestly, he taught with more skill and confidence than many professional educators. He has a remarkable gift for teaching and inspiring young people, and we were incredibly fortunate to have him lead our Coding Camp.</Quote>
           <br/>
           <Text align="right" style={{width:"100%"}} weight="bold">
             — Sally Newson, Founder, <a href={"https://karma-club.org/"}>Karma Club & The Kove</a>
           </Text>
+          <img className={styles.karmaClubLogo} src={karmaImg} />
         </Flex>
       </Grid>
     </section>
