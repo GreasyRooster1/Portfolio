@@ -12,7 +12,7 @@ import TechIcon from "@components/TechIcon.jsx";
 
 const LINKS = [{ label: 'live demo', accent: true }, { label: 'source' }, { label: 'writeup' }]
 
-export default function FeaturedHero() {\
+export default function FeaturedHero() {
 
 
 
@@ -49,8 +49,9 @@ export default function FeaturedHero() {\
 
         <Flex className={styles.box} gridRow={"2/2"} gridColumn={"1/1"} justify={"center"} align={"center"}>
           <div>
-            <div className={styles.metricLabel}>total lines</div>
-            <div className={styles.metricValue}>2,467</div>
+            <div className={styles.metricLabel}>total lines of code</div>
+            <div className={styles.linesValue}>500,467</div>
+            <div className={styles.linesSub}>by <span style={{color:"var(--accent)"}}>real</span> students ages 7-17</div>
           </div>
         </Flex>
         <Flex className={styles.box} gridRow={"2/2"} gridColumn={"2/4"} justify={"center"} align={"center"} px={"7"} direction={"column"} style={{fontSize:"14pt",overflow:"clip",position:"relative",zIndex:"1"}}>
