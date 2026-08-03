@@ -12,7 +12,10 @@ import TechIcon from "@components/TechIcon.jsx";
 
 const LINKS = [{ label: 'live demo', accent: true }, { label: 'source' }, { label: 'writeup' }]
 
-export default function FeaturedHero() {
+export default function FeaturedHero() {\
+
+
+
   return (
     <section className={styles.section}>
       <Grid style={{height:"60vh"}} columns={{initial:"1",sm:"1",lg:"3"}} gap={{initial:"2",lg:"3"}} >
@@ -45,7 +48,10 @@ export default function FeaturedHero() {
         </Grid>
 
         <Flex className={styles.box} gridRow={"2/2"} gridColumn={"1/1"} justify={"center"} align={"center"}>
-
+          <div>
+            <div className={styles.metricLabel}>total lines</div>
+            <div className={styles.metricValue}>2,467</div>
+          </div>
         </Flex>
         <Flex className={styles.box} gridRow={"2/2"} gridColumn={"2/4"} justify={"center"} align={"center"} px={"7"} direction={"column"} style={{fontSize:"14pt",overflow:"clip",position:"relative",zIndex:"1"}}>
           <Quote wrap="pretty">Dillon was one of the most impressive student instructors I've ever seen. His ability to explain complex coding concepts with patience, clarity, and enthusiasm kept every student fully engaged from start to finish. Quite honestly, he taught with more skill and confidence than many professional educators. He has a remarkable gift for teaching and inspiring young people, and we were incredibly fortunate to have him lead our Coding Camp.</Quote>
