@@ -90,3 +90,9 @@
   color: var(--muted);
 }
 
+.stackText{
+  font: 400 15px/1 var(--font-mono);
+  margin-top:14px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}

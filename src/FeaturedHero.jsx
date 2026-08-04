@@ -64,12 +64,14 @@ export default function FeaturedHero() {
                 </div>
               </div>
             </Flex>
-            <Flex className={styles.box} justify={"center"} align={"center"}>
-              <Flex width={"100%"} style={{justifyContent:"space-evenly"}}>
+            <Flex className={styles.box} justify={"center"} align={"center"} direction={"column"} gap="4">
+              <div className={styles.metricLabel}>tech stack</div>
+              <Flex width={"100%"} style={{justifyContent:"space-evenly"}} >
                 <TechIcon icon={firebaseIcon} name={"Firebase"}/>
                 <TechIcon icon={viteIcon} name={"Vite"}/>
                 <TechIcon icon={rustIcon} name={"Rust"}/>
               </Flex>
+              <div className={styles.stackText}>JavaScript • TypeScript • CSS</div>
             </Flex>
             <Flex className={styles.box} justify={"center"} align={"center"} >
               <div>

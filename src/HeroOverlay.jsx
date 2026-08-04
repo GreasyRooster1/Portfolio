@@ -11,7 +11,7 @@ function HeroOverlay(props) {
         <div className={styles.overlay}>
             <div>
                 <div className={styles.eyebrow}>featured · 2024-2026</div>
-                <div className={styles.title}>Teaching Students</div>
+                <div className={styles.title}>Inspiring Future Programmers</div>
                 <p className={styles.desc}>
                     Currently teaching Javascript, Arduino, Scratch and Python to students ages 6-16
                 </p>
