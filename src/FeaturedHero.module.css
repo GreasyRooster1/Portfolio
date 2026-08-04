@@ -71,7 +71,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(-55%,-55%);
+  transform: translate(-45%,-45%);
   z-index: -1;
   opacity: 1;
 }
