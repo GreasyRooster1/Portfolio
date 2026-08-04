@@ -13,6 +13,18 @@ import CountUp from "@components/CountUp.jsx";
 
 const LINKS = [{ label: 'live demo', accent: true }, { label: 'source' }, { label: 'writeup' }]
 
+import kc1 from "@assets/kc1.jpg"
+import kc2 from "@assets/kc2.jpg"
+import kc3 from "@assets/kc3.jpg"
+import kc4 from "@assets/kc4.jpg"
+import kc5 from "@assets/kc5.jpg"
+import kc6 from "@assets/kc6.jpg"
+import kc7 from "@assets/kc7.jpg"
+import kc8 from "@assets/kc8.jpg"
+import Carousel from "@components/Carousel.jsx";
+
+const images = [kc1,kc2,kc3,kc4,kc5,kc6,kc7,kc8];
+
 export default function FeaturedHero() {
   const [totalLines, setTotalLines] = useState(527886)
   const [totalProjects, setTotalProjects] = useState(2523)
@@ -43,6 +55,7 @@ export default function FeaturedHero() {
             <div>
               <HeroOverlay />
             </div>
+            <Carousel images={images}/>
           </Flex>
           <Grid gridRow={"1/1"} gridColumn={"3/3"} direction="column" gap={{initial:"2",lg:"3"}} height={"100%"} width={"25%"} minWidth={"330px"}>
             <Flex className={styles.box} justify={"center"} align={"center"}>
