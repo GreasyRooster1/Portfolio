@@ -49,7 +49,16 @@ export default function FeaturedHero() {
               <div className={styles.metrics}>
                 <div>
                   <div className={styles.metricLabel}>students</div>
-                  <div className={styles.metricValue}>300+</div>
+                  <div className={styles.metricValue}>
+                    <CountUp className={styles.metricValue}
+                             from={100}
+                             to={300}
+                             separator=","
+                             direction="up"
+                             duration={.5}
+                             delay={0}
+                    />+
+                  </div>
                 </div>
                 <div>
                   <div className={styles.metricLabel}>total projects</div>
