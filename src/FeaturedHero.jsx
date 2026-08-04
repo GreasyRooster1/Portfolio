@@ -51,9 +51,9 @@ export default function FeaturedHero() {
     <section className={styles.section}>
       <Flex direction="column" gap={{initial:"2",lg:"3"}} width={"100%"}>
         <Flex direction="row" style={{height:"50vh"}} gap={{initial:"2",lg:"3"}} width={"100%"}>
-          <Flex className={styles.box} gridRow={"1/1"} gridColumn={"1/3"} height={"100%"} flexGrow="1" style={{position:"relative",zIndex:1}}>
-            <Carousel images={images} style={{position:"absolute",zIndex:-1}}/>
-            <div style={{width:"100%"}}>
+          <Flex className={styles.box} gridRow={"1/1"} gridColumn={"1/3"} height={"100%"} width={"100%"} flexGrow="1" style={{position:"relative",zIndex:1,overflow: "clip"}}>
+            <Carousel images={images} style={{position:"absolute",zIndex:-1}} />
+            <div style={{width:"100%",pointerEvents:"none"}}>
               <HeroOverlay />
             </div>
           </Flex>
