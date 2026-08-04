@@ -16,14 +16,12 @@ function Carousel(props) {
     }
 
     const handlePreviousClick = () => {
-        resetClock();
         setCurrentImageIndex(
             currentImageIndex === 0 ? props.images.length - 1 : currentImageIndex - 1
         );
     };
 
     const handleNextClick = () => {
-        resetClock();
         setCurrentImageIndex((currentImageIndex + 1) % props.images.length);
     };
 

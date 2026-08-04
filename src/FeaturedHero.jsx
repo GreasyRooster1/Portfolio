@@ -10,8 +10,7 @@ import rustIcon from '@assets/rust.png'
 import karmaImg from '@assets/karma2.png'
 import TechIcon from "@components/TechIcon.jsx";
 import CountUp from "@components/CountUp.jsx";
-
-const LINKS = [{ label: 'live demo', accent: true }, { label: 'source' }, { label: 'writeup' }]
+import Carousel from "@components/Carousel.jsx";
 
 import kc1 from "@assets/kc1.jpg"
 import kc2 from "@assets/kc2.jpg"
@@ -21,9 +20,10 @@ import kc5 from "@assets/kc5.jpg"
 import kc6 from "@assets/kc6.jpg"
 import kc7 from "@assets/kc7.jpg"
 import kc8 from "@assets/kc8.jpg"
-import Carousel from "@components/Carousel.jsx";
+import snake from "@assets/snakelesson.png"
 
-const images = [kc1,kc2,kc3,kc4,kc5,kc6,kc7,kc8];
+const LINKS = [{ label: 'live demo', accent: true }, { label: 'source' }, { label: 'writeup' }]
+const images = [kc1,kc2,kc3,kc4,kc5,kc6,kc7,kc8,snake];
 
 export default function FeaturedHero() {
   const [totalLines, setTotalLines] = useState(527886)
@@ -33,10 +33,7 @@ export default function FeaturedHero() {
     fetch("https://portfolio-api.dillonjw.com/qcode_line_count")
         .then((data) => {
           data.json().then((dataJson) => {
-            setTimeout(()=>{
-              setTotalLines(dataJson)
-            },500)
-
+            setTotalLines(dataJson)
           })
         })
     fetch("https://portfolio-api.dillonjw.com/qcode_project_count")
@@ -88,7 +85,7 @@ export default function FeaturedHero() {
             </Flex>
             <Flex className={styles.box} justify={"center"} align={"center"} direction={"column"} gap="4">
               <div className={styles.metricLabel}>tech stack</div>
-              <Flex width={"100%"} style={{justifyContent:"space-evenly"}} >
+              <Flex width={"100%"} style={{justifyContent:"space-evenly"}} px="2">
                 <TechIcon icon={firebaseIcon} name={"Firebase"}/>
                 <TechIcon icon={viteIcon} name={"Vite"}/>
                 <TechIcon icon={rustIcon} name={"Rust"}/>
