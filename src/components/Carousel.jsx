@@ -33,7 +33,7 @@ function Carousel(props) {
     }, [currentImageIndex]);
 
     return (
-        <div className={styles.imageContainer}>
+        <div className={styles.imageContainer} style={props.style}>
             <button className={`${styles.navButton} ${styles.left}`} onClick={handlePreviousClick}>&lt;</button>
 
             {props.images.map((image, index) => (
