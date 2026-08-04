@@ -15,14 +15,16 @@ const LINKS = [{ label: 'live demo', accent: true }, { label: 'source' }, { labe
 
 export default function FeaturedHero() {
   const [totalLines, setTotalLines] = useState(527886)
-  const [totalProjects, setTotalProjects] = useState(2000)
+  const [totalProjects, setTotalProjects] = useState(2523)
 
   useEffect(() => {
     fetch("https://portfolio-api.dillonjw.com/qcode_line_count")
         .then((data) => {
           data.json().then((dataJson) => {
+            setTimeout(()=>{
+              setTotalLines(dataJson)
+            },500)
 
-            setTotalLines(dataJson)
           })
         })
     fetch("https://portfolio-api.dillonjw.com/qcode_project_count")
@@ -56,7 +58,7 @@ export default function FeaturedHero() {
                          to={totalProjects}
                          separator=","
                          direction="up"
-                         duration={1}
+                         duration={.5}
                          delay={0}
                 />
               </div>
@@ -74,8 +76,15 @@ export default function FeaturedHero() {
         <Flex className={styles.box} gridRow={"2/2"} gridColumn={"1/1"} justify={"center"} align={"center"}>
           <div>
             <div className={styles.metricLabel}>total lines of code</div>
-            <div className={styles.linesValue}>500,467</div>
-            <div className={styles.linesSub}>by <span style={{color:"var(--accent)"}}>real</span> students ages 7-17</div>
+            <CountUp className={styles.linesValue}
+                     from={100000}
+                     to={totalLines}
+                     separator=","
+                     direction="up"
+                     duration={.5}
+                     delay={0}
+            />
+            <div className={styles.linesSub}>by <span style={{color:"var(--accent)"}}>real</span> students ages 6-16</div>
           </div>
         </Flex>
         <Flex className={styles.box} gridRow={"2/2"} gridColumn={"2/4"} justify={"center"} align={"center"} px={"7"} direction={"column"} style={{fontSize:"14pt",overflow:"clip",position:"relative",zIndex:"1"}}>
