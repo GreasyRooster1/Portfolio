@@ -3,18 +3,35 @@ import LinkRow from '@components/LinkRow'
 import styles from './FeaturedHero.module.css'
 import HeroOverlay from "@/HeroOverlay.jsx";
 import {Box, Flex, Grid, Quote, Text} from "@radix-ui/themes";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import firebaseIcon from '@assets/firebase.png'
 import viteIcon from '@assets/vite.svg'
 import rustIcon from '@assets/rust.png'
 import karmaImg from '@assets/karma2.png'
 import TechIcon from "@components/TechIcon.jsx";
+import CountUp from "@components/CountUp.jsx";
 
 const LINKS = [{ label: 'live demo', accent: true }, { label: 'source' }, { label: 'writeup' }]
 
 export default function FeaturedHero() {
+  const [totalLines, setTotalLines] = useState(527886)
+  const [totalProjects, setTotalProjects] = useState(2000)
 
+  useEffect(() => {
+    fetch("https://portfolio-api.dillonjw.com/qcode_line_count")
+        .then((data) => {
+          data.json().then((dataJson) => {
 
+            setTotalLines(dataJson)
+          })
+        })
+    fetch("https://portfolio-api.dillonjw.com/qcode_project_count")
+        .then((data) => {
+          data.json().then((dataJson) => {
+              setTotalProjects(dataJson)
+          })
+        })
+  },[])
 
   return (
     <section className={styles.section}>
@@ -34,7 +51,14 @@ export default function FeaturedHero() {
               </div>
               <div>
                 <div className={styles.metricLabel}>total projects</div>
-                <div className={styles.metricValue}>2,467</div>
+                <CountUp className={styles.metricValue}
+                         from={1000}
+                         to={totalProjects}
+                         separator=","
+                         direction="up"
+                         duration={1}
+                         delay={0}
+                />
               </div>
             </div>
           </Flex>
