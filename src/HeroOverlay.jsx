@@ -3,12 +3,13 @@ import {Flex, Grid} from "@radix-ui/themes";
 import Placeholder from "@components/Placeholder.jsx";
 import styles from "./heroOverlay.module.css";
 import LinkRow from "@components/LinkRow.jsx";
+import Overlay from "@components/Overlay.jsx";
 
 const LINKS = [{ label: 'live demo', accent: true }, { label: 'source' }, { label: 'writeup' }]
 
 function HeroOverlay(props) {
     return (
-        <div className={styles.overlay}>
+        <Overlay>
             <div>
                 <div className={styles.eyebrow}>featured · 2024-2026</div>
                 <div className={styles.title}>Inspiring Future Programmers</div>
@@ -17,8 +18,7 @@ function HeroOverlay(props) {
                 </p>
                 <LinkRow links={LINKS} className={styles.links} />
             </div>
-
-        </div>
+        </Overlay>
     );
 }
 
