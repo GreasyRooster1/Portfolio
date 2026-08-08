@@ -7,7 +7,7 @@ export default function Nav() {
   return (
     <nav className={styles.nav}>
       <div className={styles.brand}>
-        Your Name
+        Dillon Wilson
         <Cursor />
       </div>
       <div className={styles.links}>
