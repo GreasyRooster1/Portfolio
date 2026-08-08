@@ -24,7 +24,7 @@
       "desc": "Simulates ropes, cloth, springs, and planets using a variation of the Semi-implicit Euler Method. Optimized to handle thousands of objects on a single thread. Fully deterministic",
       "stats": [
         { "k": "Language", "v": "Java, Rust" },
-        { "k": "particles @ 60fps", "v": "10,000" }
+        { "k": "particles @ 60fps", "v": "5,000" }
       ],
       "links": [
         { "label": "demo", "accent": true },
