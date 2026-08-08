@@ -1,5 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import styles from './carousel.module.css';
+import { TbChevronCompactLeft } from "react-icons/tb";
+import { TbChevronCompactRight } from "react-icons/tb";
+
+
 
 function Carousel(props) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -32,7 +36,7 @@ function Carousel(props) {
 
     return (
         <div className={styles.imageContainer} style={props.style}>
-            <button className={`${styles.navButton} ${styles.left}`} onClick={handlePreviousClick}>&lt;</button>
+            <TbChevronCompactLeft className={`${styles.navButton} ${styles.left}`} onClick={handlePreviousClick}/>
 
             {props.images.map((image, index) => (
                 <img
@@ -43,7 +47,7 @@ function Carousel(props) {
                 />
             ))}
 
-            <button className={`${styles.navButton} ${styles.right}`} onClick={handleNextClick}>&gt;</button>
+            <TbChevronCompactRight className={`${styles.navButton} ${styles.right}`} onClick={handleNextClick}/>
 
         </div>
     )
