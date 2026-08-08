@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid} from "@radix-ui/themes";
+import {Flex, Grid} from "@radix-ui/themes";
 import Overlay from "@components/Overlay.jsx";
 import styles from "./ProjectsGrid.module.css";
 import sp1 from "@assets/StudentProjects/1.png"
@@ -11,12 +11,12 @@ import sp6 from "@assets/StudentProjects/6.png"
 import sp7 from "@assets/StudentProjects/7.png"
 import sp8 from "@assets/StudentProjects/8.png"
 import sp9 from "@assets/StudentProjects/9.png"
+import LinkRow from "@components/LinkRow.jsx";
 
 
 function ProjectsGrid(props) {
     return (
         <div style={{width:"100%",pointerEvents:"none"}}>
-            <Overlay>sd</Overlay>
             <Grid columns="3" rows="3" width="100%" height="100%" className={styles.grid}>
                 <ImageGrid/>
                 <ImageGrid/>
@@ -28,6 +28,14 @@ function ProjectsGrid(props) {
                 <ImageGrid/>
                 <ImageGrid/>
             </Grid>
+            <Overlay style={{height:"60%",padding:"5%"}}>
+                <Flex width={"100%"} direction={"column"} align={"left"}>
+                    <div className={styles.title}>Student Projects</div>
+                    <span className={styles.desc}>
+                        <span style={{color:"var(--accent)"}}>Click</span> to see real student projects
+                    </span>
+                </Flex>
+            </Overlay>
         </div>
     );
 }

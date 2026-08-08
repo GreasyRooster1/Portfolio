@@ -8,7 +8,7 @@ const LINKS = [{ label: 'live demo', accent: true }, { label: 'source' }, { labe
 
 function HeroOverlay(props) {
     return (
-        <div className={styles.overlay}>
+        <div className={styles.overlay} {...props}>
             {props.children}
         </div>
     );
