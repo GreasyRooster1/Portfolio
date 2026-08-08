@@ -3,7 +3,7 @@
     {
       "title": "Software Raytracer",
       "year": "2024",
-      "imgSrc": "/Featured/WeekendRaytracing.png",
+      "imgSrc": "/Featured/WeekendRaytracing2.png",
       "imgH": 310,
       "desc": "A CPU based path tracer. Simulates light rays bouncing and refracting around a scene to create a realistic image. Supports reflective materials, glass and emissive materials",
       "stats": [

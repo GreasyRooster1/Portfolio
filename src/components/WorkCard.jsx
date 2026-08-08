@@ -2,10 +2,10 @@ import Placeholder from './Placeholder'
 import LinkRow from './LinkRow'
 import styles from './WorkCard.module.css'
 
-export default function WorkCard({ note, imgH, title, year, desc, stats, bar, links }) {
+export default function WorkCard({ note, imgH, title, year, desc, stats, bar, links, imgSrc}) {
   return (
     <div className={styles.card}>
-      <Placeholder height={imgH} note={note} />
+      <img className={styles.image} height={imgH} src={imgSrc} alt="" />
       <div className={styles.head}>
         <div className={styles.title}>{title}</div>
         <div className={styles.year}>{year}</div>

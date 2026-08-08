@@ -74,3 +74,11 @@
 .links {
   margin-top: 16px;
 }
+
+.image{
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid var(--hairline);
+}
