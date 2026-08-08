@@ -12,14 +12,14 @@ import TechIcon from "@components/TechIcon.jsx";
 import CountUp from "@components/CountUp.jsx";
 import Carousel from "@components/Carousel.jsx";
 
-import kc1 from "@assets/kc1.jpg"
-import kc2 from "@assets/kc2.jpg"
-import kc3 from "@assets/kc3.jpg"
-import kc4 from "@assets/kc4.jpg"
-import kc5 from "@assets/kc5.jpg"
-import kc6 from "@assets/kc6.jpg"
-import kc7 from "@assets/kc7.jpg"
-import kc8 from "@assets/kc8.jpg"
+import kc1 from "@assets/KC/kc1.jpg"
+import kc2 from "@assets/KC/kc2.jpg"
+import kc3 from "@assets/KC/kc3.jpg"
+import kc4 from "@assets/KC/kc4.jpg"
+import kc5 from "@assets/KC/kc5.jpg"
+import kc6 from "@assets/KC/kc6.jpg"
+import kc7 from "@assets/KC/kc7.jpg"
+import kc8 from "@assets/KC/kc8.jpg"
 import snake from "@assets/snakelesson.png"
 import Overlay from "@components/Overlay.jsx";
 import ProjectsGrid from "@/ProjectsGrid.jsx";
