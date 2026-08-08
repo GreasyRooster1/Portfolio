@@ -49,6 +49,10 @@ a {
   color: inherit;
 }
 
+a:hover{
+  color: var(--accent);
+}
+
 @keyframes blink {
   0%,
   49% {
