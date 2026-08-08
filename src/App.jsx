@@ -10,15 +10,22 @@ import About from './components/About'
 import Footer from './components/Footer'
 import styles from './App.module.css'
 import {useEffect, useState} from "react";
+import projectData from '@assets/projects.json';
 
 export default function App() {
-    const [totalProjects, setTotalProjects] = useState(2523)
+    const [data, setData] = useState(projectData)
 
     useEffect(() => {
         fetch("https://portfolio-api.dillonjw.com/projects")
-            .then((data) => {
-                data.json().then((dataJson) => {
-                    setTotalLines(dataJson)
+            .then((res) => {
+                if(!res.ok) {
+                    return;
+                }
+                res.json().then((d) => {
+                    if(Object.keys(d).length === 0){
+                        return;
+                    }
+                    setData(d)
                 })
             })
     },[])
@@ -27,9 +34,9 @@ export default function App() {
             <Nav />
             <Hero/>
             <FeaturedHero />
-            <SelectedWork />
-            <ProjectIndex />
-            <About />
+            <SelectedWork projects={data.featured}/>
+            <ProjectIndex projects={data.list}/>
+            <About experiments={data.experiments} />
             <Footer />
         </div>
     )

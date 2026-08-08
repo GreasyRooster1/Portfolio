@@ -1,7 +1,7 @@
 import styles from './About.module.css'
 import { ABOUT_STATS, EXPERIMENTS } from '../data'
 
-export default function About() {
+export default function About(props) {
   return (
     <section id="about" className={styles.section}>
       <div>
@@ -28,14 +28,13 @@ export default function About() {
       <div>
         <div className={styles.label}>Experiments</div>
         <div className={styles.experiments}>
-          {EXPERIMENTS.map((e, i) => (
+          {props.experiments.map((e, i) => (
             <a
               key={e.name}
               href="#7a"
               className={[
                 styles.experiment,
-                e.muted ? styles.experimentMuted : '',
-                i === EXPERIMENTS.length - 1 ? styles.experimentLast : '',
+                i === props.experiments.length - 1 ? styles.experimentLast : '',
               ]
                 .filter(Boolean)
                 .join(' ')}
