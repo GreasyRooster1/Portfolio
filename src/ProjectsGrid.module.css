@@ -7,12 +7,12 @@
     width: 300%;
     height: 300%;
     pointer-events: none;
-    animation: 3s infinite forwards move;
+    animation: 20s infinite forwards move linear;
 }
 
 @keyframes move {
     0%{
-        transform: translateX(-66%) translateY(-66%);
+        transform: translateX(-33%) translateY(-33%);
     }
     100%{
         transform: translateX(0) translateY(0);
