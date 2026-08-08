@@ -1,16 +1,15 @@
 {
   "featured": [
     {
-      "title": " collaboration engine",
-      "year": "2026",
-      "note": "screenshot 4:3",
+      "title": "Software Raytracer",
+      "year": "2024",
+      "imgSrc": "/Featured/WeekendRaytracing.png",
       "imgH": 310,
-      "desc": "CRDT document sync with offline reconciliation and a merge UI for genuine conflicts. Rust core compiled to WASM, shared by web and native.",
+      "desc": "A CPU based path tracer. Simulates light rays bouncing and refracting around a scene to create a realistic image. Supports reflective materials, glass and emissive materials",
       "stats": [
-        { "k": "p99", "v": "40 ms" },
-        { "k": "peers", "v": "1.2 k" }
+        { "k": "Language", "v": "Java" },
+        { "k": "Rays", "v": "2,844,444+" }
       ],
-      "bar": { "pct": 24, "note": "vs. 165 ms baseline" },
       "links": [
         { "label": "demo", "accent": true },
         { "label": "source" },
