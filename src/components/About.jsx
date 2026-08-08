@@ -26,7 +26,7 @@ export default function About() {
         </div>
       </div>
       <div>
-        <div className={styles.label}>Experiments — one evening each</div>
+        <div className={styles.label}>Experiments</div>
         <div className={styles.experiments}>
           {EXPERIMENTS.map((e, i) => (
             <a

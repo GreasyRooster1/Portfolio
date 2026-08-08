@@ -67,7 +67,6 @@ export const EXPERIMENTS = [
   { name: 'Terminal typing trainer', tag: 'GO' },
   { name: 'Chord voicing explorer', tag: 'WEBAUDIO' },
   { name: 'Regex → NFA visualiser', tag: 'CANVAS' },
-  { name: '+ 6 more', tag: 'ALL', muted: true },
 ]
 
 export const ABOUT_STATS = [
