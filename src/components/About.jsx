@@ -11,14 +11,18 @@ export default function About() {
           make decisions, and what you're looking for next.
         </p>
         <div className={styles.stats}>
-          {ABOUT_STATS.map((s) => (
-            <div key={s.k}>
-              <div className={`${styles.statValue} ${s.accent ? styles.statValueAccent : ''}`}>
-                {s.v}
-              </div>
-              <div className={styles.statLabel}>{s.k}</div>
+            <div>
+                <div className={`${styles.statValue} ${styles.statValueAccent}`}>
+                    11 Years
+                </div>
+                <div className={styles.statLabel}>Programming Experience</div>
             </div>
-          ))}
+            <div>
+                <div className={`${styles.statValue}`}>
+                    Hundreds
+                </div>
+                <div className={styles.statLabel}>Of Projects</div>
+            </div>
         </div>
       </div>
       <div>

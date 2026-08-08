@@ -1,0 +1,157 @@
+{
+  "featured": [
+    {
+      "title": "Realtime collaboration engine",
+      "year": "2026",
+      "note": "screenshot 4:3",
+      "imgH": 310,
+      "desc": "CRDT document sync with offline reconciliation and a merge UI for genuine conflicts. Rust core compiled to WASM, shared by web and native.",
+      "stats": [
+        { "k": "p99", "v": "40 ms" },
+        { "k": "peers", "v": "1.2 k" }
+      ],
+      "bar": { "pct": 24, "note": "vs. 165 ms baseline" },
+      "links": [
+        { "label": "demo", "accent": true },
+        { "label": "source" },
+        { "label": "writeup" }
+      ]
+    },
+    {
+      "title": "GPU particle simulator",
+      "year": "2025",
+      "note": "screen capture / gif",
+      "imgH": 310,
+      "desc": "Compute-shader fluid field with zero CPU readback — sorting and binning happen entirely on device.",
+      "stats": [
+        { "k": "particles", "v": "2.0 M" },
+        { "k": "frame", "v": "16 ms" }
+      ],
+      "links": [
+        { "label": "demo", "accent": true },
+        { "label": "source" }
+      ]
+    },
+    {
+      "title": "Distributed job scheduler",
+      "year": "2025",
+      "note": "architecture diagram",
+      "imgH": 250,
+      "desc": "Work-stealing queue with exactly-once delivery, Raft-replicated leases and a replay log for post-mortems.",
+      "stats": [
+        { "k": "throughput", "v": "12 k/s" },
+        { "k": "dupes", "v": "0 / 40 M" }
+      ],
+      "links": [
+        { "label": "source" },
+        { "label": "writeup" }
+      ]
+    },
+    {
+      "title": "Vector search engine",
+      "year": "2024",
+      "note": "benchmark chart",
+      "imgH": 250,
+      "desc": "HNSW index written from scratch with hand-tuned SIMD distance kernels and a memory-mapped store.",
+      "stats": [
+        { "k": "p50", "v": "1.8 ms" },
+        { "k": "corpus", "v": "10 M" }
+      ],
+      "links": [
+        { "label": "bench", "accent": true },
+        { "label": "source" }
+      ]
+    }
+  ],
+  "list": [
+    {
+      "n": "01",
+      "title": "Realtime collaboration engine",
+      "sub": "CRDT sync with offline reconciliation",
+      "stack": "Rust · WASM",
+      "result": "40 ms p99",
+      "links": [
+        { "label": "demo", "accent": true },
+        { "label": "src" }
+      ]
+    },
+    {
+      "n": "02",
+      "title": "GPU particle simulator",
+      "sub": "Compute-shader fluid field, zero readback",
+      "stack": "WebGPU · TS",
+      "result": "2 M @ 60 fps",
+      "links": [
+        { "label": "demo", "accent": true },
+        { "label": "src" }
+      ]
+    },
+    {
+      "n": "03",
+      "title": "Distributed job scheduler",
+      "sub": "Work-stealing queue, exactly-once",
+      "stack": "Go · Raft",
+      "result": "12 k jobs/s",
+      "links": [
+        { "label": "writeup" }
+      ]
+    },
+    {
+      "n": "04",
+      "title": "Toy language + compiler",
+      "sub": "Parser, SSA IR, LLVM backend",
+      "stack": "C++ · LLVM",
+      "result": "Self-hosting, 9 k LOC",
+      "links": [
+        { "label": "src" }
+      ]
+    },
+    {
+      "n": "05",
+      "title": "Vector search engine",
+      "sub": "HNSW from scratch, SIMD kernels",
+      "stack": "Rust · AVX2",
+      "result": "1.8 ms p50",
+      "links": [
+        { "label": "bench", "accent": true },
+        { "label": "src" }
+      ]
+    },
+    {
+      "n": "06",
+      "title": "Offline-first mobile client",
+      "sub": "Local SQLite as source of truth",
+      "stack": "Swift · Kotlin",
+      "result": "Works at 0 bars",
+      "links": [
+        { "label": "video" }
+      ]
+    },
+    {
+      "n": "07",
+      "title": "Path-traced renderer",
+      "sub": "BVH build, importance sampling, denoiser",
+      "stack": "C++ · TBB",
+      "result": "90 s → 4 s / frame",
+      "links": [
+        { "label": "gallery" }
+      ]
+    },
+    {
+      "n": "08",
+      "title": "Log ingestion pipeline",
+      "sub": "Backpressure-aware fan-out with replay",
+      "stack": "Kafka · ClickHouse",
+      "result": "200 k events/s",
+      "links": [
+        { "label": "writeup" }
+      ]
+    }
+  ],
+  "experiments": [
+    { "name": "Terminal typing trainer", "tag": "GO" },
+    { "name": "Chord voicing explorer", "tag": "WEBAUDIO" },
+    { "name": "Regex → NFA visualiser", "tag": "CANVAS" },
+    { "name": "+ 6 more", "tag": "ALL", "muted": true }
+  ]
+}
