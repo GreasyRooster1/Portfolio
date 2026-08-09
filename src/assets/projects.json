@@ -19,8 +19,9 @@
     {
       "title": "Rigid body Physics Simulation",
       "year": "2025",
-      "imgSrc": "/Featured/VerletIntegration2.png",
+      "imgSrc": "/Featured/VerletIntegration2.mp4",
       "imgH": 310,
+      "isVideo": true,
       "desc": "Simulates ropes, cloth, springs, and planets using a variation of the Semi-implicit Euler Method. Optimized to handle thousands of objects on a single thread. Fully deterministic",
       "stats": [
         { "k": "Language", "v": "Java, Rust" },
