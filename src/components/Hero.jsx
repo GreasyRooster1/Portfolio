@@ -7,7 +7,7 @@ export default function Hero() {
     <header className={styles.hero}>
       <div>
         <div className={styles.eyebrow}>
-          solo developer · graphics · distributed systems · product
+          full stack developer · web · systems programming · graphics
         </div>
         <h1 className={styles.title}>
           Interfaces and the <span className={styles.accent}>machinery</span> underneath them.
@@ -15,20 +15,20 @@ export default function Hero() {
       </div>
       <div>
         <p className={styles.lede}>
-          Eight years taking projects from a blank repo to something people use daily. Everything
-          below is live, benchmarked and open source.
+          Eleven years taking blank projects to full apps. Hundreds of experiments, games, apps and utilities created over the years. Below are some of my personal favorites
         </p>
         <div className={styles.actions}>
-          <a href="#7a" className={`${styles.btn} ${styles.btnPrimary}`}>
-            résumé.pdf
+          {/*<a href="#7a" className={`${styles.btn} ${styles.btnPrimary}`}>*/}
+          {/*  résumé.pdf*/}
+          {/*</a>*/}
+          <a href="https://github.com/GreasyRooster1/" className={`${styles.btn} ${styles.btnPrimary}`}>
+            GitHub
           </a>
-          {SECONDARY_ACTIONS.map((l) => (
-            <a key={l} href="#7a" className={`${styles.btn} ${styles.btnGhost}`}>
-              {l}
-            </a>
-          ))}
+          <a href="mailto:dillonjwilson1@gmail.com" className={`${styles.btn}  ${styles.btnGhost}`}>
+            Email
+          </a>
         </div>
-        <div className={styles.availability}>available · [City] · replies within a day</div>
+        {/*<div className={styles.availability}>available · [City] · replies within a day</div>*/}
       </div>
     </header>
   )
