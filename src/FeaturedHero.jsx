@@ -23,6 +23,7 @@ import kc8 from "@assets/KC/kc8.jpg"
 import snake from "@assets/snakelesson.png"
 import Overlay from "@components/Overlay.jsx";
 import ProjectsGrid from "@/ProjectsGrid.jsx";
+import HeroQuote from "@components/HeroQuote.jsx";
 
 const LINKS = [{ label: 'live demo', accent: true }, { label: 'source' }, { label: 'writeup' }]
 const images = [kc1,kc2,kc3,kc4,kc5,kc6,kc7,kc8,snake];
@@ -115,13 +116,13 @@ export default function FeaturedHero() {
           <Flex className={styles.box} justify={"center"} align={"center"} width={"30%"} style={{position:"relative",overflow:"clip"}}>
             <ProjectsGrid/>
           </Flex>
-          <Flex className={styles.box} justify={"center"} align={"center"} width={"70%"} px={"7"} direction={"column"} style={{fontSize:"14pt",overflow:"clip",position:"relative",zIndex:"1"}}>
-            <Quote wrap="pretty">Dillon was one of the most impressive student instructors I've ever seen. His ability to explain complex coding concepts with patience, clarity, and enthusiasm kept every student fully engaged from start to finish. Quite honestly, he taught with more skill and confidence than many professional educators. He has a remarkable gift for teaching and inspiring young people, and we were incredibly fortunate to have him lead our Coding Camp.</Quote>
-            <br/>
-            <Text align="right" style={{width:"100%"}} weight="bold">
-              — Sally Newson, Founder, <a href={"https://karma-club.org/"}>Karma Club & The Kove</a>
-            </Text>
-            <img className={styles.karmaClubLogo} src={karmaImg} />
+          <Flex className={styles.box} justify={"center"} align={"center"} width={"70%"} direction={"column"} style={{fontSize:"14pt",overflow:"clip",position:"relative",zIndex:"1"}}>
+            <HeroQuote author={(<>
+              Sally Newson, Founder, <a href={"https://karma-club.org/"}>Karma Club & The Kove</a>
+            </>)}
+            src={karmaImg}>
+              Dillon was one of the most impressive student instructors I've ever seen. His ability to explain complex coding concepts with patience, clarity, and enthusiasm kept every student fully engaged from start to finish. Quite honestly, he taught with more skill and confidence than many professional educators. He has a remarkable gift for teaching and inspiring young people, and we were incredibly fortunate to have him lead our Coding Camp.
+            </HeroQuote>
           </Flex>
         </Flex>
       </Flex>
