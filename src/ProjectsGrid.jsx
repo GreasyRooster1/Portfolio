@@ -16,7 +16,7 @@ import LinkRow from "@components/LinkRow.jsx";
 
 function ProjectsGrid(props) {
     return (
-        <div style={{width:"100%"}}>
+        <a className={styles.main} style={{width:"100%"}} href={"https://google.com"}>
             <Grid columns="3" rows="3" width="100%" height="100%" className={styles.grid}>
                 <ImageGrid/>
                 <ImageGrid/>
@@ -36,7 +36,7 @@ function ProjectsGrid(props) {
                     </span>
                 </Flex>
             </Overlay>
-        </div>
+        </a>
     );
 }
 
