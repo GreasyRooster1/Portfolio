@@ -50,14 +50,16 @@
       ]
     },
     {
-      "title": "Vector search engine",
-      "year": "2024",
-      "note": "benchmark chart",
+      "title": "Falling Sand",
+      "year": "2022-2024",
+      "imgSrc": "/Featured/PowderLarge.png",
+      "isVideo": false,
+      "videoSrc": "/Featured/RaycastingEngine1.mp4",
       "imgH": 250,
-      "desc": "HNSW index written from scratch with hand-tuned SIMD distance kernels and a memory-mapped store.",
+      "desc": "A series of falling sand simulations. Simulates a gamified version of a variety of materials, including sand, water, lava, acid, and many more. Each simulation built on the last, and each offers something unique",
       "stats": [
-        { "k": "p50", "v": "1.8 ms" },
-        { "k": "corpus", "v": "10 M" }
+        { "k": "Languages", "v": "Java, JS" },
+        { "k": "total elements", "v": "136" }
       ],
       "links": [
         { "label": "bench", "accent": true },
