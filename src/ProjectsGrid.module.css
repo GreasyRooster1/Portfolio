@@ -30,3 +30,11 @@
     color: var(--body);
     text-wrap: pretty;
 }
+
+.link{
+    color:var(--accent)
+}
+
+.link:hover{
+    text-decoration: underline;
+}

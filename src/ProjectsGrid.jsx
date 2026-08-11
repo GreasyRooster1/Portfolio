@@ -16,7 +16,7 @@ import LinkRow from "@components/LinkRow.jsx";
 
 function ProjectsGrid(props) {
     return (
-        <div style={{width:"100%",pointerEvents:"none"}}>
+        <div style={{width:"100%"}}>
             <Grid columns="3" rows="3" width="100%" height="100%" className={styles.grid}>
                 <ImageGrid/>
                 <ImageGrid/>
@@ -32,7 +32,7 @@ function ProjectsGrid(props) {
                 <Flex width={"100%"} direction={"column"} align={"left"}>
                     <div className={styles.title}>Student Projects</div>
                     <span className={styles.desc}>
-                        <span style={{color:"var(--accent)"}}>Click</span> to see real student projects
+                        <a className={styles.link}>Click here</a> to see real student projects
                     </span>
                 </Flex>
             </Overlay>
