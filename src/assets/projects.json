@@ -70,9 +70,9 @@
   "list": [
     {
       "n": "01",
-      "title": " collaboration engine",
-      "sub": "CRDT sync with offline reconciliation",
-      "stack": "Rust · WASM",
+      "title": "Minimal Desktop Station",
+      "sub": "Setup many centrally accessible desktop stations on a server for minimal cost",
+      "stack": "Raspberry Pi · Proxmox",
       "result": "40 ms p99",
       "links": [
         { "label": "demo", "accent": true },
@@ -81,9 +81,9 @@
     },
     {
       "n": "02",
-      "title": "GPU particle simulator",
-      "sub": "Compute-shader fluid field, zero readback",
-      "stack": "WebGPU · TS",
+      "title": "Digital Yondr Replacement",
+      "sub": "Uses screen time API and NFC tags to allow for school districts to restrict phone usage during school hours",
+      "stack": "Rust · Swift",
       "result": "2 M @ 60 fps",
       "links": [
         { "label": "demo", "accent": true },
@@ -92,9 +92,9 @@
     },
     {
       "n": "03",
-      "title": "Distributed job scheduler",
-      "sub": "Work-stealing queue, exactly-once",
-      "stack": "Go · Raft",
+      "title": "Dynamic Planet Renderer",
+      "sub": "Renders a planet as a dynamic LOD mesh that increases resolution as the camera approaches to optimize performance",
+      "stack": "Rust",
       "result": "12 k jobs/s",
       "links": [
         { "label": "writeup" }
@@ -102,9 +102,9 @@
     },
     {
       "n": "04",
-      "title": "Toy language + compiler",
-      "sub": "Parser, SSA IR, LLVM backend",
-      "stack": "C++ · LLVM",
+      "title": "Fantasy Emulator",
+      "sub": "A fully custom bytecode and assembly language. Builds assembly files into bytecode directly. Has graphics support built-in",
+      "stack": "Rust · Bevy",
       "result": "Self-hosting, 9 k LOC",
       "links": [
         { "label": "src" }
