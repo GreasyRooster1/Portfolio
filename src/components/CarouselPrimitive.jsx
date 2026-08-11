@@ -1,4 +1,4 @@
-import React, {Children, useEffect, useState} from 'react';
+import React, {Children, useEffect, useRef, useState} from 'react';
 import styles from './carousel.module.css';
 import { TbChevronCompactLeft } from "react-icons/tb";
 import { TbChevronCompactRight } from "react-icons/tb";
@@ -8,6 +8,8 @@ import { TbChevronCompactRight } from "react-icons/tb";
 function CarouselPrimitive(props) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [timeoutId, setTimeoutId] = useState();
+
+    const children = Children.toArray(props.children);
 
     const resetClock = ()=>{
         if(timeoutId){
@@ -21,30 +23,22 @@ function CarouselPrimitive(props) {
 
     const handlePreviousClick = () => {
         setCurrentIndex(
-            currentIndex === 0 ? props.images.length - 1 : currentIndex - 1
+            currentIndex === 0 ? children.length - 1 : currentIndex - 1
         );
     };
 
     const handleNextClick = () => {
-        setCurrentIndex((currentIndex + 1) % props.images.length);
+        setCurrentIndex((currentIndex + 1) % children.length);
     };
-
-    const children = Children.toArray(props.children);
-
-    useEffect(() => {
-        resetClock();
-        return () => clearTimeout(timeoutId);
-    }, [currentIndex]);
-
     return (
-        <div className={styles.imageContainer} style={props.style}>
-            {!props.noArrows && <TbChevronCompactLeft className={`${styles.navButton} ${styles.left}`} onClick={handlePreviousClick}/>}
+        <>
+            {!props.noArrows && <TbChevronCompactLeft className={`${styles.navButton} ${styles.left} ${props.fadeArrows?styles.fade:""}`} onClick={handlePreviousClick}/>}
 
             {children[currentIndex]}
 
-            {!props.noArrows && <TbChevronCompactRight className={`${styles.navButton} ${styles.right}`} onClick={handleNextClick}/>}
+            {!props.noArrows && <TbChevronCompactRight className={`${styles.navButton} ${styles.right} ${props.fadeArrows?styles.fade:""}`} onClick={handleNextClick}/>}
 
-        </div>
+        </>
     )
 }
 
