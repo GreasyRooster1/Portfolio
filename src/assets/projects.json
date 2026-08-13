@@ -21,7 +21,7 @@
       "year": "2025",
       "imgSrc": "/Featured/VerletIntegration2.png",
       "isVideo": true,
-      "videoSrc": "https://github.com/GreasyRooster1/Portfolio/raw/refs/heads/main/public/Featured/VerletIntegration1.mp4",
+      "videoSrc": "https://github.com/GreasyRooster1/Portfolio/raw/refs/heads/main/large/VerletIntegration1.mp4",
       "imgH": 310,
       "desc": "Simulates ropes, cloth, springs, and planets using a variation of the Semi-implicit Euler Method. Optimized to handle thousands of objects on a single thread. Fully deterministic",
       "stats": [
@@ -38,7 +38,7 @@
       "year": "2024",
       "imgSrc": "/Featured/RaycastingEngine.png",
       "isVideo": true,
-      "videoSrc": "https://github.com/GreasyRooster1/Portfolio/raw/refs/heads/main/public/Featured/RaycastingEngine1.mp4",
+      "videoSrc": "https://github.com/GreasyRooster1/Portfolio/raw/refs/heads/main/large/RaycastingEngine1.mp4",
       "imgH": 250,
       "desc": "Rendering engine based on DOOM and Quake. Uses ray casts to approximate 3d graphics. Build with a fully featured level editor, textures, doors, and transparency",
       "stats": [
