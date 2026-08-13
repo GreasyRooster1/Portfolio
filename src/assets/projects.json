@@ -120,36 +120,6 @@
         { "label": "bench", "accent": true },
         { "label": "src" }
       ]
-    },
-    {
-      "n": "06",
-      "title": "Offline-first mobile client",
-      "sub": "Local SQLite as source of truth",
-      "stack": "Swift · Kotlin",
-      "result": "Works at 0 bars",
-      "links": [
-        { "label": "video" }
-      ]
-    },
-    {
-      "n": "07",
-      "title": "Path-traced renderer",
-      "sub": "BVH build, importance sampling, denoiser",
-      "stack": "C++ · TBB",
-      "result": "90 s → 4 s / frame",
-      "links": [
-        { "label": "gallery" }
-      ]
-    },
-    {
-      "n": "08",
-      "title": "Log ingestion pipeline",
-      "sub": "Backpressure-aware fan-out with replay",
-      "stack": "Kafka · ClickHouse",
-      "result": "200 k events/s",
-      "links": [
-        { "label": "writeup" }
-      ]
     }
   ],
   "experiments": [
