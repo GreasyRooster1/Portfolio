@@ -1,6 +1,7 @@
 import SectionHead from '@components/SectionHead'
 import IndexRow from '@components/IndexRow'
 import styles from './ProjectIndex.module.css'
+import LinkRow from "@components/LinkRow.jsx";
 
 export default function ProjectIndex(props) {
   return (
@@ -16,6 +17,9 @@ export default function ProjectIndex(props) {
       {props.projects.map((project, i) => (
         <IndexRow key={project.n} {...project} last={i === props.projects.length - 1} />
       ))}
+    <a className={styles.moreContainer} href="https://github.com/GreasyRooster1?tab=repositories">
+        <span className={styles.moreText}>View 58 public repositories...</span>
+    </a>
     </section>
   )
 }

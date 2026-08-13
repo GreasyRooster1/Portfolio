@@ -16,3 +16,15 @@
 .linksHead {
   text-align: right;
 }
+
+.moreContainer {
+  display: block;
+  grid-template-columns: var(--index-cols);
+  align-items: center;
+  padding: 17px 28px;
+  border-bottom: 1px solid var(--hairline-soft);
+  transition: background 0.15s;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  text-decoration: none;
+}
