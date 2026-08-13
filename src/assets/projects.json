@@ -112,10 +112,10 @@
     },
     {
       "n": "05",
-      "title": "Vector search engine",
-      "sub": "HNSW from scratch, SIMD kernels",
-      "stack": "Rust · AVX2",
-      "result": "1.8 ms p50",
+      "title": "Oxidized Simulation",
+      "sub": "Uses OpenGL to render physics objects with minimal performance overhead. Separate simulation and render threads, increasing performance",
+      "stack": "Rust · OpenGL",
+      "result": "~0.8 ms @ 300 objects",
       "links": [
         { "label": "bench", "accent": true },
         { "label": "src" }
