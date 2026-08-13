@@ -25,26 +25,6 @@ export default function About(props) {
             </div>
         </div>
       </div>
-      <div>
-        <div className={styles.label}>Experiments</div>
-        <div className={styles.experiments}>
-          {props.experiments.map((e, i) => (
-            <a
-              key={e.name}
-              href="#7a"
-              className={[
-                styles.experiment,
-                i === props.experiments.length - 1 ? styles.experimentLast : '',
-              ]
-                .filter(Boolean)
-                .join(' ')}
-            >
-              {e.name}
-              <span className={styles.experimentTag}>{e.tag}</span>
-            </a>
-          ))}
-        </div>
-      </div>
     </section>
   )
 }
