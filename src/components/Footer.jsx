@@ -5,10 +5,10 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.email}>
-        you@example.com
+        dillonjwilson@gmail.com
         <Cursor />
       </div>
-      <div>github / linkedin / rss</div>
+        <div><a href={"https://github.com/GreasyRooster1"}>github</a> / <a href={"mailto:dillonjwilson1@gmail.com"}>email</a></div>
     </footer>
   )
 }
