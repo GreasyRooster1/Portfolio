@@ -5,7 +5,7 @@ import styles from './ProjectIndex.module.css'
 export default function ProjectIndex(props) {
   return (
     <section id="index" className={styles.section}>
-      <SectionHead title="Everything else" meta={`${props.projects.length} projects`} />
+      <SectionHead title="More projects" meta={`${props.projects.length} projects`} />
       <div className={styles.header}>
         <div>№</div>
         <div>project</div>
