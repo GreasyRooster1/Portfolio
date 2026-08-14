@@ -40,7 +40,7 @@
       "isVideo": true,
       "videoSrc": "https://github.com/GreasyRooster1/Portfolio/raw/refs/heads/main/large/RaycastingEngine1.mp4",
       "imgH": 250,
-      "desc": "Rendering engine based on DOOM and Quake. Uses ray casts to approximate 3d graphics. Build with a fully featured level editor, textures, doors, and transparency",
+      "desc": "Rendering engine based on DOOM and Quake. Uses ray casts to approximate 3d graphics. Built with a fully featured level editor, textures, doors, and transparency",
       "stats": [
         { "k": "Language", "v": "Java" }
       ],
