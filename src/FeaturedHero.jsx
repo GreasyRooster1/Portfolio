@@ -1,6 +1,6 @@
 import Placeholder from '@components/Placeholder'
 import LinkRow from '@components/LinkRow'
-import styles from './FeaturedHero.module.css'
+import styles from '@/FeaturedHero.module.css'
 import HeroOverlay from "@/HeroOverlay.jsx";
 import {Box, Flex, Grid, Quote, Text} from "@radix-ui/themes";
 import React, {useEffect, useState} from "react";
@@ -11,109 +11,31 @@ import karmaImg from '@assets/karma2.png'
 import TechIcon from "@components/TechIcon.jsx";
 import CountUp from "@components/CountUp.jsx";
 import Carousel from "@components/Carousel.jsx";
-
-import kc1 from "@assets/KC/kc1.jpg"
-import kc2 from "@assets/KC/kc2.jpg"
-import kc3 from "@assets/KC/kc3.jpg"
-import kc4 from "@assets/KC/kc4.jpg"
-import kc5 from "@assets/KC/kc5.jpg"
-import kc6 from "@assets/KC/kc6.jpg"
-import kc7 from "@assets/KC/kc7.jpg"
-import kc8 from "@assets/KC/kc8.jpg"
-import snake from "@assets/snakelesson.png"
 import Overlay from "@components/Overlay.jsx";
 import ProjectsGrid from "@/ProjectsGrid.jsx";
 import HeroQuote from "@components/HeroQuote.jsx";
 import CarouselPrimitive from "@components/CarouselPrimitive.jsx";
+import {ImagesBlock} from "@/heroComponents/ImagesBlock.jsx";
+import StatsBlock from "@/heroComponents/StatsBlock.jsx";
+import {LineBlock} from "@/heroComponents/LineBlock.jsx";
+import {StackComponent} from "@/heroComponents/StackComponent.jsx";
 
 const LINKS = [{ label: 'live demo', accent: true }, { label: 'source' }, { label: 'writeup' }]
-const images = [kc1,kc2,kc3,kc4,kc5,kc6,kc7,kc8,snake];
 
 export default function FeaturedHero() {
-  const [totalLines, setTotalLines] = useState(527886)
-  const [totalProjects, setTotalProjects] = useState(2523)
-
-  useEffect(() => {
-    fetch("https://portfolio-api.dillonjw.com/qcode_line_count")
-        .then((data) => {
-          data.json().then((dataJson) => {
-            setTotalLines(dataJson)
-          })
-        })
-    fetch("https://portfolio-api.dillonjw.com/qcode_project_count")
-        .then((data) => {
-          data.json().then((dataJson) => {
-              setTotalProjects(dataJson)
-          })
-        })
-  },[])
-
   return (
     <section className={styles.section}>
       <Flex direction="column" gap={{initial:"2",lg:"3"}} width={"100%"}>
         <Flex direction="row" height={{initial:"100vh",md:"70vh",lg:"50vh"}} gap={{initial:"2",lg:"3"}} minHeight="600px" width={"100%"}>
-          <Flex className={styles.box} gridRow={"1/1"} gridColumn={"1/3"} height={"100%"} width={"100%"} flexGrow="1" style={{position:"relative",zIndex:1,overflow: "clip"}}>
-            <Carousel images={images} style={{position:"absolute",zIndex:-1}} />
-            <div style={{width:"100%",pointerEvents:"none"}}>
-              <HeroOverlay />
-            </div>
-          </Flex>
+          <ImagesBlock/>
           <Grid gridRow={"1/1"} gridColumn={"3/3"} direction="column" gap={{initial:"2",lg:"3"}} height={"100%"} width={"25%"} minWidth={"330px"}>
-            <Flex className={styles.box} justify={"center"} align={"center"}>
-              <div className={styles.metrics}>
-                <div>
-                  <div className={styles.metricLabel}>students</div>
-                  <div className={styles.metricValue}>
-                    <CountUp className={styles.metricValue}
-                             from={100}
-                             to={300}
-                             separator=","
-                             direction="up"
-                             duration={.5}
-                             delay={0}
-                    />+
-                  </div>
-                </div>
-                <div>
-                  <div className={styles.metricLabel}>total projects</div>
-                  <CountUp className={styles.metricValue}
-                           from={1000}
-                           to={totalProjects}
-                           separator=","
-                           direction="up"
-                           duration={.5}
-                           delay={0}
-                  />
-                </div>
-              </div>
-            </Flex>
-            <Flex className={styles.box} justify={"center"} align={"center"} direction={"column"} gap="4">
-              <div className={styles.metricLabel}>tech stack</div>
-              <Flex width={"100%"} style={{justifyContent:"space-evenly"}} px="2">
-                <TechIcon icon={firebaseIcon} name={"Firebase"}/>
-                <TechIcon icon={viteIcon} name={"Vite"}/>
-                <TechIcon icon={rustIcon} name={"Rust"}/>
-              </Flex>
-              <div className={styles.stackText}>JavaScript • TypeScript • CSS</div>
-            </Flex>
-            <Flex className={styles.box} justify={"center"} align={"center"} >
-              <div>
-                <div className={styles.metricLabel}>total lines of code</div>
-                <CountUp className={styles.linesValue}
-                         from={100000}
-                         to={totalLines}
-                         separator=","
-                         direction="up"
-                         duration={.5}
-                         delay={0}
-                />
-                <div className={styles.linesSub}>by <span style={{color:"var(--accent)"}}>real</span> students ages 6-16</div>
-              </div>
-            </Flex>
+            <StatsBlock/>
+            <StackComponent/>
+            <LineBlock/>
           </Grid>
         </Flex>
 
-        <Flex direction="row" height={{initial:"40vh",md:"35vh",lg:"20vh"}} gap={{initial:"2",lg:"3"}} width={"100%"}>
+        <Flex direction="row" height={{initial:"40vh",md:"35vh",lg:"20vh"}} gap={{initial:"2",lg:"3"}} width={"100%"} minHeight="230px">
           <Flex className={styles.box} justify={"center"} align={"center"} width={"30%"} style={{position:"relative",overflow:"clip"}}>
             <ProjectsGrid/>
           </Flex>
