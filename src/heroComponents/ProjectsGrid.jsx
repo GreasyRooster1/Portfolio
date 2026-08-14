@@ -16,27 +16,29 @@ import LinkRow from "@components/LinkRow.jsx";
 
 function ProjectsGrid(props) {
     return (
-        <a className={styles.main} style={{width:"100%"}} href={"https://google.com"}>
-            <Grid columns="3" rows="3" width="100%" height="100%" className={styles.grid}>
-                <ImageGrid/>
-                <ImageGrid/>
-                <ImageGrid/>
-                <ImageGrid/>
-                <ImageGrid/>
-                <ImageGrid/>
-                <ImageGrid/>
-                <ImageGrid/>
-                <ImageGrid/>
-            </Grid>
-            <Overlay style={{height:"60%",padding:"5%"}}>
-                <Flex width={"100%"} direction={"column"} align={"left"}>
-                    <div className={styles.title}>Student Projects</div>
-                    <span className={styles.desc}>
-                        <a className={styles.link}>Click here</a> to see real student projects
-                    </span>
-                </Flex>
-            </Overlay>
-        </a>
+        <Flex className={styles.box} justify={"center"} align={"center"} width={"30%"} style={{position:"relative",overflow:"clip"}}>
+            <a className={styles.main} style={{width:"100%"}} href={"https://google.com"}>
+                <Grid columns="3" rows="3" width="100%" height="100%" className={styles.grid}>
+                    <ImageGrid/>
+                    <ImageGrid/>
+                    <ImageGrid/>
+                    <ImageGrid/>
+                    <ImageGrid/>
+                    <ImageGrid/>
+                    <ImageGrid/>
+                    <ImageGrid/>
+                    <ImageGrid/>
+                </Grid>
+                <Overlay style={{height:"60%",padding:"5%"}}>
+                    <Flex width={"100%"} direction={"column"} align={"left"}>
+                        <div className={styles.title}>Student Projects</div>
+                        <span className={styles.desc}>
+                            <a className={styles.link}>Click here</a> to see real student projects
+                        </span>
+                    </Flex>
+                </Overlay>
+            </a>
+        </Flex>
     );
 }
 
