@@ -4,9 +4,7 @@ import styles from '@/FeaturedHero.module.css'
 import HeroOverlay from "@/HeroOverlay.jsx";
 import {Box, Flex, Grid, Quote, Text} from "@radix-ui/themes";
 import React, {useEffect, useState} from "react";
-import firebaseIcon from '@assets/firebase.png'
-import viteIcon from '@assets/vite.svg'
-import rustIcon from '@assets/rust.png'
+
 import karmaImg from '@assets/karma2.png'
 import TechIcon from "@components/TechIcon.jsx";
 import CountUp from "@components/CountUp.jsx";
