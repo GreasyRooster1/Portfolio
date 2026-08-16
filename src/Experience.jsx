@@ -20,7 +20,7 @@ export function Experience(props) {
     return (
         <section className={styles.section} {...props}>
             <SectionHead title="Experience"/>
-            <BrickList cols={12}>
+            <BrickList cols={8}>
                 <BrickListItem img={ruby} color={"#d92007"}/>
                 <BrickListItem img={react} color={"#00d8ff"}/>
                 <BrickListItem img={js} color={"#f0dc4e"}/>
