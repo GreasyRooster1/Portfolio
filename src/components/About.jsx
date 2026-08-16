@@ -10,20 +10,7 @@ export default function About(props) {
           Placeholder bio — a few lines in your own voice about the work you want more of, how you
           make decisions, and what you're looking for next.
         </p>
-        <div className={styles.stats}>
-            <div>
-                <div className={`${styles.statValue} ${styles.statValueAccent}`}>
-                    11 Years
-                </div>
-                <div className={styles.statLabel}>Programming Experience</div>
-            </div>
-            <div>
-                <div className={`${styles.statValue}`}>
-                    Hundreds
-                </div>
-                <div className={styles.statLabel}>Of Projects</div>
-            </div>
-        </div>
+
       </div>
     </section>
   )

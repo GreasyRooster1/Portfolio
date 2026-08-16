@@ -14,9 +14,25 @@ export default function Hero() {
         </h1>
       </div>
       <div>
+        <div className={styles.stats}>
+          <div>
+            <div className={`${styles.statValue} ${styles.statValueAccent}`}>
+              11 Years
+            </div>
+            <div className={styles.statLabel}>Programming Experience</div>
+          </div>
+          <div>
+            <div className={`${styles.statValue}`}>
+              Hundreds
+            </div>
+            <div className={styles.statLabel}>Of Projects</div>
+          </div>
+        </div>
+
         <p className={styles.lede}>
           Eleven years taking blank repositories to full projects. I've always loved experimenting and testing the limits of what I can create, developing hundreds of apps, games and experiments over the years.
         </p>
+
         <div className={styles.actions}>
           {/*<a href="#7a" className={`${styles.btn} ${styles.btnPrimary}`}>*/}
           {/*  résumé.pdf*/}
@@ -28,6 +44,7 @@ export default function Hero() {
             Email
           </a>
         </div>
+
         {/*<div className={styles.availability}>available · [City] · replies within a day</div>*/}
       </div>
     </header>

@@ -62,3 +62,25 @@
   font: 400 11px/1.6 var(--font-mono);
   color: var(--faint);
 }
+
+.stats {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.statValue {
+  font: 500 16px/1 var(--font-mono);
+  color: var(--text);
+}
+
+.statValueAccent {
+  color: var(--accent);
+}
+
+.statLabel {
+  margin-top: 7px;
+  font: 400 12px/1 var(--font-mono);
+  color: var(--faint);
+}
+
