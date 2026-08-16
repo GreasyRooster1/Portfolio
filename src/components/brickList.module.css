@@ -19,6 +19,13 @@
     border-radius: 5px;
     overflow: clip;
     flex:1;
+    justify-content: center;
+    align-items: center;
+}
+
+.item img{
+    width: 80%;
+    height: 80%;
 }
 
 .offset{

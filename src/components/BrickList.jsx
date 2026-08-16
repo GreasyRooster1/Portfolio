@@ -69,7 +69,7 @@ export function BrickList(props) {
 export function BrickListItem(props){
     return (
         <div className={styles.item}>
-            {props.children}
+            {props.img&&<img src={props.img} alt="icon"/>}
         </div>
     )
 }
