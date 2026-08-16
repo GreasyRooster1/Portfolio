@@ -26,7 +26,7 @@ export function BrickList(props) {
 BrickList.Item = (props) => {
     return (
         <div className={styles.item}>
-
+            {props.children}
         </div>
     )
 }
