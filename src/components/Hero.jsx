@@ -15,7 +15,7 @@ export default function Hero() {
       </div>
       <div>
         <p className={styles.lede}>
-          Eleven years taking blank projects to full projects. Hundreds of experiments, games, apps and utilities created over the years. Below are some of my personal favorites
+          Eleven years taking blank repositories to full projects. I've always loved experimenting and testing the limits of what I can create, developing hundreds of apps, games and experiments over the years.
         </p>
         <div className={styles.actions}>
           {/*<a href="#7a" className={`${styles.btn} ${styles.btnPrimary}`}>*/}
