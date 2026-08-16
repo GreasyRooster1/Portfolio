@@ -17,7 +17,7 @@ function align(childrenArray,cols){
     let diff = cols-childrenArray.length;
     let offset = Math.floor(diff/2);
     let row = fillEmpty(offset);
-    row.push(...fillInc(childrenArray.length))
+    row.push(...childrenArray);
     if(diff%2===1){
         row.push(...fillEmpty(offset+1))
     }else{
@@ -39,10 +39,10 @@ const splitIntoThree = (list) => {
 export function BrickList(props) {
     const childrenArray = Children.toArray(props.children);
     let rows = [fillEmpty(props.cols),fillEmpty(props.cols+1),fillEmpty(props.cols)];
-    if(childrenArray.length <= props.cols-1){
-        rows[1] = align(childrenArray,props.cols+1);
+    if(childrenArray.length <= props.cols/3){
+        rows[1] = align(fillInc(childrenArray.length),props.cols+1);
     }else{
-        let arrs = splitIntoThree(childrenArray);
+        let arrs = splitIntoThree(fillInc(childrenArray.length));
         let tmp = arrs[1];
         arrs[1] = arrs[2];
         arrs[2] = tmp;
