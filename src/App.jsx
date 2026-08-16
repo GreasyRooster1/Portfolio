@@ -33,8 +33,8 @@ export default function App() {
             <Nav />
             <Hero/>
             <FeaturedHero />
-            <SelectedWork projects={data.featured}/>
-            <ProjectIndex projects={data.list}/>
+            <SelectedWork id="selected-work" projects={data.featured}/>
+            <ProjectIndex id="project-index"  projects={data.list}/>
             <Footer />
         </div>
     )

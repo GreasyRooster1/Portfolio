@@ -11,14 +11,11 @@ export default function Nav() {
         <Cursor />
       </div>
       <div className={styles.links}>
-        {LINKS.map((l) => (
-          <a key={l} href="#7a" className={styles.link}>
-            {l}
-          </a>
-        ))}
-        <a href="#7a" className={`${styles.link} ${styles.resume}`}>
-          résumé ↓
-        </a>
+        <a href="#selected-work" className={styles.link}>featured</a>
+        <a href="#project-index" className={styles.link}>projects</a>
+        {/*<a href="#7a" className={`${styles.link} ${styles.resume}`}>*/}
+        {/*  résumé ↓*/}
+        {/*</a>*/}
       </div>
     </nav>
   )

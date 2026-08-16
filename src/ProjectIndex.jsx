@@ -5,7 +5,7 @@ import LinkRow from "@components/LinkRow.jsx";
 
 export default function ProjectIndex(props) {
   return (
-    <section id="index" className={styles.section}>
+    <section id="index" className={styles.section} {...props}>
       <SectionHead title="More projects" meta={`${props.projects.length} projects`} />
       <div className={styles.header}>
         <div>№</div>

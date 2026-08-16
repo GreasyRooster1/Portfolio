@@ -5,7 +5,7 @@ import { WORK } from '@/data'
 
 export default function SelectedWork(props) {
   return (
-    <section id="work" className={styles.section}>
+    <section id="work" className={styles.section} {...props}>
       <SectionHead title="Selected work" meta={`${props.projects.length} featured projects`} />
       <div className={styles.grid}>
         {props.projects.map((w) => (
