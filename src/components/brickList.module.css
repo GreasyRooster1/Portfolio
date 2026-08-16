@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 10px;
     overflow: hidden;
+    padding:8px;
 }
 
 .row{
@@ -13,6 +14,9 @@
 
 .item{
     display: flex;
+    background:var(--surface);
     width: var(--brick-list-scale);
-    height: var(--brick-list-scale);
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    overflow: clip;
 }

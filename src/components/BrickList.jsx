@@ -5,8 +5,8 @@ export function BrickList(props) {
     return (
         <div className={styles.wall} style={{"--brick-list-scale":(props.scale??"50px")}}>
             <div className={styles.row}>
-                {Array.from({ length: count }).map((_, index) => (
-                   <BrickList.Item/>
+                {Array.from({ length: props.cols }).map((_, index) => (
+                   <BrickList.Item key={index}/>
                 ))}
             </div>
         </div>
@@ -14,5 +14,9 @@ export function BrickList(props) {
 }
 
 BrickList.Item = (props) => {
-    return React.cloneElement(props.item, {className:`${props.className},${styles.item}`})
+    return (
+        <div className={styles.item}>
+
+        </div>
+    )
 }
