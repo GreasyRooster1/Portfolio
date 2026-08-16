@@ -7,7 +7,7 @@ export function Experience(props) {
     return (
         <section className={styles.section} {...props}>
             <SectionHead title="Experience"/>
-            <BrickList cols={5} scale={"20%"}></BrickList>
+            <BrickList cols={12} scale={"10%"}></BrickList>
         </section>
     )
 }
