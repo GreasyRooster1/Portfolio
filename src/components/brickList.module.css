@@ -16,11 +16,19 @@
     display: flex;
     background:var(--surface);
     aspect-ratio: 1/1;
-    border-radius: 5px;
+    border-radius: 10px;
     overflow: clip;
     flex:1;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 2px var(--bg);
+    transition: all 0.8s ease-out;
+}
+
+.item:hover{
+    box-shadow: 0 0 15px var(--brick-item-color);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
 
 .item img{

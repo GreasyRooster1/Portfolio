@@ -68,7 +68,7 @@ export function BrickList(props) {
 
 export function BrickListItem(props){
     return (
-        <div className={styles.item}>
+        <div className={styles.item} style={{"--brick-item-color":props.color}}>
             {props.img&&<img src={props.img} alt="icon"/>}
         </div>
     )
