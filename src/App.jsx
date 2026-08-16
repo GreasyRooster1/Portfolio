@@ -6,7 +6,6 @@ import Hero from './components/Hero'
 import FeaturedHero from './FeaturedHero.jsx'
 import SelectedWork from './SelectedWork'
 import ProjectIndex from './ProjectIndex'
-import About from './components/About'
 import Footer from './components/Footer'
 import styles from './App.module.css'
 import {useEffect, useState} from "react";
@@ -36,7 +35,6 @@ export default function App() {
             <FeaturedHero />
             <SelectedWork projects={data.featured}/>
             <ProjectIndex projects={data.list}/>
-            <About experiments={data.experiments} />
             <Footer />
         </div>
     )
