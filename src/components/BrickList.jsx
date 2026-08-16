@@ -15,8 +15,8 @@ function fillInc(c){
 
 export function BrickList(props) {
     const childrenArray = Children.toArray(props.children);
-    let rows = [fillEmpty(props.cols),fillEmpty(props.cols),fillEmpty(props.cols)];
-    if(childrenArray.length <= props.cols-2){
+    let rows = [fillEmpty(props.cols),fillEmpty(props.cols+1),fillEmpty(props.cols)];
+    if(childrenArray.length <= props.cols-1){
         let diff = (props.cols+1)-childrenArray.length;
         let offset = Math.floor(diff/2);
         let row = fillEmpty(offset);

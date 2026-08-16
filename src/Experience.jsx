@@ -9,6 +9,16 @@ export function Experience(props) {
             <SectionHead title="Experience"/>
             <BrickList cols={12}>
                 <BrickListItem>test</BrickListItem>
+                <BrickListItem>test</BrickListItem>
+                <BrickListItem>test</BrickListItem>
+                <BrickListItem>test</BrickListItem>
+                <BrickListItem>test</BrickListItem>
+                <BrickListItem>test</BrickListItem>
+                <BrickListItem>test</BrickListItem>
+                <BrickListItem>test</BrickListItem>
+                <BrickListItem>test</BrickListItem>
+                <BrickListItem>test</BrickListItem>
+                <BrickListItem>test</BrickListItem>
             </BrickList>
         </section>
     )
