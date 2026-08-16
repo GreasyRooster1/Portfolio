@@ -17,14 +17,15 @@ export function BrickList(props) {
     const childrenArray = Children.toArray(props.children);
     let rows = [fillEmpty(props.cols),fillEmpty(props.cols),fillEmpty(props.cols)];
     if(childrenArray.length <= props.cols-2){
-        let diff = (props.cols-childrenArray.length)
+        let diff = (props.cols+1)-childrenArray.length;
         let offset = Math.floor(diff/2);
         let row = fillEmpty(offset);
         row.push(...fillInc(childrenArray.length))
         if(diff%2===1){
             row.push(...fillEmpty(offset+1))
+        }else{
+            row.push(...fillEmpty(offset))
         }
-        row.push(-1);
         rows[1] = row;
     }else{
 
