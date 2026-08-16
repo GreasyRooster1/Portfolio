@@ -19,6 +19,8 @@ export function Experience(props) {
                 <BrickListItem>test</BrickListItem>
                 <BrickListItem>test</BrickListItem>
                 <BrickListItem>test</BrickListItem>
+                <BrickListItem>test</BrickListItem>
+                <BrickListItem>test</BrickListItem>
             </BrickList>
         </section>
     )

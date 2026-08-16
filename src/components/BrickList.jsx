@@ -13,22 +13,44 @@ function fillInc(c){
     return tmp;
 }
 
+function align(childrenArray,cols){
+    let diff = cols-childrenArray.length;
+    let offset = Math.floor(diff/2);
+    let row = fillEmpty(offset);
+    row.push(...fillInc(childrenArray.length))
+    if(diff%2===1){
+        row.push(...fillEmpty(offset+1))
+    }else{
+        row.push(...fillEmpty(offset))
+    }
+    return row;
+}
+
+const splitIntoThree = (list) => {
+    const size = Math.floor(list.length / 3);
+
+    const part1 = list.slice(0, size);
+    const part2 = list.slice(size, size * 2);
+    const part3 = list.slice(size * 2);
+    return [part1, part2, part3];
+
+};
+
 export function BrickList(props) {
     const childrenArray = Children.toArray(props.children);
     let rows = [fillEmpty(props.cols),fillEmpty(props.cols+1),fillEmpty(props.cols)];
     if(childrenArray.length <= props.cols-1){
-        let diff = (props.cols+1)-childrenArray.length;
-        let offset = Math.floor(diff/2);
-        let row = fillEmpty(offset);
-        row.push(...fillInc(childrenArray.length))
-        if(diff%2===1){
-            row.push(...fillEmpty(offset+1))
-        }else{
-            row.push(...fillEmpty(offset))
-        }
-        rows[1] = row;
+        rows[1] = align(childrenArray,props.cols+1);
     }else{
-
+        let arrs = splitIntoThree(childrenArray);
+        let tmp = arrs[1];
+        arrs[1] = arrs[2];
+        arrs[2] = tmp;
+        console.log(arrs)
+        for(let i=0;i<arrs.length;i++){
+            let cols = i%2===0?props.cols:props.cols+1;
+            rows[i] = align(arrs[i],cols);
+        }
     }
     console.log(childrenArray,rows);
     return (
