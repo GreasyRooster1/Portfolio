@@ -13,4 +13,6 @@
 
 .item{
     display: flex;
+    width: var(--brick-list-scale);
+    height: var(--brick-list-scale);
 }
