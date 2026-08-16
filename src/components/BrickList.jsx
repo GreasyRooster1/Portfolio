@@ -1,24 +1,24 @@
 import styles from "./brickList.module.css"
-import React from "react";
+import React, {Children} from "react";
 
 export function BrickList(props) {
+    const childrenArray = Children.toArray(props.children);
+    let rows = [new Array(props.cols).fill(-1),new Array(props.cols).fill(0),new Array(props.cols).fill(-1)];
+    if(childrenArray.length <= props.cols-2){
+
+    }else{
+
+    }
+    console.log(childrenArray);
     return (
         <div className={styles.wall} >
-            <div className={styles.row}>
-                {Array.from({ length: props.cols }).map((_, index) => (
-                   <BrickList.Item key={index}/>
-                ))}
-            </div>
-            <div className={`${styles.row} ${styles.offset}`}>
-                {Array.from({ length: props.cols+1 }).map((_, index) => (
-                    <BrickList.Item key={index}/>
-                ))}
-            </div>
-            <div className={styles.row}>
-                {Array.from({ length: props.cols }).map((_, index) => (
-                    <BrickList.Item key={index}/>
-                ))}
-            </div>
+            {rows.map((row, i) => (
+                <div className={styles.row} key={i+"row"}>
+                    {row.map((index, k) => (
+                        index===-1?<BrickList.Item/>:React.cloneElement(childrenArray[index],{key:k})
+                    ))}
+                </div>
+            ))}
         </div>
     )
 }
