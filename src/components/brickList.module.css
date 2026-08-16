@@ -1,0 +1,12 @@
+.wall{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.row{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}

@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import styles from './App.module.css'
 import {useEffect, useState} from "react";
 import projectData from '@assets/projects.json';
+import {Experience} from "@/Experience.jsx";
 
 export default function App() {
     const [data, setData] = useState(projectData)
@@ -35,6 +36,7 @@ export default function App() {
             <FeaturedHero />
             <SelectedWork id="selected-work" projects={data.featured}/>
             <ProjectIndex id="project-index"  projects={data.list}/>
+            <Experience id="experience"/>
             <Footer />
         </div>
     )
