@@ -71,9 +71,9 @@
     {
       "n": "01",
       "title": "Minimal Desktop Station",
-      "sub": "Setup many centrally accessible desktop stations on a server for minimal cost",
+      "sub": "Setup many centrally accessible desktop stations on a server for minimal cost, PXE boot to centralized OS image",
       "stack": "Raspberry Pi · Proxmox",
-      "result": "40 ms p99",
+      "result": "used in a production setting",
       "links": [
         { "label": "demo", "accent": true },
         { "label": "src" }
@@ -84,7 +84,7 @@
       "title": "Digital Yondr Replacement",
       "sub": "Uses screen time API and NFC tags to allow for school districts to restrict phone usage during school hours",
       "stack": "Rust · Swift",
-      "result": "2 M @ 60 fps",
+      "result": "in development",
       "links": [
         { "label": "demo", "accent": true },
         { "label": "src" }
@@ -95,7 +95,7 @@
       "title": "Dynamic Planet Renderer",
       "sub": "Renders a planet as a dynamic LOD mesh that increases resolution as the camera approaches to optimize performance",
       "stack": "Rust",
-      "result": "12 k jobs/s",
+      "result": "120fps @ full res",
       "links": [
         { "label": "writeup" }
       ]
@@ -105,15 +105,15 @@
       "title": "Fantasy Emulator",
       "sub": "A fully custom bytecode and assembly language. Builds assembly files into bytecode directly. Has graphics support built-in",
       "stack": "Rust · Bevy",
-      "result": "Self-hosting, 9 k LOC",
+      "result": "running pong",
       "links": [
         { "label": "src" }
       ]
     },
     {
       "n": "05",
-      "title": "Oxidized Simulation",
-      "sub": "Uses OpenGL to render physics objects with minimal performance overhead. Separate simulation and render threads, increasing performance",
+      "title": "Rust Simulation",
+      "sub": "Uses OpenGL to render physics objects with minimal performance overhead. Separate simulation and render threads to increasing performance",
       "stack": "Rust · OpenGL",
       "result": "~0.8 ms @ 300 objects",
       "links": [
