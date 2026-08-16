@@ -2,9 +2,6 @@ import React, {useEffect, useState} from 'react';
 import styles from '@/FeaturedHero.module.css'
 import {Flex} from "@radix-ui/themes/dist/esm/index.d.ts";
 import TechIcon from "@components/TechIcon.jsx";
-import firebaseIcon from "@assets/firebase.png";
-import viteIcon from "@assets/vite.svg";
-import rustIcon from "@assets/rust.png";
 import CountUp from "@components/CountUp.jsx";
 import {ImagesBlock} from "@/heroComponents/ImagesBlock.jsx";
 

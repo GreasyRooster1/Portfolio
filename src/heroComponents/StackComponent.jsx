@@ -3,9 +3,9 @@ import React from "react";
 import {Flex} from "@radix-ui/themes";
 import TechIcon from "@components/TechIcon.jsx";
 import styles from '@/FeaturedHero.module.css'
-import firebaseIcon from '@assets/firebase.png'
-import viteIcon from '@assets/vite.svg'
-import rustIcon from '@assets/rust.png'
+import firebaseIcon from '@assets/langs/firebase.png'
+import viteIcon from '@assets/langs/vite.svg'
+import rustIcon from '@assets/langs/rust.png'
 
 export function StackComponent() {
     return (

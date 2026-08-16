@@ -38,6 +38,8 @@
 .item img{
     width: 80%;
     height: 80%;
+    border-radius: 15px;
+    overflow: clip;
 }
 
 .offset{
