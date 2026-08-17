@@ -21,7 +21,7 @@
     flex:1;
     justify-content: center;
     align-items: center;
-    border:1px solid var(--brick-item-color);
+    /*border:1px solid var(--brick-item-color);*/
     box-shadow: 0 0 2px  var(--brick-item-color), inset 0 0 30px -25px var(--brick-item-color);
     transition: all 1s ease-out, border .5s ease-in-out;
     box-sizing: content-box;
