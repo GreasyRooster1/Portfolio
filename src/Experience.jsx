@@ -27,8 +27,15 @@ import ollama from "@assets/langs/ollama.png"
 import postgres from "@assets/langs/postgres.svg"
 import proxmox from "@assets/langs/proxmox.png"
 import rpi from "@assets/langs/rpi.svg"
-import firebase from "@assets/langs/firebase.png"
+import firebase from "@assets/langs/firebase2.png"
 import vite from "@assets/langs/vite.svg"
+import jetbrains from "@assets/langs/jetbrains.png"
+import linux from "@assets/langs/linux.png"
+import p5 from "@assets/langs/p5.svg"
+import processing from "@assets/langs/processing.svg"
+import vscode from "@assets/langs/vscode.svg"
+import jwt from "@assets/langs/jwt.png"
+import xcode from "@assets/langs/xcode.png"
 
 export function Experience(props) {
     return (
@@ -56,19 +63,25 @@ export function Experience(props) {
                 <Text width={"100%"} align="center" size="8" weight="bold">Technologies</Text>
             </Flex>
             <BrickList cols={12}>
-                <BrickListItem img={aws} color={"#d92007"}/>
-                <BrickListItem img={cloudflare} color={"#d92007"}/>
-                <BrickListItem img={docker} color={"#d92007"}/>
-                <BrickListItem img={git} color={"#d92007"}/>
-                <BrickListItem img={github} color={"#d92007"}/>
-                <BrickListItem img={ollama} color={"#d92007"}/>
-                <BrickListItem img={postgres} color={"#d92007"}/>
-                <BrickListItem img={node} color={"#d92007"}/>
-                <BrickListItem img={proxmox} color={"#d92007"}/>
-                <BrickListItem img={rpi} color={"#d92007"}/>
-                <BrickListItem img={firebase} color={"#d92007"}/>
-                <BrickListItem img={vite} color={"#d92007"}/>
-
+                <BrickListItem img={aws} color={"#fd8d04"}/>
+                <BrickListItem img={cloudflare} color={"#f38020"}/>
+                <BrickListItem img={docker} color={"#0091e2"}/>
+                <BrickListItem img={git} color={"#f05133"}/>
+                <BrickListItem img={github} color={"#7e7e7e"}/>
+                <BrickListItem img={ollama} color={"#ffffff"}/>
+                <BrickListItem img={postgres} color={"#336791"}/>
+                <BrickListItem img={node} color={"#58a545"}/>
+                <BrickListItem img={proxmox} color={"#e57000"}/>
+                <BrickListItem img={rpi} color={"#bc1142"}/>
+                <BrickListItem img={firebase} color={"#ff9100"}/>
+                <BrickListItem img={vite} color={"#6c16ff"}/>
+                <BrickListItem img={jetbrains} color={"#f6016c"}/>
+                <BrickListItem img={linux} color={"#ffbe00"}/>
+                <BrickListItem img={p5} color={"#ed225d"}/>
+                <BrickListItem img={processing} color={"#0468ff"}/>
+                <BrickListItem img={vscode} color={"#22a6f2"}/>
+                <BrickListItem img={jwt} color={"#d63aff"}/>
+                <BrickListItem img={xcode} color={"#0cc0fa"}/>
             </BrickList>
 
         </section>
