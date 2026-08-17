@@ -72,7 +72,7 @@ export function Experience(props) {
                 <BrickListItem img={postgres} color={"#336791"}/>
                 <BrickListItem img={node} color={"#58a545"}/>
                 <BrickListItem img={proxmox} color={"#e57000"}/>
-                <BrickListItem img={rpi} color={"#bc1142"}/>
+                <BrickListItem img={rpi} color={"#e81150"}/>
                 <BrickListItem img={firebase} color={"#ff9100"}/>
                 <BrickListItem img={vite} color={"#6c16ff"}/>
                 <BrickListItem img={jetbrains} color={"#f6016c"}/>
