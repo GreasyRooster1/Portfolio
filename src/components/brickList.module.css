@@ -30,6 +30,7 @@
 .item:hover{
     transform: scale(1.05);
     transition: all 0.3s ease;
+    z-index: 99;
 }
 .active:hover{
     transform: scale(1.1);
