@@ -52,10 +52,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
+
 }
 
 .active:hover .content{
@@ -69,6 +66,20 @@
     height: 80%;
     border-radius: 15px;
     overflow: clip;
+}
+
+.title{
+
+}
+
+.link{
+    color: var(--brick-item-color);
+    text-decoration: none;
+}
+.link:hover{
+
+    text-decoration: underline;
+    color: var(--text);
 }
 
 .offset{

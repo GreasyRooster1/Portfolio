@@ -1,5 +1,6 @@
 import styles from "./brickList.module.css"
 import React, {Children} from "react";
+import {Flex,Text} from "@radix-ui/themes";
 
 function fillEmpty(c){
     return new Array(c).fill(-1)
@@ -70,9 +71,15 @@ export function BrickListItem(props){
     return (
         <div className={`${styles.item} ${props.img?styles.active:""}`} style={{"--brick-item-color":props.color}}>
             {props.img&&<img src={props.img} alt="icon"/>}
-            <div className={`${styles.content}`}>
+            <Flex className={`${styles.content}`} justify={"center"} align={"center"} direction={"column"}>
+                {props.name && (<>
+                    <Text weight="bold" size="4" mb="1">{props.name}</Text>
+                    {props.links.map((link, i) => (
+                        <a className={styles.link} href={link.href} key={i}>{link.txt}</a>
+                    ))}
+                </>)}
                 {props.children}
-            </div>
+            </Flex>
         </div>
     )
 }
