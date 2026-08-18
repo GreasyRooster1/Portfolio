@@ -13,6 +13,7 @@ export default function Nav() {
       <div className={styles.links}>
         <a href="#selected-work" className={styles.link}>featured</a>
         <a href="#project-index" className={styles.link}>projects</a>
+        <a href="#experience" className={styles.link}>experience</a>
         {/*<a href="#7a" className={`${styles.link} ${styles.resume}`}>*/}
         {/*  résumé ↓*/}
         {/*</a>*/}
