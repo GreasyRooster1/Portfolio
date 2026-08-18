@@ -55,7 +55,7 @@ export function Experience(props) {
                 <BrickListItem img={csharp} color={"#953dac"}/>
                 <BrickListItem img={python} color={"#ffcf42"}/>
                 <BrickListItem img={java} color={"#f3931b"}/>
-                <BrickListItem img={rust} color={"#dd3516"}/>
+                <BrickListItem img={rust} color={"#dd3516"}>Rust</BrickListItem>
                 <BrickListItem img={css} color={"#1c88c7"}/>
                 <BrickListItem img={swift} color={"#fa5d2d"}/>
             </BrickList>
