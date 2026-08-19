@@ -73,7 +73,7 @@ export function BrickListItem(props){
             {props.img&&<img src={props.img} alt="icon"/>}
             <Flex className={`${styles.content}`} justify={"center"} align={"center"} direction={"column"}>
                 {props.name && (<>
-                    <Text weight="bold" size="4" mb="1">{props.name}</Text>
+                    <Text weight="bold" size="4" mb="1" align="center" mx="1">{props.name}</Text>
                     {props.links.map((link, i) => (
                         <a className={styles.link} href={link.href} key={i}>{link.txt}</a>
                     ))}
