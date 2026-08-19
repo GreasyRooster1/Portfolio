@@ -67,25 +67,26 @@ export function Experience(props) {
                 <Text width={"100%"} align="center" size="8" weight="bold">Technologies</Text>
             </Flex>
             <BrickList cols={12}>
-                <BrickListItem img={aws} color={"#fd8d04"}/>
-                <BrickListItem img={cloudflare} color={"#f38020"}/>
-                <BrickListItem img={docker} color={"#0091e2"}/>
-                <BrickListItem img={git} color={"#f05133"}/>
-                <BrickListItem img={github} color={"#7e7e7e"}/>
-                <BrickListItem img={ollama} color={"#ffffff"}/>
-                <BrickListItem img={postgres} color={"#336791"}/>
-                <BrickListItem img={node} color={"#58a545"}/>
-                <BrickListItem img={proxmox} color={"#e57000"}/>
-                <BrickListItem img={rpi} color={"#e81150"}/>
-                <BrickListItem img={firebase} color={"#ff9100"}/>
-                <BrickListItem img={vite} color={"#6c16ff"}/>
-                <BrickListItem img={jetbrains} color={"#f6016c"}/>
-                <BrickListItem img={linux} color={"#ffbe00"}/>
-                <BrickListItem img={p5} color={"#ed225d"}/>
-                <BrickListItem img={processing} color={"#0468ff"}/>
-                <BrickListItem img={vscode} color={"#22a6f2"}/>
-                <BrickListItem img={jwt} color={"#d63aff"}/>
-                <BrickListItem img={xcode} color={"#0cc0fa"}/>
+                <BrickListItem img={aws} color={"#fd8d04"} name={"AWS"} links={[{txt:"Homepage",href:"https://aws.amazon.com/?nc2=h_home"}]}/>
+                <BrickListItem img={cloudflare} color={"#f38020"} name={"Cloudflare"} links={[{txt:"Homepage",href:"https://www.cloudflare.com/"}]}/>
+                <BrickListItem img={docker} color={"#0091e2"} name={"Docker"} links={[{txt:"Homepage",href:"https://www.docker.com/"}]}/>
+                <BrickListItem img={git} color={"#f05133"} name={"Git"} links={[{txt:"Homepage",href:"https://git-scm.com/e"}]}/>
+                <BrickListItem img={github} color={"#7e7e7e"} name={"Github"} links={[{txt:"Homepage",href:"https://github.com"}]}/>
+                <BrickListItem img={ollama} color={"#ffffff"} name={"Ollama"} links={[{txt:"Homepage",href:"https://ollama.com/"}]}/>
+                <BrickListItem img={postgres} color={"#336791"} name={"PostgreSQL"} links={[{txt:"Homepage",href:"https://www.postgresql.org/"}]}/>
+                <BrickListItem img={node} color={"#58a545"} name={"Node.js"} links={[{txt:"Homepage",href:"https://nodejs.org/"}]}/>
+                <BrickListItem img={proxmox} color={"#e57000"} name={"Proxmox VE"} links={[{txt:"Homepage",href:"https://www.proxmox.com/"}]}/>
+                <BrickListItem img={rpi} color={"#e81150"} name={"Raspberry PI"} links={[{txt:"Homepage",href:"https://www.raspberrypi.com/"}]}/>
+                <BrickListItem img={firebase} color={"#ff9100"} name={"Firebase"} links={[{txt:"Homepage",href:"https://firebase.google.com/"}]}/>
+                <BrickListItem img={vite} color={"#6c16ff"} name={"Vite"} links={[{txt:"Homepage",href:"https://vite.dev/"}]}/>
+                <BrickListItem img={jetbrains} color={"#f6016c"} name={"JetBrains IDEs"} links={[{txt:"Homepage",href:"https://www.jetbrains.com/"}]}/>
+                <BrickListItem img={linux} color={"#ffbe00"} name={"Linux"} links={[]}/>
+                <BrickListItem img={p5} color={"#ed225d"} name={"p5.js"} links={[{txt:"Homepage",href:"https://p5js.org/"}]}/>
+                <BrickListItem img={processing} color={"#0468ff"} name={"Processing"} links={[{txt:"Homepage",href:"https://processing.org/"}]}/>
+                <BrickListItem img={vscode} color={"#22a6f2"} name={"VS Code"} links={[{txt:"Homepage",href:"https://code.visualstudio.com/"}]}/>
+                <BrickListItem img={jwt} color={"#d63aff"} name={"JWT"} links={[{txt:"Homepage",href:"https://www.jwt.io/"}]}/>
+                <BrickListItem img={xcode} color={"#0cc0fa"} name={"X Code"} links={[{txt:"Homepage",href:"https://developer.apple.com/xcode/"}]}/>
+            {/*Open Router*/}
             </BrickList>
 
         </section>
