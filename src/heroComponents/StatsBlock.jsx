@@ -18,7 +18,7 @@ function StatsBlock(props) {
     },[])
 
     return (
-        <Flex className={styles.box} justify={"center"} align={"center"}>
+        <Flex className={styles.box} justify={"center"} align={"center"} py={"2"}>
             <div className={styles.metrics}>
                 <div>
                     <div className={styles.metricLabel}>students</div>

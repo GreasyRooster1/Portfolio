@@ -9,7 +9,7 @@ import rustIcon from '@assets/langs/rust.png'
 
 export function StackComponent() {
     return (
-        <Flex className={styles.box} justify={"center"} align={"center"} direction={"column"} gap="4">
+        <Flex className={styles.box} justify={"center"} align={"center"} direction={"column"} gap="4" py={"2"}>
             <div className={styles.metricLabel}>tech stack</div>
             <Flex width={"100%"} style={{justifyContent:"space-evenly"}} px="2">
                 <TechIcon icon={firebaseIcon} name={"Firebase"}/>

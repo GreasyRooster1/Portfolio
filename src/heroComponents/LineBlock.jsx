@@ -18,7 +18,7 @@ export function LineBlock() {
     },[])
 
     return (
-        <Flex className={styles.box} justify={"center"} align={"center"} >
+        <Flex className={styles.box} justify={"center"} align={"center"} py={"2"}>
             <div>
                 <div className={styles.metricLabel}>total lines of code</div>
                 <CountUp className={styles.linesValue}

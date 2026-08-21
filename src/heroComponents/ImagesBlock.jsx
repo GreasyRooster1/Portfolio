@@ -17,11 +17,11 @@ import snake from "@assets/snakelesson.png"
 const images = [kc1,kc2,kc3,kc4,kc5,kc6,kc7,kc8,snake];
 
 
-export function ImagesBlock() {
+export function ImagesBlock(props) {
     return (<>
             <Carousel images={images} style={{position:"absolute",zIndex:-1}} />
             <div style={{width:"100%",pointerEvents:"none"}}>
-                <HeroOverlay />
+                {!props.noOverlay && <HeroOverlay />}
             </div>
         </>
     )

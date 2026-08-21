@@ -46,15 +46,13 @@ export default function FeaturedHero() {
         </Flex>
       </DesktopView>
       <MobileView>
-        <Flex direction="column" gap="1" width={"100%"}>
-          <Box width={"100vw"} height={"100vw"} style={{position:"relative",zIndex:1,overflow: "clip"}}>
-            <ImagesBlock/>
+        <Flex direction="column" gap="3" width={"100%"}>
+          <Box width={"100%"} height={"100vw"} className={styles.box} style={{position:"relative",zIndex:1,overflow: "clip"}}>
+            <ImagesBlock noOverlay/>
           </Box>
-          <Grid gridRow={"1/1"} gridColumn={"3/3"} direction="row" gap="1" height={"100%"} width={"100%"} minWidth={"330px"}>
-            <StatsBlock/>
-            <StackComponent/>
-            <LineBlock/>
-          </Grid>
+          <StatsBlock/>
+          <StackComponent/>
+          <LineBlock/>
 
           <Flex direction="row" height={{initial:"40vh",md:"35vh",lg:"20vh"}} gap={{initial:"2",lg:"3"}} width={"100%"} minHeight="230px">
             <ProjectsGrid/>
