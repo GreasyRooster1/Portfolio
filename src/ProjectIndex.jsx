@@ -2,10 +2,11 @@ import SectionHead from '@components/SectionHead'
 import IndexRow from '@components/IndexRow'
 import styles from './ProjectIndex.module.css'
 import LinkRow from "@components/LinkRow.jsx";
+import PageSection from "@components/PageSection.jsx";
 
 export default function ProjectIndex(props) {
   return (
-    <section id="index" className={styles.section} {...props}>
+    <PageSection id="index" className={styles.section} {...props}>
       <SectionHead title="More projects" meta={`${props.projects.length} projects`} />
       <div className={styles.header}>
         <div>№</div>
@@ -20,6 +21,6 @@ export default function ProjectIndex(props) {
     <a className={styles.moreContainer} href="https://github.com/GreasyRooster1?tab=repositories">
         <span className={styles.moreText}>View 58 public repositories...</span>
     </a>
-    </section>
+    </PageSection>
   )
 }

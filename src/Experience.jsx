@@ -36,6 +36,7 @@ import processing from "@assets/langs/processing.svg"
 import vscode from "@assets/langs/vscode.svg"
 import jwt from "@assets/langs/jwt.png"
 import xcode from "@assets/langs/xcode.png"
+import PageSection from "@components/PageSection.jsx";
 
 const projLink = (lang) => {
     return `https://github.com/GreasyRooster1?tab=repositories&q=&type=&language=${lang}&sort=`;
@@ -43,7 +44,7 @@ const projLink = (lang) => {
 
 export function Experience(props) {
     return (
-        <section className={styles.section} {...props}>
+        <PageSection {...props}>
             <SectionHead title="Experience" meta="what i've worked with "/>
             <Flex width={"100%"} align={"center"} justify={"center"} mb="4" mt="6">
                 <Text width={"100%"} align="center" size="8" weight="bold">Languages</Text>
@@ -89,6 +90,6 @@ export function Experience(props) {
             {/*Open Router*/}
             </BrickList>
 
-        </section>
+        </PageSection>
     )
 }

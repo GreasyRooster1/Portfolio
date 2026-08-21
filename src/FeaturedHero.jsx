@@ -19,12 +19,13 @@ import {LineBlock} from "@/heroComponents/LineBlock.jsx";
 import {StackComponent} from "@/heroComponents/StackComponent.jsx";
 import {QuoteBlock} from "@/heroComponents/QuoteBlock.jsx";
 import {DesktopView, MobileView} from "@components/View.jsx";
+import PageSection from "@components/PageSection.jsx";
 
 const LINKS = [{ label: 'live demo', accent: true }, { label: 'source' }, { label: 'writeup' }]
 
 export default function FeaturedHero() {
   return (
-    <section className={styles.section}>
+    <PageSection>
       <DesktopView>
         <Flex direction="column" gap={{initial:"2",lg:"3"}} width={"100%"}>
           <Flex direction="row" height={{initial:"100vh",md:"70vh",lg:"50vh"}} gap={{initial:"2",lg:"3"}} minHeight="600px" width={"100%"}>
@@ -61,6 +62,6 @@ export default function FeaturedHero() {
           </Flex>
         </Flex>
       </MobileView>
-    </section>
+    </PageSection>
   )
 }
