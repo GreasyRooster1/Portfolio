@@ -6,7 +6,7 @@ import {Flex} from "@radix-ui/themes";
 
 function HeroQuote(props) {
     return (
-        <Flex justify={"center"} align={"center"} px={"7"} height={"100%"} width={"100%"} direction={"column"} style={{fontSize:"14pt",overflow:"clip",position:"relative",zIndex:"1"}}>
+        <Flex justify={"center"} align={"center"} px={{initial:"5",sm:"7"}} py={"3"} height={"100%"} width={"100%"} direction={"column"} style={{fontSize:"14pt",overflow:"clip",position:"relative",zIndex:"1"}}>
             <Quote wrap="pretty">{props.children}</Quote>
             <br/>
             <Text align="right" style={{width:"100%"}} weight="bold">

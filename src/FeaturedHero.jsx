@@ -54,7 +54,7 @@ export default function FeaturedHero() {
           {/*<StackComponent/>*/}
           <LineBlock/>
           <QuoteBlock width={"100%"}/>
-          <ProjectsGrid width={"100vw"} height={"100vw"} style={{aspectRatio:"1/1"}}/>
+          <ProjectsGrid width={"calc(100%-16px)"} height={"100vw"} style={{aspectRatio:"1/1"}}/>
         </Flex>
       </MobileView>
     </PageSection>

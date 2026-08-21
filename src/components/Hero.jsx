@@ -20,7 +20,7 @@ export default function Hero() {
     </DesktopView>
 
     <MobileView>
-      <Box mt="8">
+      <Box mt="8" mx="8px">
         <Main/>
         <About/>
         <Actions/>

@@ -6,7 +6,7 @@ const LINKS = ['work', 'index', 'about', 'experiments']
 
 export default function Nav() {
   return (
-    <nav className={styles.nav}>
+    <Flex className={styles.nav} px={{initial:"8px",sm:"22px"}} py={{initial:"16px",sm:"64px"}}>
       <div className={styles.brand}>
         Dillon Wilson
         <Cursor />
@@ -19,6 +19,6 @@ export default function Nav() {
         {/*  résumé ↓*/}
         {/*</a>*/}
       </Flex>
-    </nav>
+    </Flex>
   )
 }
