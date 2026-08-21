@@ -1,7 +1,6 @@
 import SectionHead from '@components/SectionHead'
 import WorkCard from '@components/WorkCard'
 import styles from './SelectedWork.module.css'
-import { WORK } from '@/data'
 import PageSection from "@components/PageSection.jsx";
 import {Grid} from "@radix-ui/themes";
 
