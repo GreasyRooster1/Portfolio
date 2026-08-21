@@ -20,9 +20,11 @@ export default function Hero() {
     </DesktopView>
 
     <MobileView>
-      <Main/>
-      <About/>
-      <Actions/>
+      <Box mt="8">
+        <Main/>
+        <About/>
+        <Actions/>
+      </Box>
     </MobileView>
     </>
   )
@@ -32,7 +34,8 @@ function Main(){
   return (
       <Box>
         <div className={styles.eyebrow}>
-          full stack developer · web · systems programming · graphics
+          <DesktopView>full stack developer · web · systems programming · graphics</DesktopView>
+          <MobileView>full stack · web · systems · graphics</MobileView>
         </div>
         <h1 className={styles.title}>
           Interfaces and the <span className={styles.accent}>machinery</span> underneath them.
