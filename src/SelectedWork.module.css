@@ -3,9 +3,6 @@
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px 44px;
   align-items: start;
   margin-top: 48px;
 }

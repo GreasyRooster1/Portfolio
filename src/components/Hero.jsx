@@ -1,52 +1,85 @@
 import styles from './Hero.module.css'
+import {Box} from "@radix-ui/themes";
+import {DesktopView, MobileView} from "@components/View.jsx";
 
 const SECONDARY_ACTIONS = ['github', 'email']
 
 export default function Hero() {
   return (
-    <header className={styles.hero}>
-      <div>
+    <>
+    <DesktopView>
+      <header className={styles.hero}>
+        <Main/>
+        <Box>
+          <Stats/>
+          <About/>
+          <Actions/>
+          {/*<div className={styles.availability}>available · [City] · replies within a day</div>*/}
+        </Box>
+      </header>
+    </DesktopView>
+
+    <MobileView>
+      <Main/>
+      <About/>
+      <Actions/>
+    </MobileView>
+    </>
+  )
+}
+
+function Main(){
+  return (
+      <Box>
         <div className={styles.eyebrow}>
           full stack developer · web · systems programming · graphics
         </div>
         <h1 className={styles.title}>
           Interfaces and the <span className={styles.accent}>machinery</span> underneath them.
         </h1>
-      </div>
-      <div>
-        <div className={styles.stats}>
-          <div>
-            <div className={`${styles.statValue} ${styles.statValueAccent}`}>
-              11 Years
-            </div>
-            <div className={styles.statLabel}>Programming Experience</div>
+      </Box>
+  )
+}
+
+function Stats(){
+  return (
+      <div className={styles.stats}>
+        <div>
+          <div className={`${styles.statValue} ${styles.statValueAccent}`}>
+            11 Years
           </div>
-          <div>
-            <div className={`${styles.statValue}`}>
-              Hundreds
-            </div>
-            <div className={styles.statLabel}>Of Projects</div>
+          <div className={styles.statLabel}>Programming Experience</div>
+        </div>
+        <div>
+          <div className={`${styles.statValue}`}>
+            Hundreds
           </div>
+          <div className={styles.statLabel}>Of Projects</div>
         </div>
-
-        <p className={styles.lede}>
-          Eleven years taking blank repositories to full projects. I've always loved experimenting and testing the limits of what I can create, developing hundreds of apps, games and experiments over the years.
-        </p>
-
-        <div className={styles.actions}>
-          {/*<a href="#7a" className={`${styles.btn} ${styles.btnPrimary}`}>*/}
-          {/*  résumé.pdf*/}
-          {/*</a>*/}
-          <a href="https://github.com/GreasyRooster1/" className={`${styles.btn} ${styles.btnPrimary}`}>
-            GitHub
-          </a>
-          <a href="mailto:dillonjwilson1@gmail.com" className={`${styles.btn}  ${styles.btnGhost}`}>
-            Email
-          </a>
-        </div>
-
-        {/*<div className={styles.availability}>available · [City] · replies within a day</div>*/}
       </div>
-    </header>
+  )
+}
+
+function About(){
+  return (
+      <p className={styles.lede}>
+        Eleven years taking blank repositories to full projects. I've always loved experimenting and testing the limits of what I can create, developing hundreds of apps, games and experiments over the years.
+      </p>
+  )
+}
+
+function Actions(){
+  return (
+      <div className={styles.actions}>
+        {/*<a href="#7a" className={`${styles.btn} ${styles.btnPrimary}`}>*/}
+        {/*  résumé.pdf*/}
+        {/*</a>*/}
+        <a href="https://github.com/GreasyRooster1/" className={`${styles.btn} ${styles.btnPrimary}`}>
+          GitHub
+        </a>
+        <a href="mailto:dillonjwilson1@gmail.com" className={`${styles.btn}  ${styles.btnGhost}`}>
+          Email
+        </a>
+      </div>
   )
 }
