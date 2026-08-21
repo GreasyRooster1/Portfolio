@@ -11,10 +11,10 @@ function HeroOverlay(props) {
     return (
         <Overlay>
             <div>
-                <div className={styles.eyebrow}>featured · 2024-2026</div>
+                {/*<div className={styles.eyebrow}>featured · 2024-2026</div>*/}
                 <div className={styles.title}>Inspiring Future Programmers</div>
                 <p className={styles.desc}>
-                    Currently teaching Javascript, Arduino, Scratch and Python to students ages 6-16
+                    An all-in-one platform build specifically to teach kids ages 6-16 programming skills. Students follow their lessons, build and run their projects, and share their work all within the app.
                 </p>
                 <LinkRow links={LINKS} className={styles.links} />
             </div>
