@@ -6,7 +6,7 @@ const LINKS = ['work', 'index', 'about', 'experiments']
 
 export default function Nav() {
   return (
-    <Flex className={styles.nav} px={{initial:"8px",sm:"22px"}} py={{initial:"16px",sm:"64px"}}>
+    <Flex className={styles.nav} px={{initial:"8px",sm:"64px"}} py={{initial:"16px",sm:"22px"}}>
       <div className={styles.brand}>
         Dillon Wilson
         <Cursor />
