@@ -16,9 +16,19 @@
   text-decoration: none;
 }
 
+.link:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
 .accent {
   color: var(--accent);
   text-decoration: none;
+}
+
+.accent:hover {
+  color: var(--text);
+  text-decoration: underline;
 }
 
 .sep {

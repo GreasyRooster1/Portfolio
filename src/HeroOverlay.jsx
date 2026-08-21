@@ -5,12 +5,12 @@ import styles from "./heroOverlay.module.css";
 import LinkRow from "@components/LinkRow.jsx";
 import Overlay from "@components/Overlay.jsx";
 
-const LINKS = [{ label: 'live demo', accent: true }, { label: 'source' }, { label: 'writeup' }]
+const LINKS = [{ label: 'see more', accent: true, href:"" }, { label: 'source', href:"https://github.com/GreasyRooster1/QCode" }]
 
 function HeroOverlay(props) {
     return (
         <Overlay>
-            <div>
+            <div style={{pointerEvents: 'all'}}>
                 {/*<div className={styles.eyebrow}>featured · 2024-2026</div>*/}
                 <div className={styles.title}>Inspiring Future Programmers</div>
                 <p className={styles.desc}>

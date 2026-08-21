@@ -9,7 +9,7 @@ export default function LinkRow({ links, separated = false, className }) {
       {links.map((l, i) => (
         <span key={l.label}>
           {separated && i > 0 && <span className={styles.sep}>/</span>}
-          <a className={l.accent ? styles.accent : styles.link} href={l.src}>
+          <a className={l.accent ? styles.accent : styles.link} href={l.href}>
             {l.label}
           </a>
         </span>
