@@ -1,5 +1,6 @@
 import Cursor from './Cursor'
 import styles from './Nav.module.css'
+import {Flex} from "@radix-ui/themes";
 
 const LINKS = ['work', 'index', 'about', 'experiments']
 
@@ -10,14 +11,14 @@ export default function Nav() {
         Dillon Wilson
         <Cursor />
       </div>
-      <div className={styles.links}>
+      <Flex className={styles.links} gap={{initial:"8px",sm:"12px",md:"24px"}}>
         <a href="#selected-work" className={styles.link}>featured</a>
         <a href="#project-index" className={styles.link}>projects</a>
         <a href="#experience" className={styles.link}>experience</a>
         {/*<a href="#7a" className={`${styles.link} ${styles.resume}`}>*/}
         {/*  résumé ↓*/}
         {/*</a>*/}
-      </div>
+      </Flex>
     </nav>
   )
 }

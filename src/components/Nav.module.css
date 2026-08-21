@@ -20,8 +20,6 @@
 }
 
 .links {
-  display: flex;
-  gap: 24px;
   font: 500 11px/1 var(--font-mono);
   letter-spacing: 0.1em;
   text-transform: uppercase;
