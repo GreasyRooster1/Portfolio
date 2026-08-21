@@ -23,6 +23,7 @@ export default function App() {
                 }
                 res.json().then((d) => {
                     if(Object.keys(d).length === 0){
+                        console.warn("no server data found")
                         return;
                     }
                     setData(d)
