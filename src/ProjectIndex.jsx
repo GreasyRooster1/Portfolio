@@ -6,7 +6,7 @@ import PageSection from "@components/PageSection.jsx";
 
 export default function ProjectIndex(props) {
   return (
-    <PageSection id="index" className={styles.section} {...props}>
+    <PageSection id="index" {...props}>
       <SectionHead title="More projects" meta={`${props.projects.length} projects`} />
       <div className={styles.header}>
         <div>№</div>

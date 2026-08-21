@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './pageSection.module.css';
+import {Box} from "@radix-ui/themes";
 
 function PageSection(props) {
     return (
-        <section className={styles.section} {...props}>
+        <Box mt="60px" mx="64px" style={{position:"relative"}} {...props}>
             {props.children}
-        </section>
+        </Box>
     );
 }
 

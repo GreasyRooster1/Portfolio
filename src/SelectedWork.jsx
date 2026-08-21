@@ -6,7 +6,7 @@ import PageSection from "@components/PageSection.jsx";
 
 export default function SelectedWork(props) {
   return (
-    <PageSection id="work" className={styles.section} {...props}>
+    <PageSection id="work" {...props}>
       <SectionHead title="Selected work" meta={`${props.projects.length} featured projects`} />
       <div className={styles.grid}>
         {props.projects.map((w) => (
