@@ -38,7 +38,7 @@ function Main(){
           <MobileView>full stack · web · systems · graphics</MobileView>
         </div>
         <h1 className={styles.title}>
-          Interfaces and the <span className={styles.accent}>machinery</span> underneath them.
+          Interfaces and the <span className={styles.accent}>machinery</span> underneath them (this is the butt part).
         </h1>
       </Box>
   )
@@ -66,7 +66,7 @@ function Stats(){
 function About(){
   return (
       <p className={styles.lede}>
-        Eleven years taking blank repositories to full projects. I've always loved experimenting and testing the limits of what I can create, developing hundreds of apps, games and experiments over the years.
+        Eleven years taking blank repositories to full projects. I've always loved experimenting with new techniques and testing the limits of what I can create. I teach so more kids can share the same positive experiences that made programming special for me
       </p>
   )
 }

@@ -11,9 +11,7 @@
         { "k": "Rays", "v": "2,844,444+" }
       ],
       "links": [
-        { "label": "demo", "accent": true },
-        { "label": "source" },
-        { "label": "writeup" }
+        { "label": "source", "href":"https://github.com/GreasyRooster1/WeekendRaytracing"}
       ]
     },
     {
@@ -29,8 +27,7 @@
         { "k": "particles @ 60fps", "v": "5,000" }
       ],
       "links": [
-        { "label": "demo", "accent": true },
-        { "label": "source" }
+        { "label": "source", "accent": false, "href":"https://github.com/GreasyRooster1/VerletIntegration"}
       ]
     },
     {
@@ -45,8 +42,7 @@
         { "k": "Language", "v": "Java" }
       ],
       "links": [
-        { "label": "source" },
-        { "label": "writeup" }
+        { "label": "source", "accent": false, "href":"https://github.com/GreasyRooster1/RaycastingEngine"}
       ]
     },
     {
@@ -62,8 +58,7 @@
         { "k": "total elements", "v": "136" }
       ],
       "links": [
-        { "label": "bench", "accent": true },
-        { "label": "source" }
+        { "label": "source", "accent": false, "href":"https://github.com/GreasyRooster1/Powder/tree/master/src/main"}
       ]
     }
   ],
