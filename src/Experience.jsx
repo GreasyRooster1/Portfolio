@@ -37,6 +37,7 @@ import vscode from "@assets/langs/vscode.svg"
 import jwt from "@assets/langs/jwt.png"
 import xcode from "@assets/langs/xcode.png"
 import PageSection from "@components/PageSection.jsx";
+import {DesktopView} from "@components/View.jsx";
 
 const projLink = (lang) => {
     return `https://github.com/GreasyRooster1?tab=repositories&q=&type=&language=${lang}&sort=`;
@@ -44,6 +45,7 @@ const projLink = (lang) => {
 
 export function Experience(props) {
     return (
+        <DesktopView>
         <PageSection {...props}>
             <SectionHead title="Experience" meta="what i've worked with "/>
             <Flex width={"100%"} align={"center"} justify={"center"} mb="4" mt="6">
@@ -91,5 +93,6 @@ export function Experience(props) {
             </BrickList>
 
         </PageSection>
+        </DesktopView>
     )
 }
