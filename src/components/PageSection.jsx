@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './pageSection.module.css';
 import {Box} from "@radix-ui/themes";
 
 function PageSection(props) {
