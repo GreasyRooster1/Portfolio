@@ -41,7 +41,7 @@ export default function FeaturedHero() {
 
           <Flex direction="row" height={{initial:"40vh",md:"35vh",lg:"20vh"}} gap={{initial:"2",lg:"3"}} width={"100%"} minHeight="230px">
             <ProjectsGrid/>
-            <QuoteBlock/>
+            <QuoteBlock width={"70%"}/>
           </Flex>
         </Flex>
       </DesktopView>
@@ -51,13 +51,10 @@ export default function FeaturedHero() {
             <ImagesBlock noOverlay/>
           </Box>
           <StatsBlock/>
-          <StackComponent/>
+          {/*<StackComponent/>*/}
           <LineBlock/>
-
-          <Flex direction="row" height={{initial:"40vh",md:"35vh",lg:"20vh"}} gap={{initial:"2",lg:"3"}} width={"100%"} minHeight="230px">
-            <ProjectsGrid/>
-            <QuoteBlock/>
-          </Flex>
+          <QuoteBlock width={"100%"}/>
+          <ProjectsGrid width={"100vw"} height={"100vw"} style={{aspectRatio:"1/1"}}/>
         </Flex>
       </MobileView>
     </PageSection>

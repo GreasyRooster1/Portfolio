@@ -4,9 +4,9 @@ import HeroQuote from "@components/HeroQuote.jsx";
 import styles from "@/FeaturedHero.module.css";
 import karmaImg from '@assets/karma2.png'
 
-export function QuoteBlock() {
+export function QuoteBlock(props) {
     return (
-        <Flex className={styles.box} justify={"center"} align={"center"} width={"70%"} direction={"column"} style={{fontSize:"14pt",overflow:"clip",position:"relative",zIndex:"1"}}>
+        <Flex className={styles.box} justify={"center"} align={"center"} direction={"column"} style={{fontSize:"14pt",overflow:"clip",position:"relative",zIndex:"1"}} {...props}>
             <CarouselPrimitive autoTime={5000} noArrows>
                 <HeroQuote author={(<>
                     Sally Newson, Founder, <a href={"https://karma-club.org/"}>Karma Club & The Kove</a>

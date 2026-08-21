@@ -43,3 +43,7 @@
 .link:hover{
     text-decoration: underline;
 }
+
+.box{
+    border: 2px solid var(--hairline);
+}
