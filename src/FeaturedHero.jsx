@@ -18,27 +18,49 @@ import StatsBlock from "@/heroComponents/StatsBlock.jsx";
 import {LineBlock} from "@/heroComponents/LineBlock.jsx";
 import {StackComponent} from "@/heroComponents/StackComponent.jsx";
 import {QuoteBlock} from "@/heroComponents/QuoteBlock.jsx";
+import {DesktopView, MobileView} from "@components/View.jsx";
 
 const LINKS = [{ label: 'live demo', accent: true }, { label: 'source' }, { label: 'writeup' }]
 
 export default function FeaturedHero() {
   return (
     <section className={styles.section}>
-      <Flex direction="column" gap={{initial:"2",lg:"3"}} width={"100%"}>
-        <Flex direction="row" height={{initial:"100vh",md:"70vh",lg:"50vh"}} gap={{initial:"2",lg:"3"}} minHeight="600px" width={"100%"}>
-          <ImagesBlock/>
-          <Grid gridRow={"1/1"} gridColumn={"3/3"} direction="column" gap={{initial:"2",lg:"3"}} height={"100%"} width={"25%"} minWidth={"330px"}>
+      <DesktopView>
+        <Flex direction="column" gap={{initial:"2",lg:"3"}} width={"100%"}>
+          <Flex direction="row" height={{initial:"100vh",md:"70vh",lg:"50vh"}} gap={{initial:"2",lg:"3"}} minHeight="600px" width={"100%"}>
+            <Flex className={styles.box} gridRow={"1/1"} gridColumn={"1/3"} height={"100%"} width={"100%"} flexGrow="1" style={{position:"relative",zIndex:1,overflow: "clip"}}>
+              <ImagesBlock/>
+            </Flex>
+            <Grid gridRow={"1/1"} gridColumn={"3/3"} direction="column" gap={{initial:"2",lg:"3"}} height={"100%"} width={"25%"} minWidth={"330px"}>
+              <StatsBlock/>
+              <StackComponent/>
+              <LineBlock/>
+            </Grid>
+          </Flex>
+
+          <Flex direction="row" height={{initial:"40vh",md:"35vh",lg:"20vh"}} gap={{initial:"2",lg:"3"}} width={"100%"} minHeight="230px">
+            <ProjectsGrid/>
+            <QuoteBlock/>
+          </Flex>
+        </Flex>
+      </DesktopView>
+      <MobileView>
+        <Flex direction="column" gap="1" width={"100%"}>
+          <Box width={"100vw"} height={"100vw"} style={{position:"relative",zIndex:1,overflow: "clip"}}>
+            <ImagesBlock/>
+          </Box>
+          <Grid gridRow={"1/1"} gridColumn={"3/3"} direction="row" gap="1" height={"100%"} width={"100%"} minWidth={"330px"}>
             <StatsBlock/>
             <StackComponent/>
             <LineBlock/>
           </Grid>
-        </Flex>
 
-        <Flex direction="row" height={{initial:"40vh",md:"35vh",lg:"20vh"}} gap={{initial:"2",lg:"3"}} width={"100%"} minHeight="230px">
-          <ProjectsGrid/>
-          <QuoteBlock/>
+          <Flex direction="row" height={{initial:"40vh",md:"35vh",lg:"20vh"}} gap={{initial:"2",lg:"3"}} width={"100%"} minHeight="230px">
+            <ProjectsGrid/>
+            <QuoteBlock/>
+          </Flex>
         </Flex>
-      </Flex>
+      </MobileView>
     </section>
   )
 }

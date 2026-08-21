@@ -18,12 +18,11 @@ const images = [kc1,kc2,kc3,kc4,kc5,kc6,kc7,kc8,snake];
 
 
 export function ImagesBlock() {
-    return (
-        <Flex className={styles.box} gridRow={"1/1"} gridColumn={"1/3"} height={"100%"} width={"100%"} flexGrow="1" style={{position:"relative",zIndex:1,overflow: "clip"}}>
+    return (<>
             <Carousel images={images} style={{position:"absolute",zIndex:-1}} />
             <div style={{width:"100%",pointerEvents:"none"}}>
                 <HeroOverlay />
             </div>
-        </Flex>
+        </>
     )
 }
