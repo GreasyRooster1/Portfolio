@@ -38,7 +38,7 @@ function Main(){
           <MobileView>full stack · web · systems · graphics</MobileView>
         </div>
         <h1 className={styles.title}>
-          Programming to make a difference
+          Programming to make a <span className={styles.accent}>difference</span>
         </h1>
       </Flex>
   )
