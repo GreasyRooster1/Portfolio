@@ -1,5 +1,5 @@
 import styles from './Hero.module.css'
-import {Box} from "@radix-ui/themes";
+import {Box, Flex} from "@radix-ui/themes";
 import {DesktopView, MobileView} from "@components/View.jsx";
 
 const SECONDARY_ACTIONS = ['github', 'email']
@@ -32,15 +32,15 @@ export default function Hero() {
 
 function Main(){
   return (
-      <Box>
+      <Flex direction={'column'} alignItems={'center'} justify={'center'} height={'100%'}>
         <div className={styles.eyebrow}>
           <DesktopView>full stack developer · web · systems programming · graphics</DesktopView>
           <MobileView>full stack · web · systems · graphics</MobileView>
         </div>
         <h1 className={styles.title}>
-          Interfaces and the <span className={styles.accent}>machinery</span> underneath them (this is the butt part).
+          Programming to make a difference
         </h1>
-      </Box>
+      </Flex>
   )
 }
 
