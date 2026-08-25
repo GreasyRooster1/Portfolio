@@ -8,7 +8,6 @@ import {Experience} from "@/Experience.jsx";
 import Footer from "@/pages/index/Footer.jsx";
 import projectData from '@assets/projects.json';
 import HtmlTitle from "@components/HtmlTitle.jsx";
-import styles from {}
 
 function Index(props) {
     const [data, setData] = useState(projectData)
