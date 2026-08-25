@@ -65,7 +65,7 @@ export function Experience(props) {
                 <BrickListItem img={rust} color={"#dd3516"} name={"Rust"} links={[{txt:"Homepage",href:"https://rust-lang.org/"},{txt:"Projects",href:projLink("rust")}]}/>
                 <BrickListItem img={css} color={"#1c88c7"} name={"CSS"} links={[{txt:"Projects",href:projLink("css")}]}/>
                 <BrickListItem img={swift} color={"#fa5d2d"} name={"Swift"} links={[{txt:"Homepage",href:"https://www.swift.org/"}]}/>
-            </BrickList>
+            </BrickList>i
             <Flex width={"100%"} align={"center"} justify={"center"} mb="4" mt="6">
                 <Text width={"100%"} align="center" size="8" weight="bold">Technologies</Text>
             </Flex>
@@ -90,6 +90,7 @@ export function Experience(props) {
                 <BrickListItem img={jwt} color={"#d63aff"} name={"JWT"} links={[{txt:"Homepage",href:"https://www.jwt.io/"}]}/>
                 <BrickListItem img={xcode} color={"#0cc0fa"} name={"X Code"} links={[{txt:"Homepage",href:"https://developer.apple.com/xcode/"}]}/>
             {/*Open Router*/}
+            {/*Oracle Cloud*/}
             </BrickList>
 
         </PageSection>
