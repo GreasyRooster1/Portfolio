@@ -1,12 +1,12 @@
 // Portfolio homepage — option 7a "Full 2a layout in 3c ice blue on cool slate".
 // Imported from the Claude Design doc "Portfolio Homepage".
 
-import Nav from './components/Nav'
-import Hero from './components/Hero'
+import Nav from './Nav.jsx'
+import Hero from './Hero.jsx'
 import FeaturedHero from './FeaturedHero.jsx'
 import SelectedWork from './SelectedWork'
 import ProjectIndex from './ProjectIndex'
-import Footer from './components/Footer'
+import Footer from './Footer.jsx'
 import styles from './App.module.css'
 import {useEffect, useState} from "react";
 import projectData from '@assets/projects.json';

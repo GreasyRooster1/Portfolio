@@ -1,4 +1,4 @@
-import LinkRow from './LinkRow'
+import LinkRow from '@components/LinkRow.jsx'
 import styles from './IndexRow.module.css'
 
 export default function IndexRow({ n, title, sub, stack, result, links, last }) {

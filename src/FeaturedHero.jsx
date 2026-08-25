@@ -11,7 +11,7 @@ import CountUp from "@components/CountUp.jsx";
 import Carousel from "@components/Carousel.jsx";
 import Overlay from "@components/Overlay.jsx";
 import ProjectsGrid from "@/heroComponents/ProjectsGrid.jsx";
-import HeroQuote from "@components/HeroQuote.jsx";
+import HeroQuote from "@/HeroQuote.jsx";
 import CarouselPrimitive from "@components/CarouselPrimitive.jsx";
 import {ImagesBlock} from "@/heroComponents/ImagesBlock.jsx";
 import StatsBlock from "@/heroComponents/StatsBlock.jsx";

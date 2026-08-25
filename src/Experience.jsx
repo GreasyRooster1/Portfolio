@@ -1,6 +1,6 @@
 import styles from "@/ProjectIndex.module.css";
 import SectionHead from "@components/SectionHead.jsx";
-import IndexRow from "@components/IndexRow.jsx";
+import IndexRow from "@/IndexRow.jsx";
 import {BrickList, BrickListItem} from "@components/BrickList.jsx";
 import {Flex, Text} from "@radix-ui/themes";
 import rust from "@assets/langs/rustcrab.png"

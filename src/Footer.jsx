@@ -1,4 +1,4 @@
-import Cursor from './Cursor'
+import Cursor from '@components/Cursor.jsx'
 import styles from './Footer.module.css'
 import {Flex} from "@radix-ui/themes";
 

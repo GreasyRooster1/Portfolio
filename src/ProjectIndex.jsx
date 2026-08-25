@@ -1,5 +1,5 @@
 import SectionHead from '@components/SectionHead'
-import IndexRow from '@components/IndexRow'
+import IndexRow from '@/IndexRow.jsx'
 import styles from './ProjectIndex.module.css'
 import LinkRow from "@components/LinkRow.jsx";
 import PageSection from "@components/PageSection.jsx";

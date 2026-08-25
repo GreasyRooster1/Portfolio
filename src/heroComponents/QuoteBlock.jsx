@@ -1,6 +1,6 @@
 import {Flex} from "@radix-ui/themes";
 import CarouselPrimitive from "@components/CarouselPrimitive.jsx";
-import HeroQuote from "@components/HeroQuote.jsx";
+import HeroQuote from "@/HeroQuote.jsx";
 import styles from "@/FeaturedHero.module.css";
 import karmaImg from '@assets/karma2.png'
 
