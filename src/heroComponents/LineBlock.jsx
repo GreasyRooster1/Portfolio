@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {Flex} from "@radix-ui/themes";
 import CountUp from "@components/CountUp.jsx";
-import styles from '@/FeaturedHero.module.css'
+import styles from '@/pages/index/FeaturedHero.module.css'
 
 
 export function LineBlock() {

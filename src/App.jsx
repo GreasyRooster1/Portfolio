@@ -1,44 +1,10 @@
-// Portfolio homepage — option 7a "Full 2a layout in 3c ice blue on cool slate".
-// Imported from the Claude Design doc "Portfolio Homepage".
-
-import Nav from './Nav.jsx'
-import Hero from './Hero.jsx'
-import FeaturedHero from './FeaturedHero.jsx'
-import SelectedWork from './SelectedWork'
-import ProjectIndex from './ProjectIndex'
-import Footer from './Footer.jsx'
-import styles from './App.module.css'
-import {useEffect, useState} from "react";
-import projectData from '@assets/projects.json';
-import {Experience} from "@/Experience.jsx";
+import {Route, Routes} from "react-router-dom";
+import Index from "@/pages/index/Index.jsx";
 
 export default function App() {
-    const [data, setData] = useState(projectData)
-
-    useEffect(() => {
-        fetch("https://portfolio-api.dillonjw.com/projects")
-            .then((res) => {
-                if(!res.ok) {
-                    return;
-                }
-                res.json().then((d) => {
-                    if(Object.keys(d).length === 0){
-                        console.warn("no server data found")
-                        return;
-                    }
-                    setData(d)
-                })
-            })
-    },[])
     return (
-        <div className={styles.page}>
-            <Nav />
-            <Hero/>
-            <FeaturedHero />
-            <SelectedWork id="selected-work" projects={data.featured}/>
-            <ProjectIndex id="project-index"  projects={data.list}/>
-            <Experience id="experience"/>
-            <Footer />
-        </div>
+        <Routes>
+            <Route exact path="/" component={Index} />
+        </Routes>
     )
 }

@@ -2,7 +2,7 @@ import {LineBlock} from "@/heroComponents/LineBlock.jsx";
 import React from "react";
 import {Flex} from "@radix-ui/themes";
 import TechIcon from "@components/TechIcon.jsx";
-import styles from '@/FeaturedHero.module.css'
+import styles from '@/pages/index/FeaturedHero.module.css'
 import firebaseIcon from '@assets/langs/firebase.png'
 import viteIcon from '@assets/langs/vite.svg'
 import rustIcon from '@assets/langs/rust.png'

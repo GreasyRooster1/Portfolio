@@ -1,7 +1,7 @@
-import Placeholder from '@components/Placeholder'
-import LinkRow from '@components/LinkRow'
-import styles from '@/FeaturedHero.module.css'
-import HeroOverlay from "@/HeroOverlay.jsx";
+import Placeholder from '@components/Placeholder.jsx'
+import LinkRow from '@components/LinkRow.jsx'
+import styles from '@/pages/index/FeaturedHero.module.css'
+import HeroOverlay from "@/pages/index/HeroOverlay.jsx";
 import {Box, Flex, Grid, Quote, Text} from "@radix-ui/themes";
 import React, {useEffect, useState} from "react";
 
@@ -11,7 +11,7 @@ import CountUp from "@components/CountUp.jsx";
 import Carousel from "@components/Carousel.jsx";
 import Overlay from "@components/Overlay.jsx";
 import ProjectsGrid from "@/heroComponents/ProjectsGrid.jsx";
-import HeroQuote from "@/HeroQuote.jsx";
+import HeroQuote from "@/pages/index/HeroQuote.jsx";
 import CarouselPrimitive from "@components/CarouselPrimitive.jsx";
 import {ImagesBlock} from "@/heroComponents/ImagesBlock.jsx";
 import StatsBlock from "@/heroComponents/StatsBlock.jsx";

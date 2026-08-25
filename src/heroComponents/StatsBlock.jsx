@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import styles from '@/FeaturedHero.module.css'
+import styles from '@/pages/index/FeaturedHero.module.css'
 import {Flex} from "@radix-ui/themes/dist/esm/index.d.ts";
 import TechIcon from "@components/TechIcon.jsx";
 import CountUp from "@components/CountUp.jsx";

@@ -1,8 +1,8 @@
-import styles from "@/FeaturedHero.module.css";
+import styles from "@/pages/index/FeaturedHero.module.css";
 import React from "react";
 import {Flex} from "@radix-ui/themes";
 import Carousel from "@components/Carousel.jsx";
-import HeroOverlay from "@/HeroOverlay.jsx";
+import HeroOverlay from "@/pages/index/HeroOverlay.jsx";
 
 import kc1 from "@assets/KC/kc1.jpg"
 import kc2 from "@assets/KC/kc2.jpg"

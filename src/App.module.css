@@ -1,6 +1,0 @@
-.page {
-  max-width: var(--page-width);
-  margin: 0 auto;
-  background: var(--bg);
-  font-family: var(--font-sans);
-}

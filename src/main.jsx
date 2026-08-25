@@ -9,8 +9,10 @@ import HtmlTitle from "@components/HtmlTitle.jsx";
 createRoot(document.getElementById('root')).render(
   <StrictMode>
       <Theme appearance="dark">
-          <HtmlTitle/>
-        <App />
+          <BrowserRouter>
+
+            <App />
+          </BrowserRouter>
       </Theme>
   </StrictMode>,
 )

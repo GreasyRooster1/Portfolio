@@ -1,7 +1,7 @@
 import {Flex} from "@radix-ui/themes";
 import CarouselPrimitive from "@components/CarouselPrimitive.jsx";
-import HeroQuote from "@/HeroQuote.jsx";
-import styles from "@/FeaturedHero.module.css";
+import HeroQuote from "@/pages/index/HeroQuote.jsx";
+import styles from "@/pages/index/FeaturedHero.module.css";
 import karmaImg from '@assets/karma2.png'
 
 export function QuoteBlock(props) {

@@ -1,6 +1,6 @@
-mimport React from 'react';
+import React from 'react';
 import {Quote, Text} from "@radix-ui/themes/dist/esm/index.d.ts";
-import styles from "@/heroQuote.module.css";
+import styles from "@/pages/index/heroQuote.module.css";
 import karmaImg from "@assets/karma2.png";
 import {Flex} from "@radix-ui/themes";
 

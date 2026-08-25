@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text} from "@radix-ui/themes/dist/esm/index.d.ts";
-import styles from "@/FeaturedHero.module.css";
+import styles from "@/pages/index/FeaturedHero.module.css";
 import {Flex} from "@radix-ui/themes";
 
 function TechIcon(props) {
