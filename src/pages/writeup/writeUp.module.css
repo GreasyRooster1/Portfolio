@@ -22,3 +22,8 @@
     left: 20px;
     height: 100%;
 }
+
+.menuItem{
+    border-left: 3px solid var(--accent);
+    padding-left: 12px;
+}
