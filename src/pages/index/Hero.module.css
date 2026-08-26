@@ -3,7 +3,7 @@
   grid-template-columns: 1.35fr 1fr;
   gap: 64px;
   align-items: end;
-  padding: 104px 64px 0;
+  padding: 0 64px;
 }
 
 .eyebrow {
@@ -24,6 +24,16 @@
 
 .accent {
   color: var(--accent);
+}
+
+.name{
+  font: 600 62px/1 var(--font-sans);
+}
+
+.line{
+  flex:1;
+  padding: 0 64px;
+  border-bottom: 2px solid var(--hairline-strong);
 }
 
 .lede {
