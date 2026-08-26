@@ -4,17 +4,17 @@ import {Flex} from "@radix-ui/themes";
 import Carousel from "@components/Carousel.jsx";
 import HeroOverlay from "@/pages/index/HeroOverlay.jsx";
 
-import kc1 from "@assets/KC/kc1.jpg"
-import kc2 from "@assets/KC/kc2.jpg"
+// import kc1 from "@assets/KC/kc1.jpg"
+// import kc2 from "@assets/KC/kc2.jpg"
 import kc3 from "@assets/KC/kc3.jpg"
 import kc4 from "@assets/KC/kc4.jpg"
 import kc5 from "@assets/KC/kc5.jpg"
 import kc6 from "@assets/KC/kc6.jpg"
-import kc7 from "@assets/KC/kc7.jpg"
-import kc8 from "@assets/KC/kc8.jpg"
+// import kc7 from "@assets/KC/kc7.jpg"
+// import kc8 from "@assets/KC/kc8.jpg"
 import snake from "@assets/snakelesson.png"
-
-const images = [kc1,kc2,kc3,kc4,kc5,kc6,kc7,kc8,snake];
+import es1 from "@assets/Esporterz/esporterz1.jpeg"
+const images = [kc3,kc4,kc5,kc6,snake,es1];
 
 
 export function ImagesBlock(props) {
