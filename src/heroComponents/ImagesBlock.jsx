@@ -14,7 +14,7 @@ import kc6 from "@assets/KC/kc6.jpg"
 // import kc8 from "@assets/KC/kc8.jpg"
 import snake from "@assets/snakelesson.png"
 import es1 from "@assets/Esporterz/esporterz1.jpeg"
-const images = [kc3,kc4,kc5,kc6,snake,es1];
+const images = [kc5,kc6,es1,kc4,kc3,snake];
 
 
 export function ImagesBlock(props) {
