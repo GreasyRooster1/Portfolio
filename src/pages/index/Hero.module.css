@@ -28,6 +28,7 @@
 
 .name{
   font: 600 62px/1 var(--font-sans);
+  text-wrap: nowrap;
 }
 
 .line{

@@ -21,6 +21,7 @@ export default function Hero() {
     </DesktopView>
 
     <MobileView>
+        <Name/>
       <Box mt="8" mx="8px">
         <Main/>
         <About/>
@@ -33,7 +34,7 @@ export default function Hero() {
 
 function Name(){
     return (
-        <Flex width="100%" direction={"row"} justify={"center"} align={"center"} pt='92px' pb="52px" px={"64px"} gapX="32px">
+        <Flex width="100%" direction={"row"} justify={"center"} align={"center"} pt={{initial:"24px",sm:'82px'}} pb={{initial:"0px",sm:'62px'}} px={"64px"} gapX="32px">
             <div className={styles.line}/><Text className={styles.name}>Dillon Wilson</Text><div className={styles.line}/>
         </Flex>
     )
