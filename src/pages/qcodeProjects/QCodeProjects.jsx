@@ -18,8 +18,8 @@ function QCodeProjects(props) {
                 <QCProject id={422378628263191}/>
                 <QCProject id={344818653046913}/>
                 <QCProject id={6466099712027261}/>
-                <QCProject id={422378628263191}/>
-                <QCProject id={422378628263191}/>
+                <QCProject id={2685623999620988}/>
+                <QCProject id={1590278035540024}/>
             </Grid>
         </div>
     );
