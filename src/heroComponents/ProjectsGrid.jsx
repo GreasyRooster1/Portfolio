@@ -17,7 +17,7 @@ import LinkRow from "@components/LinkRow.jsx";
 function ProjectsGrid(props) {
     return (
         <Flex className={styles.box} justify={"center"} align={"center"} {...props} style={{position:"relative",overflow:"clip",...props.style}}>
-            <a className={styles.main} style={{width:"100%"}} href={"https://google.com"}>
+            <a className={styles.main} style={{width:"100%"}} href={"qcode_projects"}>
                 <Grid columns="3" rows="3" width="100%" height="100%" className={styles.grid}>
                     <ImageGrid/>
                     <ImageGrid/>
