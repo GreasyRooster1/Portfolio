@@ -5,7 +5,7 @@ import styles from "./heroOverlay.module.css";
 import LinkRow from "@components/LinkRow.jsx";
 import Overlay from "@components/Overlay.jsx";
 
-const LINKS = [{ label: 'source', href:"https://github.com/GreasyRooster1/QCode", accent:true},{ label: 'student work', href:"qcode_projects", accent:false}]
+const LINKS = [{ label: 'more info', href:"https://github.com/GreasyRooster1/QCode/", accent:true},{ label: 'source', href:"https://github.com/GreasyRooster1/QCode/tree/master/src", accent:false},{ label: 'student work', href:"qcode_projects", accent:false}]
 
 function HeroOverlay(props) {
     return (
