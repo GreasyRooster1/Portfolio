@@ -47,7 +47,7 @@ export function Experience(props) {
     return (
         <DesktopView>
         <PageSection {...props}>
-            <SectionHead title="Experience" meta="what i've worked with "/>
+            <SectionHead title="Experience" meta="hover to view projects"/>
             <Flex width={"100%"} align={"center"} justify={"center"} mb="4" mt="6">
                 <Text width={"100%"} align="center" size="8" weight="bold">Languages</Text>
             </Flex>
