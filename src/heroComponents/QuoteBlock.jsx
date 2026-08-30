@@ -8,7 +8,7 @@ import esporterzImg from '@assets/esporterz3.png'
 export function QuoteBlock(props) {
     return (
         <Flex className={styles.box} justify={"center"} align={"center"} direction={"column"} style={{fontSize:"14pt",overflow:"clip",position:"relative",zIndex:"1"}} {...props}>
-            <CarouselPrimitive autoTime={5000}>
+            <CarouselPrimitive autoTime={5000_000000}>
                 <HeroQuote author={(<>
                     Sally Newson, Founder, <a href={"https://karma-club.org/"}>Karma Club & The Kove</a>
                 </>)} src={karmaImg}>

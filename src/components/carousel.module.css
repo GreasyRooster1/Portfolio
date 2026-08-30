@@ -35,7 +35,6 @@ img.block {
 }
 
 .item{
-    display: block;
     animation: fadeIn 0.6s ease;
 }
 
