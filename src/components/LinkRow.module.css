@@ -1,0 +1,37 @@
+.spaced {
+  display: flex;
+  gap: 16px;
+  font: 500 10.5px/1 var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.separated {
+  font: 500 10.5px/1 var(--font-mono);
+  color: var(--muted);
+}
+
+.link {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+.accent {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.accent:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+.sep {
+  margin: 0 6px;
+  color: var(--bar-track);
+}

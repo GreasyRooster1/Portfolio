@@ -1,0 +1,28 @@
+import styles from "@/pages/index/FeaturedHero.module.css";
+import React from "react";
+import {Flex} from "@radix-ui/themes";
+import Carousel from "@components/Carousel.jsx";
+import HeroOverlay from "@/pages/index/HeroOverlay.jsx";
+
+// import kc1 from "@assets/KC/kc1.jpg"
+// import kc2 from "@assets/KC/kc2.jpg"
+import kc3 from "@assets/KC/kc3.jpg"
+import kc4 from "@assets/KC/kc4.jpg"
+import kc5 from "@assets/KC/kc5.jpg"
+import kc6 from "@assets/KC/kc6.jpg"
+// import kc7 from "@assets/KC/kc7.jpg"
+// import kc8 from "@assets/KC/kc8.jpg"
+import snake from "@assets/snakelesson.png"
+import es1 from "@assets/Esporterz/esporterz1.jpeg"
+const images = [kc5,kc6,es1,kc4,kc3,snake];
+
+
+export function ImagesBlock(props) {
+    return (<>
+            <Carousel images={images} style={{position:"absolute",zIndex:-1}} />
+            <div style={{width:"100%",pointerEvents:"none"}}>
+                {!props.noOverlay && <HeroOverlay />}
+            </div>
+        </>
+    )
+}

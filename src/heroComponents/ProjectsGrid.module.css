@@ -1,0 +1,49 @@
+.main{
+    display: block;
+}
+
+.gridImage{
+    width: 100%;
+    height: 100%;
+}
+
+.grid{
+    width: 300%;
+    height: 300%;
+    pointer-events: none;
+    animation: 20s infinite forwards move linear;
+}
+
+@keyframes move {
+    0%{
+        transform: translateX(-33%) translateY(-33%);
+    }
+    100%{
+        transform: translateX(0) translateY(0);
+    }
+}
+
+.title {
+    font: 600 34px/1.1 var(--font-sans);
+    letter-spacing: -0.02em;
+    color: var(--text);
+    transition: .3s ease color;
+}
+
+.desc {
+    font: 400 14.5px/1.55 var(--font-sans);
+    color: var(--body);
+    text-wrap: pretty;
+}
+
+.link{
+    color:var(--accent)
+}
+
+.link:hover{
+    text-decoration: underline;
+}
+
+.box{
+    border: 2px solid var(--hairline);
+}

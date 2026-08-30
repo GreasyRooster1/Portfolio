@@ -1,0 +1,99 @@
+import styles from './Hero.module.css'
+import {Box, Flex,Text} from "@radix-ui/themes";
+import {DesktopView, MobileView} from "@components/View.jsx";
+
+const SECONDARY_ACTIONS = ['github', 'email']
+
+export default function Hero() {
+  return (
+    <>
+    <DesktopView>
+        <Name/>
+      <header className={styles.hero}>
+        <Main/>
+        <Box>
+          <Stats/>
+          <About/>
+          <Actions/>
+          {/*<div className={styles.availability}>available · [City] · replies within a day</div>*/}
+        </Box>
+      </header>
+    </DesktopView>
+
+    <MobileView>
+        <Name/>
+      <Box mt="8" mx="8px">
+        <Main/>
+        <About/>
+        <Actions/>
+      </Box>
+    </MobileView>
+    </>
+  )
+}
+
+function Name(){
+    return (
+        <Flex width="100%" direction={"row"} justify={"center"} align={"center"} pt={{initial:"24px",sm:'82px'}} pb={{initial:"0px",sm:'72px'}} px={"64px"} gapX="32px">
+            <div className={styles.line}/><Text className={styles.name}>Dillon Wilson</Text><div className={styles.line}/>
+        </Flex>
+    )
+}
+
+function Main(){
+  return (
+      <Flex direction={'column'} alignItems={'center'} justify={'center'} height={'100%'}>
+        <div className={styles.eyebrow}>
+          <DesktopView>full stack developer · web · systems programming · graphics</DesktopView>
+          <MobileView>full stack · web · systems · graphics</MobileView>
+        </div>
+        <h1 className={styles.title}>
+            {/*<em className={styles.name}>Dillon Wilson: </em><br/>*/}
+            Programming to make a <span className={styles.accent}>difference</span>
+        </h1>
+      </Flex>
+  )
+}
+
+function Stats(){
+  return (
+      <div className={styles.stats}>
+        <div>
+          <div className={`${styles.statValue} ${styles.statValueAccent}`}>
+            11 Years
+          </div>
+          <div className={styles.statLabel}>Programming Experience</div>
+        </div>
+        <div>
+          <div className={`${styles.statValue}`}>
+            Hundreds
+          </div>
+          <div className={styles.statLabel}>Of Projects</div>
+        </div>
+      </div>
+  )
+}
+
+function About(){
+  return (
+      <p className={styles.lede}>
+        Eleven years taking blank repositories to full projects. I've always loved experimenting with new techniques and testing the limits of what I can create. I teach so more kids can share the same positive experiences that made programming special for me
+      </p>
+  )
+}
+
+function Actions(){
+  return (
+      <div className={styles.actions}>
+        {/*<a href="#7a" className={`${styles.btn} ${styles.btnPrimary}`}>*/}
+        {/*  résumé.pdf*/}
+        {/*</a>*/}
+        <a href="https://github.com/GreasyRooster1/" className={`${styles.btn} ${styles.btnPrimary}`}>
+          GitHub
+        </a>
+        <a href="mailto:dillonjwilson1@gmail.com" className={`${styles.btn}  ${styles.btnGhost}`}>
+          Email
+        </a>
+      </div>
+  )
+}

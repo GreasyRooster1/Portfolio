@@ -1,0 +1,77 @@
+.imageContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.imageContainer img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: -1;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+img.hidden {
+    display: none;
+}
+
+img.block {
+    display: block;
+    animation: fadeIn 0.6s ease;
+}
+
+.item{
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.navButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scale(1);
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+
+    padding: 0;
+    z-index: 500;
+}
+.navButton * {
+    transition: transform 0.3s ease;
+}
+
+.navButton.left {
+    left: -.7rem;
+}
+
+.navButton.right {
+    right: -.7rem;
+}
+
+.navButton:hover * {
+    transform: scale(1.2) translateY(-10%) translateX(-10%);
+}

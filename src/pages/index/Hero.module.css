@@ -1,0 +1,102 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 64px;
+  align-items: end;
+  padding: 0 64px;
+}
+
+.eyebrow {
+  margin-bottom: 26px;
+  font: 500 10.5px/1 var(--font-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.title {
+  margin: 0;
+  max-width: 16ch;
+  font: 600 72px/1 var(--font-sans);
+  letter-spacing: -0.025em;
+  color: var(--text);
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.name{
+  font: 600 62px/1 var(--font-sans);
+  text-wrap: nowrap;
+}
+
+.line{
+  flex:1;
+  padding: 0 64px;
+  border-bottom: 2px solid var(--hairline-strong);
+}
+
+.lede {
+  margin: 0;
+  font: 400 16px/1.65 var(--font-sans);
+  color: var(--body);
+  text-wrap: pretty;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.btn {
+  padding: 13px 18px;
+  font: 600 11px/1 var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.btnPrimary {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.btnPrimary:hover {
+  background: var(--text);
+  color: var(--accent);
+}
+
+.btnGhost {
+  border: 1px solid var(--btn-border);
+  color: var(--text);
+}
+
+.availability {
+  margin-top: 20px;
+  font: 400 11px/1.6 var(--font-mono);
+  color: var(--faint);
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.statValue {
+  font: 500 16px/1 var(--font-mono);
+  color: var(--text);
+}
+
+.statValueAccent {
+  color: var(--accent);
+}
+
+.statLabel {
+  margin-top: 7px;
+  font: 400 12px/1 var(--font-mono);
+  color: var(--faint);
+}
+
