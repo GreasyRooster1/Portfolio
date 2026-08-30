@@ -61,11 +61,11 @@ img.block {
 }
 
 .navButton.left {
-    left: 1rem;
+    left: -.7rem;
 }
 
 .navButton.right {
-    right: 1rem;
+    right: -.7rem;
 }
 
 .navButton:hover * {

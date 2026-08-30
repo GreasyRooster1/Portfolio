@@ -12,7 +12,7 @@ function HeroQuote(props) {
             <Text align="right" style={{width:"100%"}} weight="bold">
                 — {props.author}
             </Text>
-            <img className={styles.logo} src={props.src} />
+            <img className={props.imgClass?props.imgClass:styles.logo} src={props.src} />
         </Flex>
     );
 }
