@@ -63,6 +63,11 @@
   color: var(--bg);
 }
 
+.btnPrimary:hover {
+  background: var(--text);
+  color: var(--accent);
+}
+
 .btnGhost {
   border: 1px solid var(--btn-border);
   color: var(--text);
