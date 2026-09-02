@@ -19,7 +19,7 @@ import arduino from "@assets/langs/arduino.svg"
 
 import aws from "@assets/langs/aws.png"
 import cloudflare from "@assets/langs/cloudflare.png"
-import docker from "@assets/langs/docker.webp"
+import docker from "@assets/langs/docker.png"
 import git from "@assets/langs/git.svg"
 import github from "@assets/langs/github.webp"
 import node from "@assets/langs/node.svg"

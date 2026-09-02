@@ -66,7 +66,7 @@
     {
       "n": "01",
       "title": "Digital Yondr Replacement",
-      "sub": "Uses screen time API and NFC tags to allow for school districts to restrict phone usage during school hours",
+      "sub": "Uses screen time API and NFC tags to allow for school districts to restrict phone usage during school hours.",
       "stack": "Rust · Swift",
       "result": "in development",
       "links": [
@@ -76,7 +76,7 @@
     {
       "n": "02",
       "title": "Dynamic Planet Renderer",
-      "sub": "Renders a planet as a dynamic LOD mesh that increases resolution as the camera approaches to optimize performance",
+      "sub": "Renders a planet as a dynamic LOD mesh that increases resolution as the camera approaches to optimize performance.",
       "stack": "Rust",
       "result": "120fps @ full res",
       "links": [
@@ -86,7 +86,7 @@
     {
       "n": "03",
       "title": "Fantasy Emulator",
-      "sub": "A fully custom bytecode and assembly language. Builds assembly files into bytecode directly. Has graphics support built-in",
+      "sub": "A fully custom bytecode and assembly language. Builds assembly files into bytecode directly. Has graphics support built-in.",
       "stack": "Rust · Bevy",
       "result": "running pong",
       "links": [
@@ -96,7 +96,7 @@
     {
       "n": "04",
       "title": "Rust Physics Simulation",
-      "sub": "Uses OpenGL to render physics objects with minimal performance overhead. Separate simulation and render threads to increasing performance",
+      "sub": "Uses OpenGL to render physics objects with minimal performance overhead. Separate simulation and render threads to increasing performance.",
       "stack": "Rust · OpenGL",
       "result": "~0.8 ms @ 300 objects",
       "links": [
@@ -106,7 +106,7 @@
     {
       "n": "05",
       "title": "Minimal Desktop Station",
-      "sub": "Setup many centrally accessible desktop stations on a server for minimal cost, PXE boot to centralized OS image",
+      "sub": "Setup many centrally accessible desktop stations on a server for minimal cost, PXE boot to centralized OS image.",
       "stack": "Raspberry Pi · Proxmox",
       "result": "used in a production setting",
       "links": [
