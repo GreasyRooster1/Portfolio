@@ -47,10 +47,18 @@ function Main(){
           <DesktopView>full stack developer · web · systems programming · graphics</DesktopView>
           <MobileView>full stack · web · systems · graphics</MobileView>
         </div>
-        <h1 className={styles.title}>
-            {/*<em className={styles.name}>Dillon Wilson: </em><br/>*/}
-            Programming to make a <span className={styles.accent}>difference</span>
-        </h1>
+          <DesktopView>
+            <h1 className={styles.title}>
+                {/*<em className={styles.name}>Dillon Wilson: </em><br/>*/}
+                Programming to make a <span className={styles.accent}>difference</span>
+            </h1>
+          </DesktopView>
+          <MobileView>
+              <h1 className={styles.titleMobile}>
+                  {/*<em className={styles.name}>Dillon Wilson: </em><br/>*/}
+                  Programming to make a <span className={styles.accent}>difference</span>
+              </h1>
+          </MobileView>
       </Flex>
   )
 }
