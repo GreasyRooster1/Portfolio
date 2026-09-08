@@ -21,6 +21,13 @@
   letter-spacing: -0.025em;
   color: var(--text);
 }
+.titleMobile {
+  margin: 0;
+  max-width: 16ch;
+  font: 600 64px/1 var(--font-sans);
+  letter-spacing: -0.025em;
+  color: var(--text);
+}
 
 .accent {
   color: var(--accent);
