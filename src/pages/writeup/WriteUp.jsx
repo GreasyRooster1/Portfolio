@@ -9,7 +9,11 @@ function WriteUp(props) {
     const titles = [];
 
 
-
+    let registerTitle = (children)=>{
+        let title = getReactNodeText(children);
+        let id = `${title.toLowerCase()}`.replaceAll(" ", "_");
+        React.useEffect(()=>{titles.push({name:title,id:id})},[])
+    }
 
     return (
         <div className={styles.page}>
@@ -18,10 +22,13 @@ function WriteUp(props) {
             <Markdown components={{
                 h1(props) {
                     const {children, node, ...rest} = props
-                    let title = getReactNodeText(children);
-                    let id = `${title.toLowerCase()}`.replaceAll(" ", "_");
-                    React.useEffect(()=>{titles.push({name:title,id:id})},[])
+                    registerTitle(children);
                     return <h1 {...rest} >{children}</h1>
+                },
+                h2(props) {
+                    const {children, node, ...rest} = props
+                    registerTitle(children);
+                    return <h2 {...rest} >{children}</h2>
                 }
             }}>
                 {props.md}
