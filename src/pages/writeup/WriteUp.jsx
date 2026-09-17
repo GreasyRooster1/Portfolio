@@ -4,14 +4,12 @@ import styles from "./writeUp.module.css";
 import {DesktopView} from "@components/View.jsx";
 import HtmlTitle from "@components/HtmlTitle.jsx";
 import Menu from "@/pages/writeup/Menu.jsx";
-import remarkGfm from 'remark-gfm'
 
 function WriteUp(props) {
-    const [titles, setTitles] = React.useState([]);
+    const titles = [];
 
-    const addTitle = (title) => {
-        setTitles((prevTitles) => [...prevTitles, title]);
-    }
+
+
 
     return (
         <div className={styles.page}>
@@ -19,17 +17,31 @@ function WriteUp(props) {
             <Menu titles={titles} {...props}/>
             <Markdown components={{
                 h1(props) {
-                    const {node, ...rest} = props
-                    let title = node.innerHTML
-                    let id = `${title.toLowerCase()}${titles.length}`;
-                    addTitle({name:title,id:id})
-                    return <h1 style={{color: 'red'}} {...rest} />
+                    const {children, node, ...rest} = props
+                    let title = getReactNodeText(children);
+                    let id = `${title.toLowerCase()}`.replaceAll(" ", "_");
+                    React.useEffect(()=>{titles.push({name:title,id:id})},[])
+                    return <h1 {...rest} >{children}</h1>
                 }
             }}>
                 {props.md}
             </Markdown>
         </div>
     );
+}
+
+function getReactNodeText(node) {
+    if (!node) return '';
+    if (typeof node === 'string' || typeof node === 'number') {
+        return String(node);
+    }
+    if (Array.isArray(node)) {
+        return node.map(getReactNodeText).join('');
+    }
+    if (React.isValidElement(node)) {
+        return getReactNodeText(node.props.children);
+    }
+    return '';
 }
 
 export default WriteUp;
