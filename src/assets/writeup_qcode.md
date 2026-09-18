@@ -26,8 +26,8 @@ Teaching computer science in a traditional education environment causes a few is
 
 QCode courses are designed around students moving at their own pace, and the entire platform is built to cater to this principle. QCode doesn't use video lessons or long paragraphs to read with code to cut and paste. Every lesson is a series of steps organized into chapters. The steps are intentionally small, making students constantly feel like they are making progress as they complete them. Each step contains a small description, and often an **image** some code to write out. Every piece of code a student is told to write comes from an image, so there is never a chance to copy and paste directly into their project.
 
-Students also dont just copy down the code when following lessons. Every step has a "type", clearly showing if a step is meant to be informational, code to write, etc. These steps include:
-- Info - explains a concept to a sudent
+Students also don't just copy down the code when following lessons. Every step has a "type", clearly showing if a step is meant to be informational, code to write, etc. These steps include:
+- Info - explains a concept to a student
 - Code - a snippet of code to write
 - Challenge - a partial snipped of code, forcing the student to recall previous knowledge to complete the step
 - Check - regular checks to make sure the lesson has been followed correctly
