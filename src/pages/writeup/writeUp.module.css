@@ -1,7 +1,7 @@
 .page{
     --menu-width: 180px;
 
-    max-width: min(1080px,calc(100vw - var(--menu-width)));
+    max-width: min(1080px,calc(100vw - var(--menu-width) * 2));
     margin: 0 auto;
     background: var(--bg);
     font-family: var(--font-sans);
@@ -26,4 +26,5 @@
 .menuItem{
     border-left: 3px solid var(--accent);
     padding-left: 12px;
+    width:100%;
 }

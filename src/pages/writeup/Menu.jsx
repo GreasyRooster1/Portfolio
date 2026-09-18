@@ -8,10 +8,9 @@ function Menu(props) {
         <DesktopView>
             <div className={styles.menuWrapper}>
                 <Flex direction="column" gapY="2" className={styles.menu}>
-                    <span className={styles.menuItem}>Item</span>
-                    <span className={styles.menuItem}>Item</span>
-                    <span className={styles.menuItem}>Item</span>
-                    <span className={styles.menuItem}>Item</span>
+                    {props.titles.map((title, index) => (
+                        <a key={index} className={styles.menuItem} href={`#${title.id}`}>{title.name}</a>
+                    ))}
                 </Flex>
             </div>
         </DesktopView>

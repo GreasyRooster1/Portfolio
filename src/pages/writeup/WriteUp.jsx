@@ -1,4 +1,4 @@
-import React from 'react';
+import {useEffect, useState} from 'react';
 import Markdown from "react-markdown";
 import styles from "./writeUp.module.css";
 import {DesktopView} from "@components/View.jsx";
@@ -6,14 +6,19 @@ import HtmlTitle from "@components/HtmlTitle.jsx";
 import Menu from "@/pages/writeup/Menu.jsx";
 
 function WriteUp(props) {
-    const titles = [];
-
+    let rawTitles = [];
+    const [titles,setTitles] = useState([]);
 
     let registerTitle = (children)=>{
         let title = getReactNodeText(children);
         let id = `${title.toLowerCase()}`.replaceAll(" ", "_");
-        React.useEffect(()=>{titles.push({name:title,id:id})},[])
+        useEffect(()=>{rawTitles.push({name:title,id:id})},[])
     }
+
+    useEffect(() => {
+        setTitles(rawTitles);
+        rawTitles = []
+    }, []);
 
     return (
         <div className={styles.page}>
