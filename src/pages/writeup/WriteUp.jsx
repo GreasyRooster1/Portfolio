@@ -6,6 +6,7 @@ import HtmlTitle from "@components/HtmlTitle.jsx";
 import Menu from "@/pages/writeup/Menu.jsx";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
+import {Text} from "@radix-ui/themes";
 
 function WriteUp(props) {
     let rawTitles = [];
@@ -34,7 +35,7 @@ function WriteUp(props) {
                 h1(props) {
                     const {children, node, ...rest} = props
                     let id=registerTitle(children);
-                    return <h1 {...rest} >{children}</h1>
+                    return (<Text weight="bold" size={{initial:"8",md:"8",lg:"9"}} my={{initial:"32px",lg:"64px"}} as={"div"} id={id} {...rest} >{children}</Text>)
                 },
                 h2(props) {
                     const {children, node, ...rest} = props
