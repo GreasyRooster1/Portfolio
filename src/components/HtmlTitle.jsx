@@ -1,13 +1,12 @@
 import React, {useEffect} from 'react';
 
 
-const titleData = "Dillon Wilson - Portfolio - "
-
 function HtmlTitle(props) {
-    const [title, setTitle] = React.useState(titleData);
+    const [title, setTitle] = React.useState(props.title);
     const [animationStep, setAnimationStep] = React.useState(0);
 
     useEffect(() => {
+        if(props.noAnimate) return;
         let timeout = setTimeout(() => {
             setAnimationStep(1);
         },10_000)
@@ -15,12 +14,13 @@ function HtmlTitle(props) {
     })
 
     useEffect(() => {
-        setTitle(titleData.substring(animationStep)+titleData.substring(0,animationStep-1));
+        if(props.noAnimate) return;
+        setTitle(props.title.substring(animationStep)+props.title.substring(0,animationStep-1));
         if(animationStep === 0){
             return;
         }
         let timeout = setTimeout(() => {
-            if(animationStep === titleData.length){
+            if(animationStep === props.title.length){
                 setAnimationStep(0);
                 clearInterval(timeout);
                 return;

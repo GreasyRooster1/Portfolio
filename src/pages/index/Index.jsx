@@ -31,7 +31,7 @@ function Index(props) {
     return (
         <>
             <div className="page">
-                <HtmlTitle/>
+                <HtmlTitle title={"Portfolio - Dillon Wilson - "}/>
 
                 <Nav />
                 <Hero/>
