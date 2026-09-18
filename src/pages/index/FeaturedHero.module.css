@@ -92,3 +92,14 @@
   letter-spacing: 0.1em;
   color: var(--muted);
 }
+
+.esporterz{
+  mask-image: linear-gradient(100deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 90%);
+  height: 70%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-10%,-25%);
+  z-index: -1;
+  opacity: .7;
+}

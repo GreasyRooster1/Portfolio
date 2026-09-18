@@ -16,6 +16,7 @@ function Index(props) {
         fetch("https://portfolio-api.dillonjw.com/projects")
             .then((res) => {
                 if(!res.ok) {
+                    console.log("projects request failed")
                     return;
                 }
                 res.json().then((d) => {
@@ -36,7 +37,7 @@ function Index(props) {
                 <Hero/>
                 <FeaturedHero />
                 <SelectedWork id="selected-work" projects={data.featured}/>
-                <ProjectIndex id="project-index"  projects={data.list}/>
+                <ProjectIndex id="project-index" projects={data.list}/>
                 <Experience id="experience"/>
                 <Footer />
             </div>

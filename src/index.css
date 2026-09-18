@@ -25,6 +25,7 @@
   /* Type */
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
   --font-sans: Archivo, Helvetica, system-ui, sans-serif;
+  --font-script: Archivo, Helvetica, system-ui, sans-serif;
 
   /* Layout */
   --page-width: 1580px;

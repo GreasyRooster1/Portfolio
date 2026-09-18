@@ -1,5 +1,5 @@
 import styles from './Hero.module.css'
-import {Box, Flex} from "@radix-ui/themes";
+import {Box, Flex,Text} from "@radix-ui/themes";
 import {DesktopView, MobileView} from "@components/View.jsx";
 
 const SECONDARY_ACTIONS = ['github', 'email']
@@ -8,6 +8,7 @@ export default function Hero() {
   return (
     <>
     <DesktopView>
+        <Name/>
       <header className={styles.hero}>
         <Main/>
         <Box>
@@ -20,6 +21,7 @@ export default function Hero() {
     </DesktopView>
 
     <MobileView>
+        <Name/>
       <Box mt="8" mx="8px">
         <Main/>
         <About/>
@@ -30,6 +32,14 @@ export default function Hero() {
   )
 }
 
+function Name(){
+    return (
+        <Flex width="100%" direction={"row"} justify={"center"} align={"center"} pt={{initial:"24px",sm:'82px'}} pb={{initial:"0px",sm:'72px'}} px={"64px"} gapX="32px">
+            <div className={styles.line}/><Text className={styles.name}>Dillon Wilson</Text><div className={styles.line}/>
+        </Flex>
+    )
+}
+
 function Main(){
   return (
       <Flex direction={'column'} alignItems={'center'} justify={'center'} height={'100%'}>
@@ -37,9 +47,18 @@ function Main(){
           <DesktopView>full stack developer · web · systems programming · graphics</DesktopView>
           <MobileView>full stack · web · systems · graphics</MobileView>
         </div>
-        <h1 className={styles.title}>
-          Programming to make a <span className={styles.accent}>difference</span>
-        </h1>
+          <DesktopView>
+            <h1 className={styles.title}>
+                {/*<em className={styles.name}>Dillon Wilson: </em><br/>*/}
+                Programming to make a <span className={styles.accent}>difference</span>
+            </h1>
+          </DesktopView>
+          <MobileView>
+              <h1 className={styles.titleMobile}>
+                  {/*<em className={styles.name}>Dillon Wilson: </em><br/>*/}
+                  Programming to make a <span className={styles.accent}>difference</span>
+              </h1>
+          </MobileView>
       </Flex>
   )
 }
