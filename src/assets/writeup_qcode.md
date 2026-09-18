@@ -57,7 +57,7 @@ QCode is designed to keep students on the platform for everything they do. The b
 
 Students are also encouraged to share their projects to each other and view other student's shared projects. The **Share Board** is where students show off their work to others. The Share Board has let students take pride in their projects knowing others will view and interact with them. Students will often use their skills obtained in the lessons to create their own, self guided, projects with the goal of sharing them to others.
 
-Click [here](dillonjw.com/qcode_projects) to view some of my favorite student projects
+Click [here](dillonjw.com/qcode_projects) to view some of my personal favorite student projects
 
 ## The JavaScript Course
 The JavaScript course features 16 lessons with about ~48 hours of total coursework, the largest course on QCode. Like every QCode course, the JavaScript course is designed to be taken at a students own pace, so the total time can vary widely. There are a total of 3 sections to the course, beginner, intermediate, and advanced. The beginner section includes concepts such as variables, drawing, 2D coordinates, and functions. Intermediate focuses more on objects, arrays, and loops with larger and more advanced projects. The advanced section teaches object oriented programming, classes, and inheritance.
