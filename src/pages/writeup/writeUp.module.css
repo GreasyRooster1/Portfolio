@@ -1,0 +1,45 @@
+.page{
+    --menu-width: max(200px,10vw);
+
+    max-width: min(max(473px,calc(100vw - var(--menu-width) * 2)),1080px);
+    margin: 8px auto;
+    padding:8px;
+    background: var(--bg);
+    font-family: var(--font-sans);
+}
+
+.menu{
+    width:var(--menu-width);
+    display: flex;
+    position: sticky;
+    top: 20px;
+    left: 0;
+}
+
+.menuWrapper{
+    display: flex;
+    width:calc(var(--menu-width) - 20px);
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding-right:10px;
+    height: 100%;
+}
+
+.menuItem{
+    border-left: 3px solid var(--accent);
+    padding-left: 12px;
+    width:100%;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.selected{
+    font-weight: bold;
+}
+
+.img{
+    margin:auto;
+    max-width: 100%;
+
+}
