@@ -30,11 +30,17 @@ function CarouselPrimitive(props) {
     const handleNextClick = () => {
         setCurrentIndex((currentIndex + 1) % children.length);
     };
+
+    useEffect(() => {
+        resetClock();
+        return () => clearTimeout(timeoutId);
+    }, [currentIndex]);
+
     return (
         <>
             {!props.noArrows && <TbChevronCompactLeft className={`${styles.navButton} ${styles.left} ${props.fadeArrows?styles.fade:""}`} onClick={handlePreviousClick}/>}
 
-            {children[currentIndex]}
+            {React.cloneElement(children[currentIndex],{className:`${children[currentIndex].props.className} ${styles.item}`})}
 
             {!props.noArrows && <TbChevronCompactRight className={`${styles.navButton} ${styles.right} ${props.fadeArrows?styles.fade:""}`} onClick={handleNextClick}/>}
 

@@ -1,0 +1,1 @@
+scp -J root@192.168.1.249 ./src/assets/projects.json root@10.10.10.106:/root/PortfolioAPI/static/projects.json

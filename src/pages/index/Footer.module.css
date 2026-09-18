@@ -4,12 +4,14 @@
   align-items: baseline;
   margin-top: 96px;
   border-top: 1px solid var(--hairline-strong);
-  font: 500 11px/1 var(--font-mono);
-  letter-spacing: 0.08em;
+  font: 500 12px/1 var(--font-mono);
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--faint);
+
 }
 
 .email {
+  text-transform: none;
   color: var(--text);
 }

@@ -19,7 +19,7 @@ import arduino from "@assets/langs/arduino.svg"
 
 import aws from "@assets/langs/aws.png"
 import cloudflare from "@assets/langs/cloudflare.png"
-import docker from "@assets/langs/docker.webp"
+import docker from "@assets/langs/docker.png"
 import git from "@assets/langs/git.svg"
 import github from "@assets/langs/github.webp"
 import node from "@assets/langs/node.svg"
@@ -47,7 +47,7 @@ export function Experience(props) {
     return (
         <DesktopView>
         <PageSection {...props}>
-            <SectionHead title="Experience" meta="what i've worked with "/>
+            <SectionHead title="Experience" meta="hover to view projects"/>
             <Flex width={"100%"} align={"center"} justify={"center"} mb="4" mt="6">
                 <Text width={"100%"} align="center" size="8" weight="bold">Languages</Text>
             </Flex>
