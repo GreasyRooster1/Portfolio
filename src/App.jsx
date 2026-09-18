@@ -3,15 +3,15 @@ import Index from "@/pages/index/Index.jsx";
 import QCodeProjects from "@/pages/qcodeProjects/QCodeProjects.jsx";
 import WriteUp from "@/pages/writeup/WriteUp.jsx";
 
-import qcode_md from "@assets/writeup_qcode.md?raw"
-import qcode_meta from "@assets/writeup_qcode.json"
+import qcode_md from "@/writeUpData/qcode.md?raw"
+import qcode_meta from "@/writeUpData/qcode.json"
 
 export default function App() {
     return (
         <Routes>
             <Route exact path="/" element={<Index/>} />
+            <Route exact path="/qcode_writeup" element={<WriteUp md={qcode_md} meta={qcode_meta}/>} />
             <Route exact path="/qcode_projects" element={<QCodeProjects/>} />
-            <Route exact path="/writeup" element={<WriteUp md={qcode_md} meta={qcode_meta}/>} />
         </Routes>
     )
 }
