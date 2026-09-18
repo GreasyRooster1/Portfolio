@@ -4,6 +4,8 @@ import styles from "./writeUp.module.css";
 import {DesktopView} from "@components/View.jsx";
 import HtmlTitle from "@components/HtmlTitle.jsx";
 import Menu from "@/pages/writeup/Menu.jsx";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 
 function WriteUp(props) {
     let rawTitles = [];
@@ -25,7 +27,10 @@ function WriteUp(props) {
         <div className={styles.page}>
             <HtmlTitle title={props.meta.title}/>
             <Menu titles={titles} {...props}/>
-            <Markdown components={{
+            <Markdown
+                remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeRaw]}
+                components={{
                 h1(props) {
                     const {children, node, ...rest} = props
                     let id=registerTitle(children);
@@ -35,8 +40,13 @@ function WriteUp(props) {
                     const {children, node, ...rest} = props
                     let id=registerTitle(children);
                     return <h2 id={id} {...rest} >{children}</h2>
+                },
+                img(props) {
+                    const {children, node, ...rest} = props
+                    return <img className={styles.img} {...rest} />
                 }
-            }}>
+            }}
+            >
                 {props.md}
             </Markdown>
         </div>

@@ -32,18 +32,15 @@ Students also dont just copy down the code when following lessons. Every step ha
 - Challenge - a partial snipped of code, forcing the student to recall previous knowledge to complete the step
 - Check - regular checks to make sure the lesson has been followed correctly
 
+<div style="display: flex;">
 
-<img width="521" height="410" alt="image" src="https://github.com/user-attachments/assets/024b0c21-8855-4c66-bd23-4a08ab061515" />
+![A code step](https://github.com/user-attachments/assets/024b0c21-8855-4c66-bd23-4a08ab061515 "A code step")
 
-*A code step*
+![An info step](https://github.com/user-attachments/assets/7d22b053-088e-46cd-9b17-1ea51ed1210f "An info step")
 
-<img width="539" height="337" alt="image" src="https://github.com/user-attachments/assets/4e54ca75-24ac-4e6f-b06f-bac0bb5fa73b" />
+![An challenge step](https://github.com/user-attachments/assets/4e54ca75-24ac-4e6f-b06f-bac0bb5fa73b "A challenge step")
 
-*A challenge step*
-
-<img width="542" height="581" alt="image" src="https://github.com/user-attachments/assets/7d22b053-088e-46cd-9b17-1ea51ed1210f" />
-
-*An info step*
+</div>
 
 ## Choose your own adventure
 QCode gives students the authority to select what their next lesson should be, based on their current skill level.
@@ -53,7 +50,8 @@ When students are selecting their next lesson, they go to the **Lesson Flowchart
 ## The one stop shop
 QCode is designed to keep students on the platform for everything they do. The built-in editor allows them to write code directly next to their lesson steps. The editor also runs the code within the same window, so students never need to switch tabs or navigate to a different app.
 
-<img width="2545" height="1302" alt="image" src="https://github.com/user-attachments/assets/34f61093-1116-4efc-ab15-9237fa707939" />
+
+![A Students Snake Project](https://github.com/user-attachments/assets/34f61093-1116-4efc-ab15-9237fa707939 "A Student's Snake Project")
 
 *What students see when working on their code (real student project)*
 
@@ -64,8 +62,8 @@ Click [here](dillonjw.com/qcode_projects) to view some of my favorite student pr
 ## The JavaScript Course
 The JavaScript course features 16 lessons with about ~48 hours of total coursework, the largest course on QCode. Like every QCode course, the JavaScript course is designed to be taken at a students own pace, so the total time can vary widely. There are a total of 3 sections to the course, beginner, intermediate, and advanced. The beginner section includes concepts such as variables, drawing, 2D coordinates, and functions. Intermediate focuses more on objects, arrays, and loops with larger and more advanced projects. The advanced section teaches object oriented programming, classes, and inheritance.
 
+![A section of the JavaScript course](https://github.com/user-attachments/assets/fd4ba563-061d-4448-a503-50f633b1bb6e "A section of the JavaScript course")
 
-<img width="917" height="917" alt="image" src="https://github.com/user-attachments/assets/fd4ba563-061d-4448-a503-50f633b1bb6e" />
 
 *A section of the JavaScript course, in the intermediate section*
 
@@ -82,11 +80,13 @@ Students choose their course based on their own interests and their skill level.
 ## Impact
 Hundreds of students and parents have trusted QCode with their computer science education. Their trust has paid off, as those who stick with the program have shown significant improvement in the programming skills.
 
-QCode is primarily used to teach paying customers at a [local small business](https://esporterz.com), but it has also been used at a non-profit to teach underrepresented teens programming. QCode has also taught neurodivergent students, often with great success.
+QCode is primarily used to teach paying customers at a [local small business](https://esporterz.com), but it has also been used at a [non-profit](https://karma-club.org/) to teach underrepresented teens programming. QCode has also taught neurodivergent students, often with great success.
 
-<img width="2142" height="2856" alt="kc5" src="https://github.com/user-attachments/assets/7ba7b3fa-183b-4d7b-84a9-9d33865a49a2" />
-<img width="2142" height="2856" alt="kc6" src="https://github.com/user-attachments/assets/f4bcf946-1aac-4495-a794-570c6b0c240e" />
+## Images
+**Hover for more info**
 
+![Students at Karma club being taught JS](https://github.com/user-attachments/assets/7ba7b3fa-183b-4d7b-84a9-9d33865a49a2 "Students at Karma Club being taught JS")
+![Students following along with the lesson](https://github.com/user-attachments/assets/f4bcf946-1aac-4495-a794-570c6b0c240e "Students following along with the lesson")
+![A room full of students using QCode](https://github.com/user-attachments/assets/4dd7b7ed-3d49-4a9f-afc6-a2768ed1f4f6 "A room full of students using QCode")
 
-<img width="3024" height="4032" alt="esporterz1" src="https://github.com/user-attachments/assets/4dd7b7ed-3d49-4a9f-afc6-a2768ed1f4f6" />
 
