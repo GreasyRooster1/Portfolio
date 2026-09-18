@@ -13,6 +13,7 @@ function WriteUp(props) {
         let title = getReactNodeText(children);
         let id = `${title.toLowerCase()}`.replaceAll(" ", "_");
         useEffect(()=>{rawTitles.push({name:title,id:id})},[])
+        return id
     }
 
     useEffect(() => {
@@ -27,13 +28,13 @@ function WriteUp(props) {
             <Markdown components={{
                 h1(props) {
                     const {children, node, ...rest} = props
-                    registerTitle(children);
+                    let id=registerTitle(children);
                     return <h1 {...rest} >{children}</h1>
                 },
                 h2(props) {
                     const {children, node, ...rest} = props
-                    registerTitle(children);
-                    return <h2 {...rest} >{children}</h2>
+                    let id=registerTitle(children);
+                    return <h2 id={id} {...rest} >{children}</h2>
                 }
             }}>
                 {props.md}
