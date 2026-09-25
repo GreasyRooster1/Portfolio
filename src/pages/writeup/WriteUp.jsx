@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Markdown from "react-markdown";
 import styles from "./writeUp.module.css";
 import {DesktopView} from "@components/View.jsx";
@@ -7,6 +7,7 @@ import Menu from "@/pages/writeup/Menu.jsx";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import {Text} from "@radix-ui/themes";
+import Nav from "@components/Nav.jsx";
 
 function WriteUp(props) {
     let rawTitles = [];
@@ -25,8 +26,14 @@ function WriteUp(props) {
     }, []);
 
     return (
+        <>
+        <Nav title={props.meta.navTitle} noCursor>
+            <a href={props.meta.source}>source</a>
+            <a href="/">home</a>
+        </Nav>
         <div className={styles.page}>
             <HtmlTitle title={props.meta.title}/>
+
             <Menu titles={titles} {...props}/>
             <Markdown
                 remarkPlugins={[remarkGfm]}
@@ -51,6 +58,7 @@ function WriteUp(props) {
                 {props.md}
             </Markdown>
         </div>
+        </>
     );
 }
 

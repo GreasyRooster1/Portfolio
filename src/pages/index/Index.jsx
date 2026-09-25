@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import Nav from "@/pages/index/Nav.jsx";
+import Nav from "@components/Nav.jsx";
 import Hero from "@/pages/index/Hero.jsx";
 import FeaturedHero from "@/pages/index/FeaturedHero.jsx";
 import SelectedWork from "@/pages/index/SelectedWork.jsx";
@@ -33,7 +33,11 @@ function Index(props) {
             <div className="page">
                 <HtmlTitle title={"Portfolio - Dillon Wilson - "}/>
 
-                <Nav />
+                <Nav>
+                    <a href="#selected-work">featured</a>
+                    <a href="#project-index">projects</a>
+                    <a href="#experience">experience</a>
+                </Nav>
                 <Hero/>
                 <FeaturedHero />
                 <SelectedWork id="selected-work" projects={data.featured}/>

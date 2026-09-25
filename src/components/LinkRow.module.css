@@ -1,13 +1,13 @@
 .spaced {
   display: flex;
   gap: 16px;
-  font: 500 10.5px/1 var(--font-mono);
+  font: 500 12px/1 var(--font-mono);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .separated {
-  font: 500 10.5px/1 var(--font-mono);
+  font: 500 12px/1 var(--font-mono);
   color: var(--muted);
 }
 
@@ -24,6 +24,7 @@
 .accent {
   color: var(--accent);
   text-decoration: none;
+  font-weight: bold;
 }
 
 .accent:hover {

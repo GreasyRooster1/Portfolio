@@ -11,6 +11,12 @@ function CarouselPrimitive(props) {
 
     const children = Children.toArray(props.children);
 
+    useEffect(()=>{
+        if(props.randomStart){
+            setCurrentIndex(Math.floor(Math.random() * children.length));
+        }
+    },[props.randomStart])
+
     const resetClock = ()=>{
         if(timeoutId){
             clearTimeout(timeoutId);
