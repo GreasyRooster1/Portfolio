@@ -27,10 +27,9 @@ function WriteUp(props) {
 
     return (
         <>
-        <Nav>
-            <a href="#selected-work">featured</a>
-            <a href="#project-index">projects</a>
-            <a href="#experience">experience</a>
+        <Nav title={props.meta.navTitle} noCursor>
+            <a href={props.meta.source}>source</a>
+            <a href="/">home</a>
         </Nav>
         <div className={styles.page}>
             <HtmlTitle title={props.meta.title}/>

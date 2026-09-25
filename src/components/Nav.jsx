@@ -18,7 +18,8 @@ export default function Nav(props) {
         <Flex className={styles.nav} px={{initial:"8px",sm:"64px"}} py={{initial:"16px",sm:"22px"}}>
             <div className={styles.brand}>
                 Dillon Wilson
-                <Cursor />
+                {props.title?` - ${props.title}`:""}
+                {props.noCursor?"":<Cursor />}
             </div>
             <Flex className={styles.links} gap={{initial:"8px",sm:"12px",md:"24px"}}>
                 {props.children.map((link,index)=>{
