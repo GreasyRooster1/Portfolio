@@ -17,7 +17,7 @@ export default function Nav(props) {
     return (
         <Flex className={styles.nav} px={{initial:"8px",sm:"64px"}} py={{initial:"16px",sm:"22px"}}>
             <div className={styles.brand}>
-                Dillon Wilson
+                <a href={"/"} style={{textDecoration:"none"}}>Dillon Wilson</a>
                 {props.title?` - ${props.title}`:""}
                 {props.noCursor?"":<Cursor />}
             </div>
