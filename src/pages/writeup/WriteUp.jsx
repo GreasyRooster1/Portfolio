@@ -26,13 +26,15 @@ function WriteUp(props) {
     }, []);
 
     return (
+        <>
+        <Nav>
+            <a href="#selected-work">featured</a>
+            <a href="#project-index">projects</a>
+            <a href="#experience">experience</a>
+        </Nav>
         <div className={styles.page}>
             <HtmlTitle title={props.meta.title}/>
-            <Nav>
-                <a href="#selected-work">featured</a>
-                <a href="#project-index">projects</a>
-                <a href="#experience">experience</a>
-            </Nav>
+
             <Menu titles={titles} {...props}/>
             <Markdown
                 remarkPlugins={[remarkGfm]}
@@ -57,6 +59,7 @@ function WriteUp(props) {
                 {props.md}
             </Markdown>
         </div>
+        </>
     );
 }
 
