@@ -1,12 +1,12 @@
 import Cursor from '@components/Cursor.jsx'
 import styles from './Nav.module.css'
 import {Flex} from "@radix-ui/themes";
-import {useState} from "react";
+import React, {useState} from "react";
 import {motion, useScroll, useMotionValueEvent } from "motion/react";
 
 const LINKS = ['work', 'index', 'about', 'experiments']
 
-export default function Nav() {
+export default function Nav(props) {
     const { scrollY } = useScroll();
     const [isTop, setIsTop] = useState(true);
 
@@ -21,12 +21,9 @@ export default function Nav() {
                 <Cursor />
             </div>
             <Flex className={styles.links} gap={{initial:"8px",sm:"12px",md:"24px"}}>
-                <a href="#selected-work" className={styles.link}>featured</a>
-                <a href="#project-index" className={styles.link}>projects</a>
-                <a href="#experience" className={styles.link}>experience</a>
-                {/*<a href="#7a" className={`${styles.link} ${styles.resume}`}>*/}
-                {/*  résumé ↓*/}
-                {/*</a>*/}
+                {props.children.map((link,index)=>{
+                    return React.cloneElement(link,{className:styles.link,key:index})
+                })}
             </Flex>
         </Flex>
     )
