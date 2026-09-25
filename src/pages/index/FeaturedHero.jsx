@@ -39,7 +39,7 @@ export default function FeaturedHero() {
             </Grid>
           </Flex>
 
-          <Flex direction="row" height={{initial:"40vh",md:"35vh",lg:"20vh"}} gap={{initial:"2",lg:"3"}} width={"100%"} minHeight="230px">
+          <Flex direction="row" height={{initial:"50vh",md:"40vh",lg:"25vh"}} gap={{initial:"2",lg:"3"}} width={"100%"} minHeight="330px">
             <ProjectsGrid width={"30%"}/>
             <QuoteBlock width={"70%"}/>
           </Flex>

@@ -15,7 +15,7 @@ export function QuoteBlock(props) {
                     Dillon was one of the most impressive student instructors I've ever seen. His ability to explain complex coding concepts with patience, clarity, and enthusiasm kept every student fully engaged from start to finish. Quite honestly, he taught with more skill and confidence than many professional educators. He has a remarkable gift for teaching and inspiring young people, and we were incredibly fortunate to have him lead our Coding Camp.
                 </HeroQuote>
                 <HeroQuote author={(<>
-                    — Nadia Berkowitz, Founder/Owner, <a href={"https://esporterz.com"}>EsporterzEsporterz Gaming & STEM Center </a>
+                    Nadia Berkowitz, Founder/Owner, <a href={"https://esporterz.com"}>Esporterz Gaming & STEM Center </a>
                 </>)} src={esporterzImg} imgClass={styles.esporterz}>
                     Dillon's initiative and leadership have proven invaluable to our organization time and again. Beyond taking on key roles running our camps and after-school coding classes, he proactively built the website that houses our entire coding curriculum. Dillon doesn't wait to be asked before making things better. He continually identifies ways to strengthen our programs, improve efficiency, and help Esporterz grow. The maturity, technical ability, and sense of ownership he brings are rare among students his age and distinguish him as an exceptionally capable young leader.
                 </HeroQuote>
