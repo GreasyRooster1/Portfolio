@@ -1,5 +1,6 @@
 import HtmlTitle from "@components/HtmlTitle.jsx";
 import Nav from "@components/Nav.jsx";
+import ProjectIndex from "@/pages/index/ProjectIndex.jsx";
 
 export function Directory() {
     return (
@@ -11,6 +12,10 @@ export function Directory() {
                     <a href="https://github.com/GreasyRooster1">github</a>
                     <a href="/">home</a>
                 </Nav>
+
+                <ProjectIndex>
+
+                </ProjectIndex>
             </div>
         </>
     )

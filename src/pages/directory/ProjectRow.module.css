@@ -1,0 +1,46 @@
+.row {
+  display: grid;
+  grid-template-columns: var(--index-cols);
+  align-items: center;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--hairline-soft);
+  transition: background 0.15s;
+}
+
+.row:hover {
+  background: var(--row-hover);
+}
+
+.rowLast {
+  border-bottom-color: var(--hairline-strong);
+}
+
+.num {
+  font: 500 12px/1 var(--font-mono);
+  color: var(--faint);
+}
+
+.title {
+  font: 500 17px/1.2 var(--font-sans);
+  color: var(--text);
+}
+
+.sub {
+  margin-top: 3px;
+  font: 400 12.5px/1.4 var(--font-sans);
+  color: var(--muted);
+}
+
+.stack {
+  font: 400 11.5px/1.5 var(--font-mono);
+  color: var(--muted);
+}
+
+.result {
+  font: 500 12.5px/1.4 var(--font-mono);
+  color: var(--text);
+}
+
+.links {
+  text-align: right;
+}

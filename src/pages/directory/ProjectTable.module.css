@@ -1,0 +1,30 @@
+.section {
+  padding: 104px 64px 0;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: var(--index-cols);
+  padding: 14px 0;
+  border-bottom: 1px solid var(--hairline-soft);
+  font: 500 10.5px/1 var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.linksHead {
+  text-align: right;
+}
+
+.moreContainer {
+  display: block;
+  grid-template-columns: var(--index-cols);
+  align-items: center;
+  padding: 17px 28px;
+  border-bottom: 1px solid var(--hairline-soft);
+  transition: background 0.15s;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  text-decoration: none;
+}
