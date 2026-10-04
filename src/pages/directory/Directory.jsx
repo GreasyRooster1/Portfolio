@@ -3,6 +3,7 @@ import Nav from "@components/Nav.jsx";
 import ProjectTable from "@/pages/directory/ProjectTable.jsx";
 import {useEffect, useState} from "react";
 import directoryData from '@assets/directory.json';
+import {Search} from "@/pages/directory/Search.jsx";
 
 export function Directory() {
     const [data, setData] = useState(directoryData)
@@ -33,6 +34,8 @@ export function Directory() {
                     <a href="https://github.com/GreasyRooster1">github</a>
                     <a href="/">home</a>
                 </Nav>
+
+                <Search></Search>
 
                 <ProjectTable projects={data.projects}>
 
