@@ -8,10 +8,8 @@ import ProjectRow from "@/pages/directory/ProjectRow.jsx";
 
 export default function ProjectTable(props) {
   return (
-        <PageSection id="index" {...props}>
-          <SectionHead title="More projects" meta={`${props.projects.length} projects`} />
+      <>
           <div className={styles.header}>
-            <div>№</div>
             <div>project</div>
             <div>stack</div>
             <div>result</div>
@@ -20,6 +18,6 @@ export default function ProjectTable(props) {
           {props.projects.map((project, i) => (
             <ProjectRow key={project.n} {...project} last={i === props.projects.length - 1} />
           ))}
-        </PageSection>
+      </>
   )
 }

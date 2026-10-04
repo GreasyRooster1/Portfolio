@@ -1,8 +1,29 @@
 import HtmlTitle from "@components/HtmlTitle.jsx";
 import Nav from "@components/Nav.jsx";
-import ProjectIndex from "@/pages/index/ProjectIndex.jsx";
+import ProjectTable from "@/pages/directory/ProjectTable.jsx";
+import {useEffect, useState} from "react";
+import directoryData from '@assets/directory.json';
 
 export function Directory() {
+    const [data, setData] = useState(directoryData)
+
+    useEffect(() => {
+        fetch("https://portfolio-api.dillonjw.com/directory")
+            .then((res) => {
+                if(!res.ok) {
+                    console.log("directory request failed")
+                    return;
+                }
+                res.json().then((d) => {
+                    if(Object.keys(d).length === 0){
+                        console.warn("no server data found")
+                        return;
+                    }
+                    setData(d)
+                })
+            })
+    },[])
+
     return (
         <>
             <div className="page">
@@ -13,9 +34,9 @@ export function Directory() {
                     <a href="/">home</a>
                 </Nav>
 
-                <ProjectIndex>
+                <ProjectTable projects={data.projects}>
 
-                </ProjectIndex>
+                </ProjectTable>
             </div>
         </>
     )

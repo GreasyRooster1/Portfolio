@@ -4,7 +4,6 @@ import styles from './ProjectRow.module.css'
 export default function ProjectRow({ n, title, sub, stack, result, links, last }) {
   return (
     <div className={`${styles.row} ${last ? styles.rowLast : ''}`}>
-      <div className={styles.num}>{n}</div>
       <div>
         <div className={styles.title}>{title}</div>
         <div className={styles.sub}>{sub}</div>

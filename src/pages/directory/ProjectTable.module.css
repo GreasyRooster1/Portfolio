@@ -1,3 +1,7 @@
+:root{
+  --index-cols: 1fr 190px 160px 108px;
+}
+
 .section {
   padding: 104px 64px 0;
 }

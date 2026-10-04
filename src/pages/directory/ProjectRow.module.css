@@ -15,10 +15,6 @@
   border-bottom-color: var(--hairline-strong);
 }
 
-.num {
-  font: 500 12px/1 var(--font-mono);
-  color: var(--faint);
-}
 
 .title {
   font: 500 17px/1.2 var(--font-sans);
