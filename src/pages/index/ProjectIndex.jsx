@@ -20,8 +20,8 @@ export default function ProjectIndex(props) {
           {props.projects.map((project, i) => (
             <IndexRow key={project.n} {...project} last={i === props.projects.length - 1} />
           ))}
-        <a className={styles.moreContainer} href="https://github.com/GreasyRooster1?tab=repositories">
-            <span className={styles.moreText}>View 58 public repositories...</span>
+        <a className={styles.moreContainer} href="/directory">
+            <span className={styles.moreText}>View all {58} projects...</span>
         </a>
         </PageSection>
       </DesktopView>
