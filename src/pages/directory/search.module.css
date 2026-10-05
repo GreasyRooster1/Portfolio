@@ -13,11 +13,11 @@
     padding: 0 12px;
     background: transparent;
     border: 0;
-    border-left: 1px solid var(--text);
+    border-left: 1px solid var(--faint);
     cursor: pointer;
 }
 
 .button:hover,
 .button.open {
-    background: var(--faint);
+    background: var(--accent);
 }
