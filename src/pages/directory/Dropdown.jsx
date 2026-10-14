@@ -11,6 +11,29 @@ export default function Dropdown(props) {
 
     useClickOutside(dropdownRef, () => {setActive(false)});
 
+    const getAmountSelected = ()=>{
+        let c = 0;
+        for (let i = 0; i < selected.length; i++) {
+            if(selected[i]) {
+                c++
+            }
+        }
+        return c;
+    }
+
+    const getSelected = (amt) => {
+        let show = []
+        for (let i = 0; i < selected.length; i++) {
+            if(selected[i]) {
+                show.push(props.list[i]);
+                if(show.length >= amt){
+                    return show.join(",");
+                }
+            }
+        }
+        return show.join(",");
+    }
+
     return (
         <div className={styles.root} ref={dropdownRef}>
             <button
@@ -19,8 +42,9 @@ export default function Dropdown(props) {
                 aria-expanded={active}
                 onClick={()=>setActive(!active)}
             >
+
                 <span className={styles.label}>{props.label}</span>
-                <span className={styles.valueActive}>{props.value}</span>
+                <span className={styles.valueActive}>{getSelected(2)}{getAmountSelected()>2?` +${getAmountSelected()-2}`:""}</span>
                 <span className={styles.caret}>{active ? "▲" : "▼"}</span>
             </button>
 
@@ -43,7 +67,6 @@ export default function Dropdown(props) {
                             </MenuItem>
                         );
                     })}
-                    {/*{footer && <div className={styles.footer}>{footer}</div>}*/}
                 </div>
             )}
         </div>
