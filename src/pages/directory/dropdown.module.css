@@ -10,11 +10,13 @@
     gap: 9px;
     height: 100%;
     padding: 0 12px;
-    font-size: 10px;
+    font-size: .8em;
     background: transparent;
     border: 0;
     border-left: 1px solid var(--hairline);
     cursor: pointer;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
 }
 
 .trigger:hover,
@@ -35,7 +37,7 @@
 }
 
 .caret {
-    font-size: 9px;
+    font-size: 1em;
     color: var(--muted);
 }
 

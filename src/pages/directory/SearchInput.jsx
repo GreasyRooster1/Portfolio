@@ -1,8 +1,5 @@
 import styles from "./searchInput.module.css";
-import DomainFilter from "@/pages/directory/DomainFilter.jsx";
 import Dropdown from "@/pages/directory/Dropdown.jsx";
-import MenuItem from "@/pages/directory/MenuItem.jsx";
-import Marker from "@/pages/directory/Marker.jsx";
 
 
 export default function SearchInput(props) {
