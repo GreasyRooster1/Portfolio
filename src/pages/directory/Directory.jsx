@@ -5,9 +5,19 @@ import {useEffect, useState} from "react";
 import directoryData from '@assets/directory.json';
 import SearchInput from "@/pages/directory/SearchInput.jsx";
 
+const LANG = ["js","html","css"]
+
 export function Directory() {
     const [data, setData] = useState(directoryData)
     const [search, setSearch] = useState("")
+    const [language, setLanguage] = useState("")
+
+    const handleSearchChange = (e) => {
+        setSearch(e.target.value);
+    };
+    const handleLangChange = (e) => {
+        setLanguage(e.target.value);
+    };
 
     useEffect(() => {
         fetch("https://portfolio-api.dillonjw.com/directory")
@@ -36,7 +46,7 @@ export function Directory() {
                     <a href="/">home</a>
                 </Nav>
 
-                <SearchInput value={search} setValue={setSearch}></SearchInput>
+                <SearchInput value={search} changeHandle={handleSearchChange} languages={LANG}></SearchInput>
 
                 <ProjectTable projects={data.projects}>
 

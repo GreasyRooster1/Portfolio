@@ -4,10 +4,11 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 0 16px;
+    padding: 16px;
     margin-top:24px;
     margin-bottom:16px;
     border: 1px solid var(--hairline);
+    font-size:1em;
 }
 
 .prompt {
