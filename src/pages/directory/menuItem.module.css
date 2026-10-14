@@ -1,5 +1,4 @@
 .item {
-    composes: caps from "./typography.module.css";
     display: flex;
     align-items: center;
     gap: 10px;

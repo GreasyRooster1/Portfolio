@@ -5,7 +5,6 @@
 }
 
 .trigger {
-    composes: caps from "./typography.module.css";
     display: flex;
     align-items: center;
     gap: 9px;
@@ -53,7 +52,6 @@
 }
 
 .footer {
-    composes: mono from "./typography.module.css";
     margin-top: 6px;
     padding: 10px 16px 6px;
     font-size: 10px;

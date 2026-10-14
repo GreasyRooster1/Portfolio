@@ -3,10 +3,11 @@ import Nav from "@components/Nav.jsx";
 import ProjectTable from "@/pages/directory/ProjectTable.jsx";
 import {useEffect, useState} from "react";
 import directoryData from '@assets/directory.json';
-import {Search} from "@/pages/directory/Search.jsx";
+import SearchInput from "@/pages/directory/SearchInput.jsx";
 
 export function Directory() {
     const [data, setData] = useState(directoryData)
+    const [search, setSearch] = useState("")
 
     useEffect(() => {
         fetch("https://portfolio-api.dillonjw.com/directory")
@@ -35,7 +36,7 @@ export function Directory() {
                     <a href="/">home</a>
                 </Nav>
 
-                <Search></Search>
+                <SearchInput value={search} setValue={setSearch}></SearchInput>
 
                 <ProjectTable projects={data.projects}>
 

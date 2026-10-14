@@ -1,26 +1,25 @@
 import styles from "./searchInput.module.css";
+import DomainFilter from "@/pages/directory/DomainFilter.jsx";
 
-export default function SearchInput({ inputRef, value, onChange, onClear }) {
+export default function SearchInput({ value, setValue }) {
     return (
         <div className={styles.field}>
             <span className={styles.prompt}>$</span>
 
             <input
-                ref={inputRef}
                 className={styles.input}
                 value={value}
-                onChange={(event) => onChange(event.target.value)}
+                onChange={(event) => setValue(event.target.value)}
                 placeholder="search projects"
                 spellCheck={false}
             />
 
             {value && (
-                <button type="button" className={styles.clear} onClick={onClear}>
+                <button type="button" className={styles.clear} onClick={setValue("")}>
                     clear
                 </button>
             )}
 
-            <kbd className={styles.hint}>/</kbd>
         </div>
     );
 }
