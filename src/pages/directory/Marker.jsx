@@ -8,7 +8,6 @@ export default function Marker({ variant = "dot", checked = false }) {
 
     return (
         <span className={classes} aria-hidden="true">
-      {variant === "box" && checked ? "✓" : null}
     </span>
     );
 }

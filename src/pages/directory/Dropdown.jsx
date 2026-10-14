@@ -59,7 +59,7 @@ export default function Dropdown(props) {
                                     console.log(props.selected);
                                     props.setSelected(props.selected.map((item, i) => i === index ? !props.selected[index] : item));
                                 }}
-                                marker={<Marker variant="dot" checked={isSelected} />}
+                                marker={<Marker checked={isSelected} />}
                                 trailing={1}
                             >
                                 {lang}
