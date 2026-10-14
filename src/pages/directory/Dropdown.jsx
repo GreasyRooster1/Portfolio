@@ -6,15 +6,14 @@ import {useClickOutside} from "@/pages/directory/useClickOutside.js";
 
 export default function Dropdown(props) {
     const [active, setActive] = React.useState(false);
-    const [selected, setSelected] = React.useState(new Array(props.list.length).fill(false));
     const dropdownRef = useRef(null);
 
     useClickOutside(dropdownRef, () => {setActive(false)});
 
     const getAmountSelected = ()=>{
         let c = 0;
-        for (let i = 0; i < selected.length; i++) {
-            if(selected[i]) {
+        for (let i = 0; i < props.selected.length; i++) {
+            if(props.selected[i]) {
                 c++
             }
         }
@@ -23,8 +22,8 @@ export default function Dropdown(props) {
 
     const getSelected = (amt) => {
         let show = []
-        for (let i = 0; i < selected.length; i++) {
-            if(selected[i]) {
+        for (let i = 0; i < props.selected.length; i++) {
+            if(props.selected[i]) {
                 show.push(props.list[i]);
                 if(show.length >= amt){
                     return show.join(",");
@@ -44,21 +43,21 @@ export default function Dropdown(props) {
             >
 
                 <span className={styles.label}>{props.label}</span>
-                <span className={styles.valueActive}>{getSelected(2)}{getAmountSelected()>2?` +${getAmountSelected()-2}`:""}</span>
+                <span className={styles.valueActive}>{getSelected(props.showAmt)}{getAmountSelected()>props.showAmt?` +${getAmountSelected()-props.showAmt}`:""}</span>
                 <span className={styles.caret}>{active ? "▲" : "▼"}</span>
             </button>
 
             {active && (
                 <div className={styles.menu}>
                     {props.list.map((lang,index) => {
-                        const isSelected = selected[index]
+                        const isSelected = props.selected[index]
                         return (
                             <MenuItem
                                 key={index}
                                 selected={isSelected}
                                 onClick={() => {
-                                    console.log(selected);
-                                    setSelected(selected.map((item, i) => i === index ? !selected[index] : item));
+                                    console.log(props.selected);
+                                    props.setSelected(props.selected.map((item, i) => i === index ? !props.selected[index] : item));
                                 }}
                                 marker={<Marker variant="dot" checked={isSelected} />}
                                 trailing={1}

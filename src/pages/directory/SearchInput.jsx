@@ -19,9 +19,19 @@ export default function SearchInput(props) {
                 label="language"
                 value={props.language}
                 list = {props.languages}
-                active={props.language !== "all"}
-                open={open}
-                onToggle={props.onLangToggle}
+                showAmt={2}
+                selected={props.selectedLang}
+                setSelected={props.setSelectedLang}
+            >
+            </Dropdown>
+
+            <Dropdown
+                label="technologies"
+                value={props.technology}
+                list = {props.technologies}
+                showAmt={1}
+                selected={props.selectedTech}
+                setSelected={props.setSelectedTech}
             >
             </Dropdown>
 

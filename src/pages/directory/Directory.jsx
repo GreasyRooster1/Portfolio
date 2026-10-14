@@ -11,12 +11,12 @@ export function Directory() {
     const [data, setData] = useState(directoryData)
     const [search, setSearch] = useState("")
     const [language, setLanguage] = useState("")
+    const [technology, setTechnology] = useState("")
+    const [selectedLang, setSelectedLang] = useState(new Array(LANG.length).fill(false));
+    const [selectedTech, setSelectedTech] = useState(new Array(LANG.length).fill(false));
 
     const handleSearchChange = (e) => {
         setSearch(e.target.value);
-    };
-    const handleLangChange = (e) => {
-        setLanguage(e.target.value);
     };
 
     useEffect(() => {
@@ -46,7 +46,15 @@ export function Directory() {
                     <a href="/">home</a>
                 </Nav>
 
-                <SearchInput value={search} changeHandle={handleSearchChange} languages={LANG}></SearchInput>
+                <SearchInput value={search}
+                             changeHandle={handleSearchChange}
+                             languages={LANG}
+                             technologies={LANG}
+                             selectedLang={selectedLang}
+                             setSelectedLang={setSelectedLang}
+                             selectedTech={selectedTech}
+                             setSelectedTech={setSelectedTech}
+                ></SearchInput>
 
                 <ProjectTable projects={data.projects}>
 
