@@ -21,24 +21,11 @@ export default function SearchInput(props) {
             <Dropdown
                 label="language"
                 value={props.language}
+                list = {props.languages}
                 active={props.language !== "all"}
                 open={open}
                 onToggle={props.onLangToggle}
             >
-                {props.languages.map((lang) => {
-                    const selected = lang === props.language;
-                    return (
-                        <MenuItem
-                            key={lang}
-                            selected={selected}
-                            onClick={() => onSelect(lang)}
-                            marker={<Marker variant="dot" checked={selected} />}
-                            trailing={1}
-                        >
-                            {lang}
-                        </MenuItem>
-                    );
-                })}
             </Dropdown>
 
         </div>
