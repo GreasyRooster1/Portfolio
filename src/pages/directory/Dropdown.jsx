@@ -1,14 +1,18 @@
 import styles from "./dropdown.module.css";
-import React from "react";
+import React, {useRef} from "react";
 import MenuItem from "@/pages/directory/MenuItem.jsx";
 import Marker from "@/pages/directory/Marker.jsx";
+import {useClickOutside} from "@/pages/directory/useClickOutside.js";
 
 export default function Dropdown(props) {
     const [active, setActive] = React.useState(false);
     const [selected, setSelected] = React.useState(new Array(props.list.length).fill(false));
+    const dropdownRef = useRef(null);
+
+    useClickOutside(dropdownRef, () => {setActive(false)});
 
     return (
-        <div className={styles.root}>
+        <div className={styles.root} ref={dropdownRef}>
             <button
                 type="button"
                 className={styles.trigger}
@@ -23,7 +27,7 @@ export default function Dropdown(props) {
             {active && (
                 <div className={styles.menu}>
                     {props.list.map((lang,index) => {
-                        const isSelected = lang === props.value;
+                        const isSelected = selected[index]
                         return (
                             <MenuItem
                                 key={index}
