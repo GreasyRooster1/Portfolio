@@ -1,0 +1,63 @@
+.root {
+    position: relative;
+    flex: none;
+    display: flex;
+}
+
+.trigger {
+    composes: caps from "./typography.module.css";
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    height: 100%;
+    padding: 0 12px;
+    font-size: 10px;
+    background: transparent;
+    border: 0;
+    border-left: 1px solid var(--hairline);
+    cursor: pointer;
+}
+
+.trigger:hover,
+.trigger[aria-expanded="true"] {
+    background: var(--surface);
+}
+
+.label {
+    color: var(--faint);
+}
+
+.value {
+    color: var(--text);
+}
+
+.valueActive {
+    color: var(--accent);
+}
+
+.caret {
+    font-size: 9px;
+    color: var(--muted);
+}
+
+.menu {
+    position: absolute;
+    top: calc(100% + 1px);
+    right: -1px;
+    z-index: 5;
+    min-width: 220px;
+    padding: 6px 0;
+    background: var(--bg);
+    border: 1px solid var(--hairline-strong);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+    composes: mono from "./typography.module.css";
+    margin-top: 6px;
+    padding: 10px 16px 6px;
+    font-size: 10px;
+    line-height: 1.5;
+    color: var(--faint);
+    border-top: 1px solid var(--hairline-soft);
+}
