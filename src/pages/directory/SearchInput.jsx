@@ -35,6 +35,10 @@ export default function SearchInput(props) {
             >
             </Dropdown>
 
+            <button className={styles.btn} onClick={props.search}>
+                Search
+            </button>
+
         </div>
     );
 }
