@@ -21,7 +21,7 @@ export default function ProjectRow(props) {
       </div>
       <div className={styles.stack}>
           {props.projectData.tags.map(tag => (
-              <Tag key={tag.name} {...tag}/>
+              <Tag key={tag.name} tagClass={`${tag.color.replace("#","")}`} {...tag}/>
           ))}
       </div>
       <div className={styles.result}>{}</div>

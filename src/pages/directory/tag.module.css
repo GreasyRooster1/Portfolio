@@ -4,4 +4,6 @@
     color: var(--tag-color);
     border: 1px solid var(--tag-color);
     padding: 2px 6px;
+    background-color: color-mix(in srgb, var(--tag-color) 20%, transparent);;
+    display: inline-block;
 }

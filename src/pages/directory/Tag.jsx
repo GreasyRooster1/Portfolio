@@ -4,11 +4,11 @@ export function Tag(props) {
     return (
         <>
             <style>
-                .{`tag-${props.key}{`}
+                .{`tag-${props.tagClass}{`}
                     --tag-color:{props.color} !important;
                 {"}"}
             </style>
-            <span className={`${styles.tag} tag-${props.key}`}>{props.name}</span>
+            <div className={`${styles.tag} tag-${props.tagClass}`}>{props.name}</div>
         </>
     )
 }
