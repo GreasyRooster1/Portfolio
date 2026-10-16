@@ -47,13 +47,13 @@ export function Directory() {
                     return;
                 }
                 res.json().then((d) => {
-                    searchResults(d);
+                    setDirectoryData(d);
                 })
             })
     },[])
 
     useEffect(() => {
-        fetch(API+"/search_projects/")
+        fetch(API+"/search_projects/NO_QUERY_VIEW_ALL")
             .then((res) => {
                 if(!res.ok) {
                     console.log("data request failed")
@@ -86,7 +86,7 @@ export function Directory() {
                              onSearch={onSearch}
                 ></SearchInput>
 
-                <ProjectTable projects={searchResults.matches}>
+                <ProjectTable projects={searchResults?searchResults.matches:[]}>
 
                 </ProjectTable>
             </div>
