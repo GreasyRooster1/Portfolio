@@ -5,8 +5,8 @@
     align-items: center;
     gap: 10px;
     padding: 8px;
-    margin-top:24px;
-    margin-bottom:16px;
+    margin-top:32px;
+    margin-bottom:64px;
     border: 1px solid var(--hairline);
     font-size:1em;
 }

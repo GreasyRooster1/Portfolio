@@ -3,6 +3,7 @@ import Nav from "@components/Nav.jsx";
 import ProjectTable from "@/pages/directory/ProjectTable.jsx";
 import {useEffect, useState} from "react";
 import SearchInput from "@/pages/directory/SearchInput.jsx";
+import {Box} from "@radix-ui/themes";
 
 const LANG = ["js","html","css"]
 const API = "http://0.0.0.0:8080"//"https://portfolio-api.dillonjw.com"
@@ -67,7 +68,7 @@ export function Directory() {
 
     return (
         <>
-            <div className="page">
+            <Box className="page" p={{initial:"8px",sm:"16px",lg:"16px"}}>
                 <HtmlTitle title={"Project Directory - Dillon Wilson - "}/>
 
                 <Nav title="Project Directory" noCursor>
@@ -89,7 +90,7 @@ export function Directory() {
                 <ProjectTable projects={searchResults?searchResults.matches:[]}>
 
                 </ProjectTable>
-            </div>
+            </Box>
         </>
     )
 }

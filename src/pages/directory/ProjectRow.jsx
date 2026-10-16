@@ -1,5 +1,6 @@
 import LinkRow from '@components/LinkRow.jsx'
 import styles from './ProjectRow.module.css'
+import {Box} from "@radix-ui/themes";
 
 export default function ProjectRow(props) {
 
@@ -10,16 +11,18 @@ export default function ProjectRow(props) {
     let linkData = rawLinkData.filter(item => item !== undefined);
 
   return (
-    <div className={`${styles.row} ${props.last ? styles.rowLast : ''}`}>
+    <Box className={`${styles.row} ${props.last ? styles.rowLast : ''}`}>
       <div>
         <div className={styles.title}>{props.projectData.name}</div>
-        <div className={styles.sub}>{props.projectData.desc}</div>
+        <Box className={styles.sub} maxWidth={{initial:"320px",lg:"700px"}}>
+            {props.projectData.desc}
+        </Box>
       </div>
       <div className={styles.stack}>
           {}
       </div>
       <div className={styles.result}>{}</div>
       <LinkRow links={linkData} separated className={styles.links} />
-    </div>
+    </Box>
   )
 }
