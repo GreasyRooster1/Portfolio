@@ -1,4 +1,4 @@
-reaimport HtmlTitle from "@components/HtmlTitle.jsx";
+import HtmlTitle from "@components/HtmlTitle.jsx";
 import Nav from "@components/Nav.jsx";
 import ProjectTable from "@/pages/directory/ProjectTable.jsx";
 import {useEffect, useState} from "react";
@@ -23,7 +23,7 @@ export function Directory() {
     };
 
     const onSearch = ()=>{
-        if(search.length<1) return;e
+        if(search.length<1) return;
         fetch(API+"/search_projects/"+search)
             .then((res) => {
                 if(!res.ok) {
@@ -31,7 +31,11 @@ export function Directory() {
                     return;
                 }
                 res.json().then((d) => {
-                    setSearchResults(d)
+                    let matches = d.matches;
+                    matches.sort((a, b) => b.significance - a.significance);
+                    console.log(matches)
+                    d.matches = matches;
+                    setSearchResults(d);
                 })
             })
     }
