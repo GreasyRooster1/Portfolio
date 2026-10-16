@@ -4,7 +4,7 @@ import Hero from "@/pages/index/Hero.jsx";
 import FeaturedHero from "@/pages/index/FeaturedHero.jsx";
 import SelectedWork from "@/pages/index/SelectedWork.jsx";
 import ProjectIndex from "@/pages/index/ProjectIndex.jsx";
-import {Experience} from "@/Experience.jsx";
+import {Experience} from "@/pages/index/Experience.jsx";
 import Footer from "@/pages/index/Footer.jsx";
 import projectData from '@assets/projects.json';
 import HtmlTitle from "@components/HtmlTitle.jsx";
