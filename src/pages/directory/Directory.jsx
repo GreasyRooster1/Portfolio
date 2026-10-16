@@ -2,7 +2,6 @@ import HtmlTitle from "@components/HtmlTitle.jsx";
 import Nav from "@components/Nav.jsx";
 import ProjectTable from "@/pages/directory/ProjectTable.jsx";
 import {useEffect, useState} from "react";
-import directoryData from '@assets/directory.json';
 import SearchInput from "@/pages/directory/SearchInput.jsx";
 
 const LANG = ["js","html","css"]
@@ -10,13 +9,13 @@ const API = "http://0.0.0.0:8080"//"https://portfolio-api.dillonjw.com"
 
 
 export function Directory() {
-    const [data, setData] = useState(directoryData)
     const [search, setSearch] = useState("")
     const [language, setLanguage] = useState("")
     const [technology, setTechnology] = useState("")
     const [selectedLang, setSelectedLang] = useState(new Array(LANG.length).fill(false));
     const [selectedTech, setSelectedTech] = useState(new Array(LANG.length).fill(false));
-    const [searchResults, setSearchResults] = useState([])
+    const [searchResults, setSearchResults] = useState(null)
+    const [directoryData, setDirectoryData] = useState(null)
 
     const handleSearchChange = (e) => {
         setSearch(e.target.value);
@@ -40,22 +39,31 @@ export function Directory() {
             })
     }
 
-    // useEffect(() => {
-    //     fetch("https://portfolio-api.dillonjw.com/directory")
-    //         .then((res) => {
-    //             if(!res.ok) {
-    //                 console.log("directory request failed")
-    //                 return;
-    //             }
-    //             res.json().then((d) => {
-    //                 if(Object.keys(d).length === 0){
-    //                     console.warn("no server data found")
-    //                     return;
-    //                 }
-    //                 setData(d)
-    //             })
-    //         })
-    // },[])
+    useEffect(() => {
+        fetch(API+"/get_directory_data")
+            .then((res) => {
+                if(!res.ok) {
+                    console.log("data request failed")
+                    return;
+                }
+                res.json().then((d) => {
+                    searchResults(d);
+                })
+            })
+    },[])
+
+    useEffect(() => {
+        fetch(API+"/search_projects/")
+            .then((res) => {
+                if(!res.ok) {
+                    console.log("data request failed")
+                    return;
+                }
+                res.json().then((d) => {
+                    setSearchResults(d);
+                })
+            })
+    },[])
 
     return (
         <>
@@ -78,7 +86,7 @@ export function Directory() {
                              onSearch={onSearch}
                 ></SearchInput>
 
-                <ProjectTable projects={data.projects}>
+                <ProjectTable projects={searchResults.matches}>
 
                 </ProjectTable>
             </div>
