@@ -1,6 +1,7 @@
 import LinkRow from '@components/LinkRow.jsx'
 import styles from './ProjectRow.module.css'
 import {Box} from "@radix-ui/themes";
+import {Tag} from "@/pages/directory/Tag.jsx";
 
 export default function ProjectRow(props) {
 
@@ -19,7 +20,9 @@ export default function ProjectRow(props) {
         </Box>
       </div>
       <div className={styles.stack}>
-          {}
+          {props.projectData.tags.map(tag => (
+              <Tag key={tag.name} {...tag}/>
+          ))}
       </div>
       <div className={styles.result}>{}</div>
       <LinkRow links={linkData} separated className={styles.links} />
