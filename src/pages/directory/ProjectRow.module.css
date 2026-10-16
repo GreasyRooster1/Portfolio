@@ -29,6 +29,9 @@
 
 .stack {
   font: 400 11.5px/1.5 var(--font-mono);
+  display:flex;
+  flex-direction: row;
+  gap: 4px;
   color: var(--muted);
 }
 
