@@ -16,7 +16,7 @@ export default function ProjectTable(props) {
             <div className={styles.linksHead}>links</div>
           </div>
           {props.projects.map((project, i) => (
-            <ProjectRow key={project.n} {...project} last={i === props.projects.length - 1} />
+            <ProjectRow key={i} projectData={project} last={i === props.projects.length - 1} />
           ))}
       </>
   )
