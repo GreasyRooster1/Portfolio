@@ -23,8 +23,11 @@ export function Directory() {
     };
 
     const onSearch = ()=>{
-        if(search.length<1) return;
-        fetch(API+"/search_projects/"+search)
+        let searchQuery = search;
+        if(search.length<1) {
+            searchQuery = "NO_QUERY_VIEW_ALL";
+        }
+        fetch(API+"/search_projects/"+searchQuery)
             .then((res) => {
                 if(!res.ok) {
                     console.log("search request failed")

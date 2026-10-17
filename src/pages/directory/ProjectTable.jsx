@@ -11,8 +11,8 @@ export default function ProjectTable(props) {
       <>
           <div className={styles.header}>
             <div>project</div>
-            <div>stack</div>
-            <div>result</div>
+            <div>language</div>
+            <div>technologies</div>
             <div className={styles.linksHead}>links</div>
           </div>
           {props.projects.map((project, i) => (
