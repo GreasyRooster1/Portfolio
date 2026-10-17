@@ -33,6 +33,7 @@
   flex-direction: row;
   gap: 4px;
   color: var(--muted);
+  margin-left:32px;
 }
 
 .result {

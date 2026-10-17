@@ -5,13 +5,14 @@ import LinkRow from "@components/LinkRow.jsx";
 import PageSection from "@components/PageSection.jsx";
 import {DesktopView} from "@components/View.jsx";
 import ProjectRow from "@/pages/directory/ProjectRow.jsx";
+import {Box} from "@radix-ui/themes";
 
 export default function ProjectTable(props) {
   return (
       <>
           <div className={styles.header}>
             <div>project</div>
-            <div>language</div>
+            <Box ml={"32px"}>language</Box>
             <div>technologies</div>
             <div className={styles.linksHead}>links</div>
           </div>
