@@ -1,3 +1,14 @@
+.parent{
+    position:sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 1000;
+    padding-top:8px;
+    padding-bottom:8px;
+    margin-top:32px;
+    margin-bottom:64px;
+}
+
 .field {
     flex: 1;
     min-width: 0;
@@ -5,11 +16,12 @@
     align-items: center;
     gap: 10px;
     padding: 8px;
-    margin-top:32px;
-    margin-bottom:64px;
+
     border: 1px solid var(--hairline);
     font-size:1em;
+
 }
+
 
 .prompt {
     font-family: "JetBrains Mono", ui-monospace, monospace;

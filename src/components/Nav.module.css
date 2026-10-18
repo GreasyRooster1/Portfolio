@@ -1,6 +1,4 @@
 .nav {
-  position: sticky;
-  top: 0;
   z-index: 999;
   justify-content: space-between;
   align-items: center;
@@ -8,6 +6,11 @@
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--hairline);
+}
+
+.sticky{
+  position: sticky;
+  top: 0;
 }
 
 .brand {

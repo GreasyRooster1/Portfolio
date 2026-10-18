@@ -9,7 +9,7 @@ import {Box, Flex} from "@radix-ui/themes";
 
 export default function ProjectTable(props) {
   return (
-      <>
+      <div className={styles.parent}>
           <div className={styles.header}>
             <div>project</div>
             <Flex justify={"center"}>language</Flex>
@@ -19,6 +19,6 @@ export default function ProjectTable(props) {
           {props.projects.map((project, i) => (
             <ProjectRow key={i} projectData={project} last={i === props.projects.length - 1} />
           ))}
-      </>
+      </div>
   )
 }

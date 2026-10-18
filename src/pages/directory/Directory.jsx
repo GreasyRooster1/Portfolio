@@ -74,7 +74,7 @@ export function Directory() {
             <Box className="page" p={{initial:"8px",sm:"16px",lg:"16px"}}>
                 <HtmlTitle title={"Project Directory - Dillon Wilson - "}/>
 
-                <Nav title="Project Directory" noCursor>
+                <Nav title="Project Directory" noCursor noSticky={true}>
                     <a href="https://github.com/GreasyRooster1">github</a>
                     <a href="/">home</a>
                 </Nav>
