@@ -92,16 +92,19 @@ function About(){
 
 function Actions(){
   return (
-      <div className={styles.actions}>
-        {/*<a href="#7a" className={`${styles.btn} ${styles.btnPrimary}`}>*/}
-        {/*  résumé.pdf*/}
-        {/*</a>*/}
-        <a href="https://github.com/GreasyRooster1/" className={`${styles.btn} ${styles.btnPrimary}`}>
-          GitHub
-        </a>
-        <a href="mailto:dillonjwilson1@gmail.com" className={`${styles.btn}  ${styles.btnGhost}`}>
-          Email
-        </a>
-      </div>
+        <div className={styles.actions}>
+            {/*<a href="#7a" className={`${styles.btn} ${styles.btnPrimary}`}>*/}
+            {/*  résumé.pdf*/}
+            {/*</a>*/}
+            <a href="/directory" className={`${styles.btn} ${styles.btnPrimary}`}>
+                Projects
+            </a>
+            <a href="https://github.com/GreasyRooster1/" className={`${styles.btn} ${styles.btnGhost}`}>
+                GitHub
+            </a>
+            <a href="mailto:dillonjwilson1@gmail.com" className={`${styles.btn}  ${styles.btnGhost}`}>
+                Email
+            </a>
+        </div>
   )
 }
