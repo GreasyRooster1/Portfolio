@@ -62,7 +62,7 @@ export default function Dropdown(props) {
                                 marker={<Marker checked={isSelected} />}
                                 trailing={1}
                             >
-                                {lang}
+                                {lang.full_name}
                             </MenuItem>
                         );
                     })}

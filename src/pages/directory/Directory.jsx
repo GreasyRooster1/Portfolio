@@ -69,6 +69,13 @@ export function Directory() {
             })
     },[])
 
+    useEffect(() => {
+        setSelectedLang(new Array(directoryData?directoryData.tags.filter((t)=>t.tag_type==="language").length:0).fill(false));
+        setSelectedLang(new Array(directoryData?directoryData.tags.filter((t)=>t.tag_type==="technology").length:0).fill(false));
+    },[directoryData])
+
+    console.log(directoryData?directoryData.tags.filter((t)=>t.tag_type==="language"):[])
+
     return (
         <>
             <Box className="page" p={{initial:"8px",sm:"16px",lg:"16px"}}>
@@ -81,8 +88,8 @@ export function Directory() {
 
                 <SearchInput value={search}
                              changeHandle={handleSearchChange}
-                             languages={LANG}
-                             technologies={LANG}
+                             languages={directoryData?directoryData.tags.filter((t)=>t.tag_type==="language"):[]}
+                             technologies={directoryData?directoryData.tags.filter((t)=>t.tag_type==="technology"):[]}
                              selectedLang={selectedLang}
                              setSelectedLang={setSelectedLang}
                              selectedTech={selectedTech}
