@@ -10,29 +10,6 @@ export default function Dropdown(props) {
 
     useClickOutside(dropdownRef, () => {setActive(false)});
 
-    const getAmountSelected = ()=>{
-        let c = 0;
-        for (let i = 0; i < props.selected.length; i++) {
-            if(props.selected[i]) {
-                c++
-            }
-        }
-        return c;
-    }
-
-    const getSelected = (amt) => {
-        let show = []
-        for (let i = 0; i < props.selected.length; i++) {
-            if(props.selected[i]) {
-                show.push(props.list[i].name);
-                if(show.length >= amt){
-                    return show.join(",");
-                }
-            }
-        }
-        return show.join(",");
-    }
-
     return (
         <div className={styles.root} ref={dropdownRef}>
             <button
@@ -43,7 +20,7 @@ export default function Dropdown(props) {
             >
 
                 <span className={styles.label}>{props.label}</span>
-                <span className={styles.valueActive}>{getSelected(props.showAmt)}{getAmountSelected()>props.showAmt?` +${getAmountSelected()-props.showAmt}`:""}</span>
+                <span className={styles.valueActive}>{props.selected!==-1?props.list[props.selected].name:""}</span>
                 <span className={styles.caret}>{active ? "▲" : "▼"}</span>
             </button>
 
