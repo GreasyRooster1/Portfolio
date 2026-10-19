@@ -24,7 +24,7 @@ export default function Dropdown(props) {
         let show = []
         for (let i = 0; i < props.selected.length; i++) {
             if(props.selected[i]) {
-                show.push(props.list[i]);
+                show.push(props.list[i].name);
                 if(show.length >= amt){
                     return show.join(",");
                 }
@@ -50,17 +50,21 @@ export default function Dropdown(props) {
             {active && (
                 <div className={styles.menu}>
                     {props.list.map((lang,index) => {
-                        const isSelected = props.selected[index]
+                        const isSelected = props.selected===index
                         return (
                             <MenuItem
                                 key={index}
                                 selected={isSelected}
                                 onClick={() => {
                                     console.log(props.selected);
-                                    props.setSelected(props.selected.map((item, i) => i === index ? !props.selected[index] : item));
+                                    if(isSelected) {
+                                        props.setSelected(-1);
+                                    }else {
+                                        props.setSelected(index);
+                                    }
                                 }}
                                 marker={<Marker checked={isSelected} />}
-                                trailing={1}
+                                trailing={""}
                             >
                                 {lang.full_name}
                             </MenuItem>

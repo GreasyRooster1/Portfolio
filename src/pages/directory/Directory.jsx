@@ -13,8 +13,8 @@ export function Directory() {
     const [search, setSearch] = useState("")
     const [language, setLanguage] = useState("")
     const [technology, setTechnology] = useState("")
-    const [selectedLang, setSelectedLang] = useState(new Array(LANG.length).fill(false));
-    const [selectedTech, setSelectedTech] = useState(new Array(LANG.length).fill(false));
+    const [selectedLang, setSelectedLang] = useState(-1);
+    const [selectedTech, setSelectedTech] = useState(-1);
     const [searchResults, setSearchResults] = useState(null)
     const [directoryData, setDirectoryData] = useState(null)
 
@@ -68,11 +68,6 @@ export function Directory() {
                 })
             })
     },[])
-
-    useEffect(() => {
-        setSelectedLang(new Array(directoryData?directoryData.tags.filter((t)=>t.tag_type==="language").length:0).fill(false));
-        setSelectedLang(new Array(directoryData?directoryData.tags.filter((t)=>t.tag_type==="technology").length:0).fill(false));
-    },[directoryData])
 
     console.log(directoryData?directoryData.tags.filter((t)=>t.tag_type==="language"):[])
 
