@@ -11,8 +11,8 @@ const API = "http://0.0.0.0:8080"//"https://portfolio-api.dillonjw.com"
 
 export function Directory() {
     const [search, setSearch] = useState("")
-    const [language, setLanguage] = useState("")
-    const [technology, setTechnology] = useState("")
+    const [languages, setLanguages] = useState([])
+    const [technologies, setTechnologies] = useState([])
     const [selectedLang, setSelectedLang] = useState(-1);
     const [selectedTech, setSelectedTech] = useState(-1);
     const [searchResults, setSearchResults] = useState(null)
@@ -27,7 +27,7 @@ export function Directory() {
         if(search.length<1) {
             searchQuery = "NO_QUERY_VIEW_ALL";
         }
-        fetch(API+"/search_projects/"+searchQuery)
+        fetch(`${API}/search_projects/${searchQuery}/${selectedLang===-1?"NO_LANG_VIEW_ALL":languages[selectedLang].name}/${selectedTech===-1?"NO_TECH_VIEW_ALL":technologies[selectedTech].name}`, {})
             .then((res) => {
                 if(!res.ok) {
                     console.log("search request failed")
@@ -52,12 +52,14 @@ export function Directory() {
                 }
                 res.json().then((d) => {
                     setDirectoryData(d);
+                    setLanguages(d.tags.filter((t)=>t.tag_type==="language"));
+                    setTechnologies(d.tags.filter((t)=>t.tag_type==="technology"));
                 })
             })
     },[])
 
     useEffect(() => {
-        fetch(API+"/search_projects/NO_QUERY_VIEW_ALL")
+        fetch(`${API}/search_projects/NO_QUERY_VIEW_ALL/${selectedLang===-1?"NO_LANG_VIEW_ALL":languages[selectedLang].name}/${selectedTech===-1?"NO_TECH_VIEW_ALL":technologies[selectedTech].name}`)
             .then((res) => {
                 if(!res.ok) {
                     console.log("data request failed")
@@ -69,7 +71,6 @@ export function Directory() {
             })
     },[])
 
-    console.log(directoryData?directoryData.tags.filter((t)=>t.tag_type==="language"):[])
 
     return (
         <>
@@ -83,8 +84,8 @@ export function Directory() {
 
                 <SearchInput value={search}
                              changeHandle={handleSearchChange}
-                             languages={directoryData?directoryData.tags.filter((t)=>t.tag_type==="language"):[]}
-                             technologies={directoryData?directoryData.tags.filter((t)=>t.tag_type==="technology"):[]}
+                             languages={languages}
+                             technologies={technologies}
                              selectedLang={selectedLang}
                              setSelectedLang={setSelectedLang}
                              selectedTech={selectedTech}
