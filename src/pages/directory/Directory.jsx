@@ -41,6 +41,12 @@ export function Directory() {
 
     const onSearch = ()=>{
         console.log(search)
+        if(urlParams.get("lang")) {
+            setSelectedLang(languages.findIndex(tag => tag.name.toLowerCase() === urlParams.get("lang")?.toLowerCase()))
+        }
+        if(urlParams.get("tech")) {
+            setSelectedTech(technologies.findIndex(tag => tag.name.toLowerCase() === urlParams.get("tech")?.toLowerCase()))
+        }
         fetch(getSearchQuery(search), {})
             .then((res) => {
                 if(!res.ok) {
@@ -88,6 +94,10 @@ export function Directory() {
 
     useEffect(() => {
         console.log("tags changed",selectedLang,selectedTech)
+        const url = new URL(window.location.href);
+        url.searchParams.delete('lang');
+        url.searchParams.delete('tech');
+        window.history.replaceState(null, '', url.toString());
         onSearch();
     },[selectedLang,selectedTech])
 
