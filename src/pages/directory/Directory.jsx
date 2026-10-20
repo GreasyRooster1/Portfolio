@@ -6,12 +6,16 @@ import SearchInput from "@/pages/directory/SearchInput.jsx";
 import {Box,Text} from "@radix-ui/themes";
 import styles from "./directory.module.css";
 
+
 const LANG = ["js","html","css"]
 const API = "http://0.0.0.0:8080"//"https://portfolio-api.dillonjw.com"
 
 
 export function Directory() {
-    const [search, setSearch] = useState("")
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
+    const [search, setSearch] = useState(urlParams.get("search")??"");
     const [languages, setLanguages] = useState([])
     const [technologies, setTechnologies] = useState([])
     const [selectedLang, setSelectedLang] = useState(-1);
@@ -61,8 +65,17 @@ export function Directory() {
                 }
                 res.json().then((d) => {
                     setDirectoryData(d);
-                    setLanguages(d.tags.filter((t)=>t.tag_type==="language"));
-                    setTechnologies(d.tags.filter((t)=>t.tag_type==="technology"));
+                    let langs = d.tags.filter((t)=>t.tag_type==="language");
+                    let techs = d.tags.filter((t)=>t.tag_type==="technology");
+                    setLanguages(langs);
+                    setTechnologies(techs);
+                    console.log(langs.findIndex(tag => tag.name.toLowerCase() === urlParams.get("lang").toLowerCase()));
+                    if(urlParams.get("lang")!=="") {
+                        setSelectedLang(langs.findIndex(tag => tag.name.toLowerCase() === urlParams.get("lang")?.toLowerCase()))
+                    }
+                    if(urlParams.get("tech")!=="") {
+                        setSelectedTech(techs.findIndex(tag => tag.name.toLowerCase() === urlParams.get("tech")?.toLowerCase()))
+                    }
                 })
             })
     },[])
@@ -72,6 +85,7 @@ export function Directory() {
     },[])
 
     useEffect(() => {
+        console.log("tags changed")
         onSearch();
     },[selectedLang,selectedTech])
 
