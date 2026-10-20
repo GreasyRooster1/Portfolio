@@ -39,8 +39,11 @@ import xcode from "@assets/langs/xcode.png"
 import PageSection from "@components/PageSection.jsx";
 import {DesktopView} from "@components/View.jsx";
 
-const projLink = (lang) => {
-    return `https://github.com/GreasyRooster1?tab=repositories&q=&type=&language=${lang}&sort=`;
+const langProjLink = (lang) => {
+    return `directory?lang=${lang}`;
+}
+const techProjLink = (tech) => {
+    return `directory?tech=${tech}`;
 }
 
 export function Experience(props) {
@@ -53,41 +56,41 @@ export function Experience(props) {
             </Flex>
             <BrickList cols={8}>
                 <BrickListItem img={ruby} color={"#d92007"} name={"Ruby"} links={[{txt:"Homepage",href:"https://www.ruby-lang.org/en/"}]}/>
-                <BrickListItem img={react} color={"#00d8ff"} name={"React"} links={[{txt:"Homepage",href:"https://react.dev/"}]}/>
-                <BrickListItem img={js} color={"#f0dc4e"} name={"JavaScript"} links={[{txt:"Projects",href:projLink("javascript")}]}/>
-                <BrickListItem img={ts} color={"#3178c6"} name={"TypeScript"} links={[{txt:"Homepage",href:"https://www.typescriptlang.org/"},{txt:"Projects",href:projLink("typescript")}]}/>
-                <BrickListItem img={html} color={"#e44d26"} name={"HTML"} links={[{txt:"Homepage",href:"https://html.spec.whatwg.org/"},{txt:"Projects",href:projLink("html")}]}/>
-                <BrickListItem img={arduino} color={"#199aa0"} name={"Arduino"} links={[{txt:"Homepage",href:"https://arduino.org/"}]}/>
-                <BrickListItem img={c} color={"#00599c"} name={"C"} links={[{txt:"Homepage",href:"https://www.c-language.org/"},{txt:"Projects",href:projLink("c")}]}/>
-                <BrickListItem img={csharp} color={"#953dac"} name={"C Sharp"} links={[{txt:"Homepage",href:"https://learn.microsoft.com/en-us/dotnet/csharp/"},{txt:"Projects",href:projLink("c%23")}]}/>
-                <BrickListItem img={python} color={"#ffcf42"} name={"Python"} links={[{txt:"Homepage",href:"https://www.python.org/"},{txt:"Projects",href:projLink("python")}]}/>
-                <BrickListItem img={java} color={"#f3931b"} name={"Java"} links={[{txt:"Homepage",href:"https://www.java.com/"},{txt:"Projects",href:projLink("java")}]}/>
-                <BrickListItem img={rust} color={"#dd3516"} name={"Rust"} links={[{txt:"Homepage",href:"https://rust-lang.org/"},{txt:"Projects",href:projLink("rust")}]}/>
-                <BrickListItem img={css} color={"#1c88c7"} name={"CSS"} links={[{txt:"Projects",href:projLink("css")}]}/>
-                <BrickListItem img={swift} color={"#fa5d2d"} name={"Swift"} links={[{txt:"Homepage",href:"https://www.swift.org/"}]}/>
+                <BrickListItem img={react} color={"#00d8ff"} name={"React"} links={[{txt:"Homepage",href:"https://react.dev/"},{txt:"Projects",href:langProjLink("react")}]}/>
+                <BrickListItem img={js} color={"#f0dc4e"} name={"JavaScript"} links={[{txt:"Projects",href:langProjLink("js")}]}/>
+                <BrickListItem img={ts} color={"#3178c6"} name={"TypeScript"} links={[{txt:"Homepage",href:"https://www.typescriptlang.org/"},{txt:"Projects",href:langProjLink("ts")}]}/>
+                <BrickListItem img={html} color={"#e44d26"} name={"HTML"} links={[{txt:"Homepage",href:"https://html.spec.whatwg.org/"},{txt:"Projects",href:langProjLink("html")}]}/>
+                <BrickListItem img={arduino} color={"#199aa0"} name={"Arduino"} links={[{txt:"Homepage",href:"https://arduino.org/"},{txt:"Projects",href:langProjLink("arduino")}]}/>
+                <BrickListItem img={c} color={"#00599c"} name={"C"} links={[{txt:"Homepage",href:"https://www.c-language.org/"},{txt:"Projects",href:langProjLink("c")}]}/>
+                <BrickListItem img={csharp} color={"#953dac"} name={"C Sharp"} links={[{txt:"Homepage",href:"https://learn.microsoft.com/en-us/dotnet/csharp/"},{txt:"Projects",href:langProjLink("c%23")}]}/>
+                <BrickListItem img={python} color={"#ffcf42"} name={"Python"} links={[{txt:"Homepage",href:"https://www.python.org/"},{txt:"Projects",href:langProjLink("python")}]}/>
+                <BrickListItem img={java} color={"#f3931b"} name={"Java"} links={[{txt:"Homepage",href:"https://www.java.com/"},{txt:"Projects",href:langProjLink("java")}]}/>
+                <BrickListItem img={rust} color={"#dd3516"} name={"Rust"} links={[{txt:"Homepage",href:"https://rust-lang.org/"},{txt:"Projects",href:langProjLink("rust")}]}/>
+                <BrickListItem img={css} color={"#1c88c7"} name={"CSS"} links={[{txt:"Projects",href:langProjLink("css")}]}/>
+                <BrickListItem img={swift} color={"#fa5d2d"} name={"Swift"} links={[{txt:"Homepage",href:"https://www.swift.org/"},{txt:"Projects",href:langProjLink("swift")}]}/>
             </BrickList>
             <Flex width={"100%"} align={"center"} justify={"center"} mb="4" mt="6">
                 <Text width={"100%"} align="center" size="8" weight="bold">Technologies</Text>
             </Flex>
             <BrickList cols={12}>
-                <BrickListItem img={aws} color={"#fd8d04"} name={"AWS"} links={[{txt:"Homepage",href:"https://aws.amazon.com/?nc2=h_home"}]}/>
-                <BrickListItem img={cloudflare} color={"#f38020"} name={"Cloudflare"} links={[{txt:"Homepage",href:"https://www.cloudflare.com/"}]}/>
+                <BrickListItem img={aws} color={"#fd8d04"} name={"AWS"} links={[{txt:"Homepage",href:"https://aws.amazon.com/?nc2=h_home"},{txt:"Projects",href:techProjLink("aws")}]}/>
+                <BrickListItem img={cloudflare} color={"#f38020"} name={"Cloudflare"} links={[{txt:"Homepage",href:"https://www.cloudflare.com/"},{txt:"Projects",href:techProjLink("cloudflare")}]}/>
                 <BrickListItem img={docker} color={"#0091e2"} name={"Docker"} links={[{txt:"Homepage",href:"https://www.docker.com/"}]}/>
                 <BrickListItem img={git} color={"#f05133"} name={"Git"} links={[{txt:"Homepage",href:"https://git-scm.com/e"}]}/>
                 <BrickListItem img={github} color={"#7e7e7e"} name={"Github"} links={[{txt:"Homepage",href:"https://github.com"}]}/>
-                <BrickListItem img={ollama} color={"#ffffff"} name={"Ollama"} links={[{txt:"Homepage",href:"https://ollama.com/"}]}/>
-                <BrickListItem img={postgres} color={"#336791"} name={"PostgreSQL"} links={[{txt:"Homepage",href:"https://www.postgresql.org/"}]}/>
+                <BrickListItem img={ollama} color={"#ffffff"} name={"Ollama"} links={[{txt:"Homepage",href:"https://ollama.com/"},{txt:"Projects",href:techProjLink("ollama")}]}/>
+                <BrickListItem img={postgres} color={"#336791"} name={"PostgreSQL"} links={[{txt:"Homepage",href:"https://www.postgresql.org/"},{txt:"Projects",href:techProjLink("postgres")}]}/>
                 <BrickListItem img={node} color={"#58a545"} name={"Node.js"} links={[{txt:"Homepage",href:"https://nodejs.org/"}]}/>
-                <BrickListItem img={proxmox} color={"#e57000"} name={"Proxmox VE"} links={[{txt:"Homepage",href:"https://www.proxmox.com/"}]}/>
-                <BrickListItem img={rpi} color={"#e81150"} name={"Raspberry PI"} links={[{txt:"Homepage",href:"https://www.raspberrypi.com/"}]}/>
-                <BrickListItem img={firebase} color={"#ff9100"} name={"Firebase"} links={[{txt:"Homepage",href:"https://firebase.google.com/"}]}/>
-                <BrickListItem img={vite} color={"#6c16ff"} name={"Vite"} links={[{txt:"Homepage",href:"https://vite.dev/"}]}/>
+                <BrickListItem img={proxmox} color={"#e57000"} name={"Proxmox VE"} links={[{txt:"Homepage",href:"https://www.proxmox.com/"},{txt:"Projects",href:techProjLink("proxmox")}]}/>
+                <BrickListItem img={rpi} color={"#e81150"} name={"Raspberry PI"} links={[{txt:"Homepage",href:"https://www.raspberrypi.com/"},{txt:"Projects",href:techProjLink("rasp%2E pi")}]}/>
+                <BrickListItem img={firebase} color={"#ff9100"} name={"Firebase"} links={[{txt:"Homepage",href:"https://firebase.google.com/"},{txt:"Projects",href:techProjLink("firebase")}]}/>
+                <BrickListItem img={vite} color={"#6c16ff"} name={"Vite"} links={[{txt:"Homepage",href:"https://vite.dev/"},{txt:"Projects",href:techProjLink("vite")}]}/>
                 <BrickListItem img={jetbrains} color={"#f6016c"} name={"JetBrains IDEs"} links={[{txt:"Homepage",href:"https://www.jetbrains.com/"}]}/>
                 <BrickListItem img={linux} color={"#ffbe00"} name={"Linux"} links={[]}/>
-                <BrickListItem img={p5} color={"#ed225d"} name={"p5.js"} links={[{txt:"Homepage",href:"https://p5js.org/"}]}/>
-                <BrickListItem img={processing} color={"#0468ff"} name={"Processing"} links={[{txt:"Homepage",href:"https://processing.org/"}]}/>
+                <BrickListItem img={p5} color={"#ed225d"} name={"p5.js"} links={[{txt:"Homepage",href:"https://p5js.org/"},{txt:"Projects",href:techProjLink("p5js")}]}/>
+                <BrickListItem img={processing} color={"#0468ff"} name={"Processing"} links={[{txt:"Homepage",href:"https://processing.org/"},{txt:"Projects",href:techProjLink("processing")}]}/>
                 <BrickListItem img={vscode} color={"#22a6f2"} name={"VS Code"} links={[{txt:"Homepage",href:"https://code.visualstudio.com/"}]}/>
-                <BrickListItem img={jwt} color={"#d63aff"} name={"JWT"} links={[{txt:"Homepage",href:"https://www.jwt.io/"}]}/>
+                <BrickListItem img={jwt} color={"#d63aff"} name={"JWT"} links={[{txt:"Homepage",href:"https://www.jwt.io/"},{txt:"Projects",href:techProjLink("jwt")}]}/>
                 <BrickListItem img={xcode} color={"#0cc0fa"} name={"X Code"} links={[{txt:"Homepage",href:"https://developer.apple.com/xcode/"}]}/>
             {/*Open Router*/}
             {/*Oracle Cloud*/}
