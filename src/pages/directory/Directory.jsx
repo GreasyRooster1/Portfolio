@@ -102,7 +102,7 @@ export function Directory() {
                              onSearch={onSearch}
                 ></SearchInput>
 
-                <ProjectTable projects={searchResults?searchResults.matches:[]} stamp={searchNumber}>
+                <ProjectTable projects={searchResults?searchResults.matches:[]} stamp={searchNumber} highlightLang={languages[selectedLang]} highlightTech={technologies[selectedTech]}>
 
                 </ProjectTable>
             </Box>

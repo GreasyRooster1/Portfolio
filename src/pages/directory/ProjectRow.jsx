@@ -1,6 +1,6 @@
 import LinkRow from '@components/LinkRow.jsx'
 import styles from './ProjectRow.module.css'
-import {Box} from "@radix-ui/themes";
+import {Box,Text} from "@radix-ui/themes";
 import {Tag} from "@/pages/directory/Tag.jsx";
 
 export default function ProjectRow(props) {
@@ -19,6 +19,11 @@ export default function ProjectRow(props) {
     let languageTags = props.projectData.tags.filter(tag => tag.tag_type==="language");
     let technologyTags = props.projectData.tags.filter(tag => tag.tag_type==="technology");
 
+    if(props.highlightLang){
+        languageTags.filter(tag => tag.name!==props.highlightLang)
+        languageTags.unshift(props.highlightLang)
+    }
+
     console.log(languageTags);
 
     return (
@@ -29,13 +34,14 @@ export default function ProjectRow(props) {
             {props.projectData.desc}
         </Box>
       </div>
-      <div className={styles.stack}>
-          {languageTags.slice(0,99).map(tag => (
+      <div className={styles.lang}>
+          {languageTags.slice(0,3).map(tag => (
               <Tag key={tag.name} tagClass={`${tag.color.replace("#","")}`} {...tag}/>
           ))}
+          {languageTags.length>3?(<Tag name={`+${languageTags.length-3}`} bgOpacity={.3} color={"#6e6e6e"}/>):""}
       </div>
-      <div className={styles.result}>
-          {technologyTags.slice(0,99).map(tag => (
+      <div className={styles.tech}>
+          {technologyTags.slice(0,2).map(tag => (
               <Tag key={tag.name} tagClass={`${tag.color.replace("#","")}`} {...tag}/>
           ))}
       </div>

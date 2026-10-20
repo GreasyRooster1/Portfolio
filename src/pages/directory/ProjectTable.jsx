@@ -29,8 +29,8 @@ export default function ProjectTable(props) {
       <div className={styles.parent}>
           <div className={styles.header}>
             <div>project</div>
-            <Flex justify={"center"}>language</Flex>
-            <Flex justify={"center"}>technologies</Flex>
+            <Flex justify={"start"}>language</Flex>
+            <Flex justify={"end"}>technologies</Flex>
             <div className={styles.linksHead}>links</div>
           </div>
           <AnimatePresence>
@@ -44,7 +44,7 @@ export default function ProjectTable(props) {
                           exit={{ opacity: 0, x: 50 }}
                           transition={{ duration: 0.25}}
                       >
-                         <ProjectRow key={i} projectData={project} last={i === props.projects.length - 1} />
+                         <ProjectRow key={i} projectData={project} last={i === props.projects.length - 1} highlightTech={props.highlightTech} highlightLang={props.highlightLang}/>
                       </motion.div>
                   ))}
           </AnimatePresence>

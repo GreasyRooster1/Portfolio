@@ -27,22 +27,23 @@
   color: var(--muted);
 }
 
-.stack {
+.lang {
   font: 400 11.5px/1.5 var(--font-mono);
   display:flex;
   flex-direction: row;
   gap: 4px;
   color: var(--muted);
-  justify-content: center;
+  justify-content: left;
+  align-items: center;
 }
 
-.result {
+.tech {
   font: 400 11.5px/1.5 var(--font-mono);
   display:flex;
   flex-direction: row;
   gap: 4px;
   color: var(--muted);
-  justify-content: center;
+  justify-content: right;
 }
 
 .links {
