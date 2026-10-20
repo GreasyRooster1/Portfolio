@@ -38,7 +38,7 @@ export default function ProjectRow(props) {
           {languageTags.slice(0,3).map(tag => (
               <Tag key={tag.name} tagClass={`${tag.color.replace("#","")}`} {...tag}/>
           ))}
-          {languageTags.length>3?(<Tag name={`+${languageTags.length-3}`} bgOpacity={.3} color={"#6e6e6e"}/>):""}
+          {languageTags.length>3?(<Text ml={"1"} size={"2"}>{`+${languageTags.length-3}`}</Text>):""}
       </div>
       <div className={styles.tech}>
           {technologyTags.slice(0,2).map(tag => (
