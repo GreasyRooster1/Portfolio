@@ -26,7 +26,14 @@ export default function ProjectRow(props) {
             languageTags = filtered;
             languageTags.unshift(props.highlightLang)
         }
+    }
 
+    if(props.highlightTech){
+        let filtered = technologyTags.filter(tag => tag.name!==props.highlightTech.name)
+        if(filtered.length<languageTags.length) {
+            technologyTags = filtered;
+            technologyTags.unshift(props.highlightTech)
+        }
     }
 
 
@@ -50,6 +57,7 @@ export default function ProjectRow(props) {
           {technologyTags.slice(0,2).map(tag => (
               <Tag key={tag.name} tagClass={`${tag.color.replace("#","")}`} {...tag}/>
           ))}
+          {technologyTags.length>2?(<Text ml={"1"} size={"2"}>{`+${technologyTags.length-2}`}</Text>):""}
       </div>
       <LinkRow links={linkData} separated className={styles.links} />
     </Box>

@@ -67,18 +67,12 @@ export function Directory() {
     },[])
 
     useEffect(() => {
-        fetch(getSearchQuery(""))
-            .then((res) => {
-                if(!res.ok) {
-                    console.log("data request failed")
-                    return;
-                }
-                res.json().then((d) => {
-                    setSearchResults(d);
-                    setSearchNumber(n=>n++)
-                })
-            })
+        onSearch();
     },[])
+
+    useEffect(() => {
+        onSearch();
+    },[selectedLang,selectedTech])
 
 
     return (

@@ -30,7 +30,7 @@ export default function ProjectTable(props) {
           <div className={styles.header}>
             <div>project</div>
             <Flex justify={"start"}>language</Flex>
-            <Flex justify={"end"}>technologies</Flex>
+            <Flex justify={"start"}>technologies</Flex>
             <div className={styles.linksHead}>links</div>
           </div>
           <AnimatePresence>
