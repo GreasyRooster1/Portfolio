@@ -2,6 +2,7 @@ import LinkRow from '@components/LinkRow.jsx'
 import styles from './ProjectRow.module.css'
 import {Box,Text} from "@radix-ui/themes";
 import {Tag} from "@/pages/directory/Tag.jsx";
+import {useEffect} from "react";
 
 export default function ProjectRow(props) {
 
@@ -20,9 +21,14 @@ export default function ProjectRow(props) {
     let technologyTags = props.projectData.tags.filter(tag => tag.tag_type==="technology");
 
     if(props.highlightLang){
-        languageTags.filter(tag => tag.name!==props.highlightLang)
-        languageTags.unshift(props.highlightLang)
+        let filtered = languageTags.filter(tag => tag.name!==props.highlightLang.name)
+        if(filtered.length<languageTags.length) {
+            languageTags = filtered;
+            languageTags.unshift(props.highlightLang)
+        }
+
     }
+
 
     console.log(languageTags);
 
