@@ -30,15 +30,17 @@ export function Directory() {
 
     const getSearchQuery = (search) => {
         let lang = selectedLang===-1?"NO_LANG_VIEW_ALL":languages[selectedLang].name
+        let tech = selectedTech===-1?"NO_TECH_VIEW_ALL":technologies[selectedTech].name
         lang = lang.replace("#","%23")
         let searchQuery = search.toLowerCase();
         if(search.length<1) {
             searchQuery = "NO_QUERY_VIEW_ALL";
         }
-        return `${API}/search_projects/${searchQuery}/${lang}/${selectedTech===-1?"NO_TECH_VIEW_ALL":technologies[selectedTech].name}`
+        return `${API}/search_projects/${searchQuery}/${lang}/${tech}`
     }
 
     const onSearch = ()=>{
+        console.log(search)
         fetch(getSearchQuery(search), {})
             .then((res) => {
                 if(!res.ok) {
@@ -57,6 +59,10 @@ export function Directory() {
     }
 
     useEffect(() => {
+        if(!(urlParams.get("search")||urlParams.get("lang")||urlParams.get("tech"))){
+            onSearch();
+        }
+
         fetch(API+"/get_directory_data")
             .then((res) => {
                 if(!res.ok) {
@@ -69,7 +75,6 @@ export function Directory() {
                     let techs = d.tags.filter((t)=>t.tag_type==="technology");
                     setLanguages(langs);
                     setTechnologies(techs);
-                    console.log(langs.findIndex(tag => tag.name.toLowerCase() === urlParams.get("lang").toLowerCase()));
                     if(urlParams.get("lang")!=="") {
                         setSelectedLang(langs.findIndex(tag => tag.name.toLowerCase() === urlParams.get("lang")?.toLowerCase()))
                     }
@@ -80,12 +85,9 @@ export function Directory() {
             })
     },[])
 
-    useEffect(() => {
-        onSearch();
-    },[])
 
     useEffect(() => {
-        console.log("tags changed")
+        console.log("tags changed",selectedLang,selectedTech)
         onSearch();
     },[selectedLang,selectedTech])
 
