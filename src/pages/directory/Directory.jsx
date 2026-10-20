@@ -3,7 +3,8 @@ import Nav from "@components/Nav.jsx";
 import ProjectTable from "@/pages/directory/ProjectTable.jsx";
 import {useEffect, useState} from "react";
 import SearchInput from "@/pages/directory/SearchInput.jsx";
-import {Box} from "@radix-ui/themes";
+import {Box,Text} from "@radix-ui/themes";
+import styles from "./directory.module.css";
 
 const LANG = ["js","html","css"]
 const API = "http://0.0.0.0:8080"//"https://portfolio-api.dillonjw.com"
@@ -95,6 +96,10 @@ export function Directory() {
                              setSelectedTech={setSelectedTech}
                              onSearch={onSearch}
                 ></SearchInput>
+
+                <Box className={styles.subTextContainer}>
+                    <Text className={styles.subText}>{searchResults?.matches.length} results</Text>
+                </Box>
 
                 <ProjectTable projects={searchResults?searchResults.matches:[]} stamp={searchNumber} highlightLang={languages[selectedLang]} highlightTech={technologies[selectedTech]}>
 
