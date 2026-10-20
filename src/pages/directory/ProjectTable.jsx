@@ -6,9 +6,26 @@ import PageSection from "@components/PageSection.jsx";
 import {DesktopView} from "@components/View.jsx";
 import ProjectRow from "@/pages/directory/ProjectRow.jsx";
 import {Box, Flex} from "@radix-ui/themes";
+import { motion, AnimatePresence } from "motion/react";
 
 export default function ProjectTable(props) {
-  return (
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: .1,
+            },
+        },
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        show: { opacity: 1, y: 0 },
+    };
+
+    return (
       <div className={styles.parent}>
           <div className={styles.header}>
             <div>project</div>
@@ -16,9 +33,21 @@ export default function ProjectTable(props) {
             <Flex justify={"center"}>technologies</Flex>
             <div className={styles.linksHead}>links</div>
           </div>
-          {props.projects.map((project, i) => (
-            <ProjectRow key={i} projectData={project} last={i === props.projects.length - 1} />
-          ))}
+          <AnimatePresence>
+
+                  {props.projects.map((project, i) => (
+                      <motion.div
+                          key={i+props.stamp}
+                          variants={itemVariants}
+                          initial={{ opacity: 0, x:-50 }}
+                          animate={{ opacity: 1, x:0 }}
+                          exit={{ opacity: 0, x: 50 }}
+                          transition={{ duration: 0.25}}
+                      >
+                         <ProjectRow key={i} projectData={project} last={i === props.projects.length - 1} />
+                      </motion.div>
+                  ))}
+          </AnimatePresence>
       </div>
-  )
+    )
 }

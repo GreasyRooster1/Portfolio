@@ -17,17 +17,24 @@ export function Directory() {
     const [selectedTech, setSelectedTech] = useState(-1);
     const [searchResults, setSearchResults] = useState(null)
     const [directoryData, setDirectoryData] = useState(null)
+    const [searchNumber, setSearchNumber] = useState(null)
 
     const handleSearchChange = (e) => {
         setSearch(e.target.value);
     };
 
-    const onSearch = ()=>{
-        let searchQuery = search;
+    const getSearchQuery = (search) => {
+        let lang = selectedLang===-1?"NO_LANG_VIEW_ALL":languages[selectedLang].name
+        lang = lang.replace("#","%23")
+        let searchQuery = search.toLowerCase();
         if(search.length<1) {
             searchQuery = "NO_QUERY_VIEW_ALL";
         }
-        fetch(`${API}/search_projects/${searchQuery}/${selectedLang===-1?"NO_LANG_VIEW_ALL":languages[selectedLang].name}/${selectedTech===-1?"NO_TECH_VIEW_ALL":technologies[selectedTech].name}`, {})
+        return `${API}/search_projects/${searchQuery}/${lang}/${selectedTech===-1?"NO_TECH_VIEW_ALL":technologies[selectedTech].name}`
+    }
+
+    const onSearch = ()=>{
+        fetch(getSearchQuery(search), {})
             .then((res) => {
                 if(!res.ok) {
                     console.log("search request failed")
@@ -39,6 +46,7 @@ export function Directory() {
                     console.log(matches)
                     d.matches = matches;
                     setSearchResults(d);
+                    setSearchNumber(n=>n++)
                 })
             })
     }
@@ -59,7 +67,7 @@ export function Directory() {
     },[])
 
     useEffect(() => {
-        fetch(`${API}/search_projects/NO_QUERY_VIEW_ALL/${selectedLang===-1?"NO_LANG_VIEW_ALL":languages[selectedLang].name}/${selectedTech===-1?"NO_TECH_VIEW_ALL":technologies[selectedTech].name}`)
+        fetch(getSearchQuery(""))
             .then((res) => {
                 if(!res.ok) {
                     console.log("data request failed")
@@ -67,6 +75,7 @@ export function Directory() {
                 }
                 res.json().then((d) => {
                     setSearchResults(d);
+                    setSearchNumber(n=>n++)
                 })
             })
     },[])
@@ -93,7 +102,7 @@ export function Directory() {
                              onSearch={onSearch}
                 ></SearchInput>
 
-                <ProjectTable projects={searchResults?searchResults.matches:[]}>
+                <ProjectTable projects={searchResults?searchResults.matches:[]} stamp={searchNumber}>
 
                 </ProjectTable>
             </Box>

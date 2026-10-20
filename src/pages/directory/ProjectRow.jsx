@@ -30,12 +30,12 @@ export default function ProjectRow(props) {
         </Box>
       </div>
       <div className={styles.stack}>
-          {languageTags.slice(0,3).map(tag => (
+          {languageTags.slice(0,99).map(tag => (
               <Tag key={tag.name} tagClass={`${tag.color.replace("#","")}`} {...tag}/>
           ))}
       </div>
       <div className={styles.result}>
-          {technologyTags.slice(0,2).map(tag => (
+          {technologyTags.slice(0,99).map(tag => (
               <Tag key={tag.name} tagClass={`${tag.color.replace("#","")}`} {...tag}/>
           ))}
       </div>
