@@ -42,6 +42,8 @@ export default function Dropdown(props) {
                                 }}
                                 marker={<Marker checked={isSelected} />}
                                 trailing={""}
+                                color={lang.color}
+                                itemClass={lang.name.replace("#","-").replace(".","-").replace(" ","-")}
                             >
                                 {lang.full_name}
                             </MenuItem>

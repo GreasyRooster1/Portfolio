@@ -19,7 +19,7 @@
 }
 
 .selected {
-    color: var(--accent);
+    color: var(--item-color);
 }
 
 .text {
