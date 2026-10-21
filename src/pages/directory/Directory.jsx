@@ -5,10 +5,10 @@ import {useEffect, useState} from "react";
 import SearchInput from "@/pages/directory/SearchInput.jsx";
 import {Box,Text} from "@radix-ui/themes";
 import styles from "./directory.module.css";
+import {API} from "@/constants.js";
 
 
 const LANG = ["js","html","css"]
-const API = "http://0.0.0.0:8080"//"https://portfolio-api.dillonjw.com"
 
 
 export function Directory() {
