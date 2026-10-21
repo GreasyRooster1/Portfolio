@@ -1,1 +1,1 @@
-export const API = "http://0.0.0.0:8080"//"https://portfolio-api.dillonjw.com"
+export const API = "https://portfolio-api.dillonjw.com"
