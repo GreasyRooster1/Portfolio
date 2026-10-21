@@ -39,15 +39,9 @@ export function Directory() {
         return `${API}/search_projects/${searchQuery}/${lang}/${tech}`
     }
 
-    const onSearch = ()=>{
+    const onSearch = (override)=>{
         console.log(search)
-        if(urlParams.get("lang")) {
-            setSelectedLang(languages.findIndex(tag => tag.name.toLowerCase() === urlParams.get("lang")?.toLowerCase()))
-        }
-        if(urlParams.get("tech")) {
-            setSelectedTech(technologies.findIndex(tag => tag.name.toLowerCase() === urlParams.get("tech")?.toLowerCase()))
-        }
-        fetch(getSearchQuery(search), {})
+        fetch(override?override:getSearchQuery(search), {})
             .then((res) => {
                 if(!res.ok) {
                     console.log("search request failed")
@@ -66,7 +60,7 @@ export function Directory() {
 
     useEffect(() => {
         if(!(urlParams.get("search")||urlParams.get("lang")||urlParams.get("tech"))){
-            onSearch();
+            onSearch(`${API}/search_projects/${urlParams.get("search")??"NO_QUERY_VIEW_ALL"}/${urlParams.get("lang")??"NO_LANG_VIEW_ALL"}/${urlParams.get("tech")??"NO_TECH_VIEW_ALL"}`);
         }
 
         fetch(API+"/get_directory_data")
