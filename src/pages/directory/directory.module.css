@@ -1,0 +1,9 @@
+.subText{
+    color:var(--muted);
+    font-family: var(--font-mono);
+    font-size: 14px;
+}
+
+.subTextContainer{
+    margin-bottom:64px;
+}

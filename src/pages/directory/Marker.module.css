@@ -1,0 +1,26 @@
+.marker {
+    flex: none;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .8em;
+    color: var(--bg);
+    background: transparent;
+    border: 1px solid var(--faint);
+}
+
+.dot {
+    width: 7px;
+    height: 7px;
+}
+
+.box {
+    width: 11px;
+    height: 11px;
+}
+
+.checked {
+    background: var(--accent);
+    border-color: var(--accent);
+}
