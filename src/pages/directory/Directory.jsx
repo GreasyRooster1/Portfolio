@@ -92,6 +92,16 @@ export function Directory() {
         url.searchParams.delete('lang');
         url.searchParams.delete('tech');
         window.history.replaceState(null, '', url.toString());
+
+
+        if(searchResults) {
+            console.log(languages,technologies);
+            let filteredResults = searchResults.matches.filter(result =>
+                (selectedLang===-1||result.tags.some(tag => tag.name === languages[selectedLang].name)) &&
+                (selectedTech===-1||result.tags.some(tag => tag.name === technologies[selectedTech].name)));
+            console.log(filteredResults);
+            setSearchResults({...searchResults, matches:filteredResults});
+        }
         onSearch();
     },[selectedLang,selectedTech])
 
