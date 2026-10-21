@@ -14,6 +14,7 @@ import csharp from "@assets/langs/csharp.png"
 import python from "@assets/langs/python.png"
 import swift from "@assets/langs/swift.svg"
 import ruby from "@assets/langs/ruby.svg"
+import asm from "@assets/langs/asm.png"
 import css from "@assets/langs/css.svg"
 import arduino from "@assets/langs/arduino.svg"
 
@@ -55,9 +56,9 @@ export function Experience(props) {
                 <Text width={"100%"} align="center" size="8" weight="bold">Languages</Text>
             </Flex>
             <BrickList cols={8}>
-                <BrickListItem img={ruby} color={"#d92007"} name={"Ruby"} links={[{txt:"Homepage",href:"https://www.ruby-lang.org/en/"}]}/>
+                <BrickListItem img={asm} color={"#32fd46"} name={"Assembly"} links={[{txt:"Info",href:"https://en.wikipedia.org/wiki/Assembly_language"},{txt:"Projects",href:langProjLink("asm")}]}/>
                 <BrickListItem img={react} color={"#00d8ff"} name={"React"} links={[{txt:"Homepage",href:"https://react.dev/"},{txt:"Projects",href:langProjLink("react")}]}/>
-                <BrickListItem img={js} color={"#f0dc4e"} name={"JavaScript"} links={[{txt:"Projects",href:langProjLink("js")}]}/>
+                <BrickListItem img={js} color={"#f0dc4e"} name={"JavaScript"} links={[{txt:"Info",href:"https://developer.mozilla.org/en-US/docs/Web/JavaScript"},{txt:"Projects",href:langProjLink("js")}]}/>
                 <BrickListItem img={ts} color={"#3178c6"} name={"TypeScript"} links={[{txt:"Homepage",href:"https://www.typescriptlang.org/"},{txt:"Projects",href:langProjLink("ts")}]}/>
                 <BrickListItem img={html} color={"#e44d26"} name={"HTML"} links={[{txt:"Homepage",href:"https://html.spec.whatwg.org/"},{txt:"Projects",href:langProjLink("html")}]}/>
                 <BrickListItem img={arduino} color={"#199aa0"} name={"Arduino"} links={[{txt:"Homepage",href:"https://arduino.org/"},{txt:"Projects",href:langProjLink("arduino")}]}/>
@@ -66,7 +67,7 @@ export function Experience(props) {
                 <BrickListItem img={python} color={"#ffcf42"} name={"Python"} links={[{txt:"Homepage",href:"https://www.python.org/"},{txt:"Projects",href:langProjLink("python")}]}/>
                 <BrickListItem img={java} color={"#f3931b"} name={"Java"} links={[{txt:"Homepage",href:"https://www.java.com/"},{txt:"Projects",href:langProjLink("java")}]}/>
                 <BrickListItem img={rust} color={"#dd3516"} name={"Rust"} links={[{txt:"Homepage",href:"https://rust-lang.org/"},{txt:"Projects",href:langProjLink("rust")}]}/>
-                <BrickListItem img={css} color={"#1c88c7"} name={"CSS"} links={[{txt:"Projects",href:langProjLink("css")}]}/>
+                <BrickListItem img={css} color={"#1c88c7"} name={"CSS"} links={[{txt:"Info",href:"https://developer.mozilla.org/en-US/docs/Web/CSS"},{txt:"Projects",href:langProjLink("css")}]}/>
                 <BrickListItem img={swift} color={"#fa5d2d"} name={"Swift"} links={[{txt:"Homepage",href:"https://www.swift.org/"},{txt:"Projects",href:langProjLink("swift")}]}/>
             </BrickList>
             <Flex width={"100%"} align={"center"} justify={"center"} mb="4" mt="6">
@@ -86,7 +87,7 @@ export function Experience(props) {
                 <BrickListItem img={firebase} color={"#ff9100"} name={"Firebase"} links={[{txt:"Homepage",href:"https://firebase.google.com/"},{txt:"Projects",href:techProjLink("firebase")}]}/>
                 <BrickListItem img={vite} color={"#6c16ff"} name={"Vite"} links={[{txt:"Homepage",href:"https://vite.dev/"},{txt:"Projects",href:techProjLink("vite")}]}/>
                 <BrickListItem img={jetbrains} color={"#f6016c"} name={"JetBrains IDEs"} links={[{txt:"Homepage",href:"https://www.jetbrains.com/"}]}/>
-                <BrickListItem img={linux} color={"#ffbe00"} name={"Linux"} links={[]}/>
+                <BrickListItem img={linux} color={"#ffbe00"} name={"Linux"} links={[{txt:"Info",href:"https://en.wikipedia.org/wiki/Linux"}]}/>
                 <BrickListItem img={p5} color={"#ed225d"} name={"p5.js"} links={[{txt:"Homepage",href:"https://p5js.org/"},{txt:"Projects",href:techProjLink("p5js")}]}/>
                 <BrickListItem img={processing} color={"#0468ff"} name={"Processing"} links={[{txt:"Homepage",href:"https://processing.org/"},{txt:"Projects",href:techProjLink("processing")}]}/>
                 <BrickListItem img={vscode} color={"#22a6f2"} name={"VS Code"} links={[{txt:"Homepage",href:"https://code.visualstudio.com/"}]}/>
