@@ -20,7 +20,7 @@ export default function Dropdown(props) {
             >
 
                 <span className={styles.label}>{props.label}</span>
-                <span className={styles.valueActive}>{props.selected!==-1?props.list[props.selected].name:""}</span>
+                {props.selected!==-1&&<span className={styles.valueActive} style={{color:props.list[props.selected].color}}>{props.list[props.selected].name}</span>}
                 <span className={styles.caret}>{active ? "▲" : "▼"}</span>
             </button>
 
