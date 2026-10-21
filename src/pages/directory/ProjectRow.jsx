@@ -30,7 +30,7 @@ export default function ProjectRow(props) {
 
     if(props.highlightTech){
         let filtered = technologyTags.filter(tag => tag.name!==props.highlightTech.name)
-        if(filtered.length<languageTags.length) {
+        if(filtered.length<technologyTags.length) {
             technologyTags = filtered;
             technologyTags.unshift(props.highlightTech)
         }
