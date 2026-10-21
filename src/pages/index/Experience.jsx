@@ -85,12 +85,12 @@ export function Experience(props) {
                 <BrickListItem img={ollama} color={"#ffffff"} name={"Ollama"} links={[{txt:"Homepage",href:"https://ollama.com/"},{txt:"Projects",href:techProjLink("ollama")}]}/>
                 <BrickListItem img={postgres} color={"#336791"} name={"PostgreSQL"} links={[{txt:"Homepage",href:"https://www.postgresql.org/"},{txt:"Projects",href:techProjLink("postgres")}]}/>
                 <BrickListItem img={node} color={"#58a545"} name={"Node.js"} links={[{txt:"Homepage",href:"https://nodejs.org/"}]}/>
-                <BrickListItem img={opengl} color={"#5586a4"} name={"OpenGL"} links={[{txt:"Homepage",href:"https://www.opengl.org/"}]}/>
+                <BrickListItem img={opengl} color={"#5586a4"} name={"OpenGL"} links={[{txt:"Homepage",href:"https://www.opengl.org/"},{txt:"Projects",href:techProjLink("opengl")}]}/>
                 <BrickListItem img={proxmox} color={"#e57000"} name={"Proxmox VE"} links={[{txt:"Homepage",href:"https://www.proxmox.com/"},{txt:"Projects",href:techProjLink("proxmox")}]}/>
                 <BrickListItem img={rpi} color={"#e81150"} name={"Raspberry PI"} links={[{txt:"Homepage",href:"https://www.raspberrypi.com/"},{txt:"Projects",href:techProjLink("rasp%2E pi")}]}/>
                 <BrickListItem img={firebase} color={"#ff9100"} name={"Firebase"} links={[{txt:"Homepage",href:"https://firebase.google.com/"},{txt:"Projects",href:techProjLink("firebase")}]}/>
-                <BrickListItem img={wgpu} color={"#8dd7f5"} name={"wgpu"} links={[{txt:"Homepage",href:"https://wgpu.rs/"}]}/>
-                <BrickListItem img={x86} color={"#777777"} name={"x86"} links={[{txt:"Homepage",href:"https://en.wikipedia.org/wiki/X86"}]}/>
+                <BrickListItem img={wgpu} color={"#8dd7f5"} name={"wgpu"} links={[{txt:"Homepage",href:"https://wgpu.rs/"},{txt:"Projects",href:techProjLink("wgpu")}]}/>
+                <BrickListItem img={x86} color={"#777777"} name={"x86"} links={[{txt:"Info",href:"https://en.wikipedia.org/wiki/X86"},{txt:"Projects",href:techProjLink("x86")}]}/>
                 <BrickListItem img={vite} color={"#6c16ff"} name={"Vite"} links={[{txt:"Homepage",href:"https://vite.dev/"},{txt:"Projects",href:techProjLink("vite")}]}/>
                 <BrickListItem img={jetbrains} color={"#f6016c"} name={"JetBrains IDEs"} links={[{txt:"Homepage",href:"https://www.jetbrains.com/"}]}/>
                 <BrickListItem img={linux} color={"#ffbe00"} name={"Linux"} links={[{txt:"Info",href:"https://en.wikipedia.org/wiki/Linux"}]}/>
