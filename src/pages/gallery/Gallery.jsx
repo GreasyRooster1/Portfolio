@@ -18,7 +18,7 @@ function Gallery(props) {
                 {props.meta.images.map((image,index) => {
                     return (
                         <Flex direction="column" key={index} className={styles.imageContainer}>
-                            <img src={image.src} alt={image.caption}/>
+                            <img src={image.src} alt={image.caption} className={styles.image}/>
                             <Text m={"2"} align={"start"} size={"4"}><Text weight={"bold"}>Fig {index+1}.</Text> {image.caption}</Text>
                         </Flex>
                     )

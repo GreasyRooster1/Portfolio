@@ -35,14 +35,12 @@
     font-weight: bold;
 }
 
-.img{
-    margin:auto;
-    max-width: 100%;
-
+.image{
+    border-radius:5px;
 }
 
 .imageContainer{
     background:var(--surface);
     padding:8px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
