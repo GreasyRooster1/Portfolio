@@ -14,11 +14,12 @@ function Gallery(props) {
         </Nav>
         <div className={styles.page}>
             <HtmlTitle title={props.meta.title}/>
-            <Grid container spacing={2}>
+            <Grid container spacing={"2"} gap={"4"} columns={"2"}>
                 {props.meta.images.map((image,index) => {
                     return (
-                        <Flex>
+                        <Flex direction="column" key={index} className={styles.imageContainer}>
                             <img src={image.src} alt={image.caption}/>
+                            <Text m={"2"} align={"start"} size={"4"}><Text weight={"bold"}>Fig {index+1}.</Text> {image.caption}</Text>
                         </Flex>
                     )
                 })}

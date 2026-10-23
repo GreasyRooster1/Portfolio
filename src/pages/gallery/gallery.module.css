@@ -1,11 +1,8 @@
 .page{
-    --menu-width: max(200px,10vw);
-
-    max-width: min(max(473px,calc(100vw - var(--menu-width) * 2)),1080px);
     margin: 8px auto;
-    padding:8px;
     background: var(--bg);
     font-family: var(--font-sans);
+    padding:24px;
 }
 
 .menu{
@@ -42,4 +39,10 @@
     margin:auto;
     max-width: 100%;
 
+}
+
+.imageContainer{
+    background:var(--surface);
+    padding:8px;
+    border-radius: 5px;
 }
