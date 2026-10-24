@@ -1,0 +1,23 @@
+{
+  "title": "Software Raytracer | Dillon Wilson - ",
+  "source": "https://github.com/GreasyRooster1/WeekendRaytracing",
+  "navTitle": "Software Raytracer",
+  "images": [
+    {
+      "src":"Featured/WeekendRaytracing5.png",
+      "caption": "A reflective, glass, and polished marble. Depth of field enabled. White, red and blue lights to visualize caustics on the glass marble. Sky lighting disabled"
+    },
+    {
+      "src":"Featured/WeekendRaytracing4.png",
+      "caption": "A reflective, glass, and polished marble. Depth of field disabled. Random colored lights around the scene, casting multicolor caustics under the glass marble. Sky lighting disabled"
+    },
+    {
+      "src":"Featured/WeekendRaytracing6.png",
+      "caption": "A recreation of the demo image from Weekend In One Weekend. Depth of feild enabled. Sky lighting enabled"
+    },
+    {
+      "src":"Featured/WeekendRaytracing7.png",
+      "caption": "Three marbles in a room made of mirrors. Showcasing accuracy with complex reflections and refractions. Depth of field enabled. Showing a reflective, glass and matte sphere"
+    }
+  ]
+}

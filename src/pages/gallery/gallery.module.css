@@ -1,0 +1,46 @@
+.page{
+    margin: 8px auto;
+    background: var(--bg);
+    font-family: var(--font-sans);
+    padding:24px;
+}
+
+.menu{
+    width:var(--menu-width);
+    display: flex;
+    position: sticky;
+    top: 64px;
+    left: 0;
+}
+
+.menuWrapper{
+    display: flex;
+    width:calc(var(--menu-width) - 20px);
+    position: fixed;
+    top: 64px;
+    left: 20px;
+    padding-right:10px;
+    height: 100%;
+}
+
+.menuItem{
+    border-left: 3px solid var(--accent);
+    padding-left: 12px;
+    width:100%;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.selected{
+    font-weight: bold;
+}
+
+.image{
+    border-radius:5px;
+}
+
+.imageContainer{
+    background:var(--surface);
+    padding:8px;
+    border-radius: 10px;
+}
