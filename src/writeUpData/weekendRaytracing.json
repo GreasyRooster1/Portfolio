@@ -4,12 +4,12 @@
   "navTitle": "Software Raytracer",
   "images": [
     {
-      "src":"Featured/WeekendRaytracing2.png",
-      "caption": "Three marbles with separate materials "
+      "src":"Featured/WeekendRaytracing5.png",
+      "caption": "A reflective, glass, and polished marble. Depth of field enabled. White, red and blue lights to visualize caustics on the glass marble. Sky lighting disabled"
     },
     {
-      "src":"Featured/WeekendRaytracing.png",
-      "caption": "Three marbles with separate materials "
+      "src":"Featured/WeekendRaytracing4.png",
+      "caption": "A reflective, glass, and polished marble. Depth of field disabled. Random colored lights around the scene, casting multicolor caustics under the glass marble. Sky lighting disabled"
     },
     {
       "src":"Featured/WeekendRaytracing.png",
