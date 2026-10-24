@@ -12,16 +12,12 @@
       "caption": "A reflective, glass, and polished marble. Depth of field disabled. Random colored lights around the scene, casting multicolor caustics under the glass marble. Sky lighting disabled"
     },
     {
-      "src":"Featured/WeekendRaytracing.png",
-      "caption": "Three marbles with separate materials "
+      "src":"Featured/WeekendRaytracing6.png",
+      "caption": "A recreation of the demo image from Weekend In One Weekend. Depth of feild enabled. Sky lighting enabled"
     },
     {
-      "src":"Featured/WeekendRaytracing.png",
-      "caption": "Three marbles with separate materials "
-    },
-    {
-      "src":"Featured/WeekendRaytracing.png",
-      "caption": "Three marbles with separate materials "
+      "src":"Featured/WeekendRaytracing7.png",
+      "caption": "Three marbles in a room made of mirrors. Showcasing accuracy with complex reflections and refractions. Depth of field enabled. Showing a reflective, glass and matte sphere"
     }
   ]
 }
