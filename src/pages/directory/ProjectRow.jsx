@@ -39,6 +39,14 @@ export default function ProjectRow(props) {
 
     console.log(languageTags);
 
+    if(props.projectData.full_private){
+        return (
+            <Box className={`${styles.row} ${props.last ? styles.rowLast : ''}`}>
+                Private Project
+            </Box>
+        )
+    }
+
     return (
     <Box className={`${styles.row} ${props.last ? styles.rowLast : ''}`}>
       <div>
@@ -59,7 +67,11 @@ export default function ProjectRow(props) {
           ))}
           {technologyTags.length>2?(<Text ml={"1"} size={"2"}>{`+${technologyTags.length-2}`}</Text>):""}
       </div>
-      <LinkRow links={linkData} separated className={styles.links} />
+        {props.projectData.private?
+            <Text className={styles.links}>private</Text>
+            :
+        <LinkRow links={linkData} separated className={styles.links} />
+        }
     </Box>
     )
 }
