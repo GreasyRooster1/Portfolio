@@ -128,7 +128,7 @@ export function Directory() {
                 ></SearchInput>
 
                 <Box className={styles.subTextContainer}>
-                    <Text className={styles.subText}>{searchResults?.matches.length} results</Text>
+                    <Text className={styles.subText}>{searchResults?.matches.length} results (2023-Present)</Text>
                 </Box>
 
                 <ProjectTable projects={searchResults?searchResults.matches:[]} stamp={searchNumber} highlightLang={languages[selectedLang]} highlightTech={technologies[selectedTech]}>
