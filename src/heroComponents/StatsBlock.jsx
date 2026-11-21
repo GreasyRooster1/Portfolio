@@ -7,6 +7,7 @@ import {ImagesBlock} from "@/heroComponents/ImagesBlock.jsx";
 
 function StatsBlock(props) {
     const [totalProjects, setTotalProjects] = useState(2523)
+    const [totalUsers, setTotalUsers] = useState(301)
 
     useEffect(() => {
         fetch("https://portfolio-api.dillonjw.com/qcode_project_count")
@@ -17,21 +18,28 @@ function StatsBlock(props) {
             })
     },[])
 
+    useEffect(() => {
+        fetch("https://portfolio-api.dillonjw.com/qcode_user_count")
+            .then((data) => {
+                data.json().then((dataJson) => {
+                    setTotalUsers(dataJson)
+                })
+            })
+    },[])
+
     return (
         <Flex className={styles.box} justify={"center"} align={"center"} py={"2"}>
             <div className={styles.metrics}>
                 <div>
                     <div className={styles.metricLabel}>students</div>
-                    <div className={styles.metricValue}>
-                        <CountUp className={styles.metricValue}
-                                 from={100}
-                                 to={300}
-                                 separator=","
-                                 direction="up"
-                                 duration={.5}
-                                 delay={0}
-                        />+
-                    </div>
+                    <CountUp className={styles.metricValue}
+                             from={100}
+                             to={totalUsers}
+                             separator=","
+                             direction="up"
+                             duration={.5}
+                             delay={0}
+                    />
                 </div>
                 <div>
                     <div className={styles.metricLabel}>total projects</div>
