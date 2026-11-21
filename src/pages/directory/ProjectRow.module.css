@@ -48,4 +48,6 @@
 
 .links {
   text-align: right;
+  color: var(--muted);
+  font: 500 12px/1 var(--font-mono);
 }
